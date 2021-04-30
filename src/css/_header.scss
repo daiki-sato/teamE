@@ -1,7 +1,41 @@
-.header__img{
-  width: 200px;
-}
+@import "common";
 
-header{
-  background-color: red;
+.header{
+  background-color: $color-green;
+  color: $color-white;
+  
+  text-align: center;
+  .header-nav{
+    height: 130px;
+
+  }
+  .header-nav__img{
+    // width: 200px;
+    height: 62px;
+    padding: 10px 0 10px 0;
+  }
+  .header-nav__menu{
+    // display: flex;
+    
+    &__list{
+      list-style: none;
+      display: inline-block;
+    }
+
+    &__list a{
+      color: $color-white;
+      height: auto;
+      padding: 10px 15px 15px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+  .header-info{
+    background: $color-lightGreen;
+    height: 52px;
+    
+    &__text{
+
+    }
+  }
 }
