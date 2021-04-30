@@ -5,21 +5,29 @@
   text-align: center; }
   .header .header-nav {
     height: 130px; }
-  .header .header-nav__img {
-    height: 62px;
-    padding: 10px 0 10px 0; }
-  .header .header-nav__menu__list {
-    list-style: none;
-    display: inline-block; }
-  .header .header-nav__menu__list a {
-    color: #ffffff;
-    height: auto;
-    padding: 10px 15px 15px;
-    font-size: 15px;
-    line-height: 1.5; }
+    .header .header-nav__img {
+      height: 62px;
+      padding: 10px 0 10px 0;
+      cursor: pointer; }
+    .header .header-nav .header-nav__menu__list {
+      list-style: none;
+      display: inline-block;
+      padding: 10px 15px 15px; }
+    .header .header-nav .header-nav__menu__list a {
+      color: #ffffff;
+      height: auto;
+      font-size: 15px;
+      padding: 10px 8px 15px;
+      line-height: 1.5; }
   .header .header-info {
     background: #89CEC8;
     height: 52px; }
+    .header .header-info__text {
+      display: block;
+      padding: 10px;
+      font-weight: bold;
+      height: 30px;
+      line-height: 30px; }
 
 body {
   font-family: "Helvetica", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, sans-serif; }
