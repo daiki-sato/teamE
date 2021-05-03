@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* トップページのcss */
+/* // ここにheader.sass fotter.sassなどを挿入する */
 .header {
   background-color: #28A69A;
   color: #ffffff;
@@ -28,6 +30,3 @@
       font-weight: bold;
       height: 30px;
       line-height: 30px; }
-
-body {
-  font-family: "Helvetica", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, sans-serif; }

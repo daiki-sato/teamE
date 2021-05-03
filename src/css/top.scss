@@ -1,15 +1,6 @@
-// トップページのcss
-// ここにheader.sass fotter.sassなどを挿入する
+ /* トップページのcss */
+/* // ここにheader.sass fotter.sassなどを挿入する */
+@import './common';
 @import './header';
-
-
-
-
-body {
-  font-family: "Helvetica", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, sans-serif;
-}
-
-
-
 
 

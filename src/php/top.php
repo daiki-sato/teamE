@@ -15,8 +15,7 @@
   ?>
 
 
-  <section class="category-search">
-
+<section class="category-search">
   <div class="search-area">
     <h2 class="search-area__title">就活サービスから探す</h2>
   </div>
@@ -26,5 +25,22 @@
     <li><a class="category-search__menu__list" href="">サービス</a></li>
   </ul>
 </section>
+
+<section class="tag-search">
+  <div class="tag-area">
+    <h2 class="tag-area__title">タグからから探す</h2>
+  </div>
+  <ul class="category-tag__menu">
+    <li><a class="category-tag__menu__list" href="">理系</a></li>
+    <li><a class="category-tag__menu__list" href="">文系</a></li>
+    <li><a class="category-tag__menu__list" href="">星3以上</a></li>
+  </ul>
+</section>
+
+
+
+
+
+
 </body>
 </html>
