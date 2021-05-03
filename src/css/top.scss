@@ -4,3 +4,25 @@
 @import './header';
 
 
+
+.keyword-search{
+
+  .keyword-search-form__input{
+    width: 70%;
+    height: 40px;
+  }
+  .keyword-search-form__button{
+    background-color: #757678;
+    color: $color-white;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 5px;
+
+  }
+}
+
+  
+  
+  .tag-search__menu__list{
+    @include btn-tag;
+  }

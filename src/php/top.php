@@ -15,6 +15,19 @@
   ?>
 
 
+<section class="keyword-search">
+  <div class="search-area">
+    <h2 class="search-area__title">KW検索</h2>
+  </div>
+  
+  <p class="keyword-search__text">キーワードで検索</p>
+  <form class="keyword-search-form" action="">
+    <input class="keyword-search-form__input" type="search" placeholder="例：出版社">
+    <button class="keyword-search-form__button" type="submit">検索</button>
+  </form>
+
+</section>
+
 <section class="category-search">
   <div class="search-area">
     <h2 class="search-area__title">就活サービスから探す</h2>
@@ -27,13 +40,13 @@
 </section>
 
 <section class="tag-search">
-  <div class="tag-area">
-    <h2 class="tag-area__title">タグからから探す</h2>
+  <div class="search-area">
+    <h2 class="search-area__title">タグからから探す</h2>
   </div>
-  <ul class="category-tag__menu">
-    <li><a class="category-tag__menu__list" href="">理系</a></li>
-    <li><a class="category-tag__menu__list" href="">文系</a></li>
-    <li><a class="category-tag__menu__list" href="">星3以上</a></li>
+  <ul class="tag-search__menu">
+    <li><a class="tag-search__menu__list" href="">理系</a></li>
+    <li><a class="tag-search__menu__list" href="">文系</a></li>
+    <li><a class="tag-search__menu__list" href="">星3以上</a></li>
   </ul>
 </section>
 
