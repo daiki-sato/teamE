@@ -32,13 +32,7 @@
   <div class="search-area">
     <h2 class="search-area__title">就活サービスから探す</h2>
   </div>
-<<<<<<< Updated upstream
-  <ul class="category-search__menu">
-    <li><a class="category-search__menu__list" href="">エージェント</a></li>
-    <li><a class="category-search__menu__list" href="">イベント</a></li>
-    <li><a class="category-search__menu__list" href="">サービス</a></li>
-  </ul>
-=======
+
 
   <div class="category-search__-menu">
     <div class="category-search__list">
@@ -167,7 +161,7 @@
 <?php 
   include("./_footer.php"); 
 ?>
->>>>>>> Stashed changes
+
 
 
 </body>
