@@ -1,0 +1,140 @@
+ /* トップページのcss */
+/* // ここにheader.sass fotter.sassなどを挿入する */
+
+
+
+
+.keyword-search{
+
+  .keyword-search-form__input{
+    width: 70%;
+    height: 40px;
+  }
+  .keyword-search-form__button{
+    background-color: #757678;
+    color: $color-white;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 5px;
+
+  }
+}
+
+.category-search{
+  .category-search__menu{
+
+
+  }
+  
+  .category-search__list{
+    margin: 10px;
+    border:  1px solid black;
+    
+  }
+  
+  .category-search__title-box{
+    background-color: $color-green;
+    padding:5px 0;
+    
+    
+  }
+  .category-search__title{
+    color: $color-white;
+    
+  }
+  .category-search__text{
+    font-size: 12px;
+    padding: 5px 10px;
+
+
+  }
+
+}
+
+  
+  
+
+.tag-search{
+
+  .tag-search__menu{
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+  }
+  .tag-search__list{
+    margin: 30px 20px;
+    list-style: none;
+    display: block;
+  }
+  
+  .tag-search__list a{
+    @include btn-tag;
+  
+  }
+}
+
+.search-box{
+
+  background-color: $color-green;
+  margin: 0 20px;
+  text-align: center;
+
+  .search-box__button{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: $color-green;
+    color: $color-white;
+    padding: 10px 30px;
+  }
+}
+
+.application-area{
+  margin: 30px 0;
+  background-color: $color-lightBlue;
+  text-align: center;
+  
+  .application-area__text{
+    line-height: 30px;
+    
+  }
+  .application-area__button{
+    display: block;
+    width: 80%;
+    cursor: pointer;
+    border: none;
+    padding: 10px 30px;
+    margin: 0 auto;
+
+    color: $color-white;
+    background-color: $color-orange;
+    
+    
+  }
+  .application-area__description{
+    
+    line-height: 30px;
+  }
+}
+
+
+.pick-up{
+  // 消す
+  height: 400px;
+
+  background-color: $color-lightGreen;
+  .pick-up__title{
+    color: white;
+  }
+
+  .pick-up-list__img{
+    width: 200px;
+  }
+
+}
