@@ -13,13 +13,50 @@ CREATE TABLE users (
 
 INSERT INTO users SET email='testtest@com', password=sha1('password');
 
-DROP TABLE IF EXISTS events;
-CREATE TABLE events (
+DROP TABLE IF EXISTS agents;
+CREATE TABLE agents (
   id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
+  agent_name VARCHAR(20) NOT NULL,
+  image_url VARCHAR(100) NOT NULL,
+  overview VARCHAR(200) NOT NULL,
+  upper_limit INT NOT NULL,
+  deadline DATE,
+  button_type BOOLEAN NOT NULL,
+  pickup BOOLEAN,
+  star FLOAT,
+  offcial_link VARCHAR(100) NOT NULL,
+  article_link VARCHAR(100) NOT NULL,
+  memo VARCHAR1(200) NOT NULL,
+  status BOOLEAN NOT NULL,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO events SET title='イベント1';
-INSERT INTO events SET title='イベント2';
+INSERT INTO agents SET agent_name='イベント1';
+INSERT INTO agents SET agent_name='イベント2';
+
+DROP TABLE IF EXISTS agent_tag_table;
+CREATE TABLE agent_tag_table (
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  agent_id INT NOT NULL,
+  tag_id INT NOT NULL
+);
+
+DROP TABLE IF EXISTS agent_kw_table;
+CREATE TABLE agent_kw_table (
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  agent_id INT NOT NULL,
+  kw_id INT NOT NULL
+);
+
+DROP TABLE IF EXISTS tag_table;
+CREATE TABLE tag_table (
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  tag_name VARCHAR(20) UNIQUE
+);
+
+DROP TABLE IF EXISTS kw_table;
+CREATE TABLE kw_table (
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  kw_name VARCHAR(20) UNIQUE
+);
