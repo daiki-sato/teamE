@@ -8,6 +8,7 @@
   <title>申し込みフォーム</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/entry.css">
 </head>
 <body>
   <?php 
@@ -19,16 +20,30 @@
     <h2>お申し込み</h2>
   </div>
 
-  <section class="entry-form">
-    <p>基本情報をご入力ください</p>
+  <section class="entry-page">
+    <p class="entry-page__text">基本情報をご入力ください</p>
 
-    <form action="#" method="post">
-      <p>お名前（必須）：<br>
-      <input type="text" name="name"></p>
-      <p>メールアドレス：<br>
-      <input type="text" name="mail"></p>
+    <form action="" method="post">
+      <div>
+        <label class="label" for="name">名前</label>
+        <input id="name" type="text" name="name">
+      </div>
+      <div>
+        <label class="label" for="name">ふりがな</label>
+        <input id="name" type="text" name="name">
+      </div>
+      <div>
+        <label class="label" for="e-mail">メールアドレス</label>
+        <input id="e-mail" type="email" name="email">
+      </div>
     </form>
 
+    <div class="">
+      <h3>資料請求リスト</h3>
+      
+    </div>
+
+    
   </section>
 
 

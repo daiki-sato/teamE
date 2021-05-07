@@ -66,14 +66,12 @@
 
   </div>
 
-
 </section>
 
 <section class="tag-search">
   <div class="search-area">
     <h2 class="search-area__title">タグからから探す</h2>
   </div>
-
 
   <ul class="tag-search__menu">
     <li class="tag-search__list"><a href="">理系</a></li>
