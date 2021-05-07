@@ -124,3 +124,21 @@
     color: white; }
   .pick-up .pick-up-list__img {
     width: 200px; }
+
+.footer {
+  text-align: center; }
+  .footer .footer__text {
+    font-size: 14px; }
+  .footer .footer__form-button {
+    cursor: pointer;
+    border: none;
+    background-color: #FFAB3F;
+    padding: 5px 25px;
+    font-size: 12px; }
+  .footer .footer__reset-button {
+    cursor: pointer;
+    border: none;
+    background-color: #757678;
+    color: #ffffff;
+    padding: 5px 25px;
+    font-size: 12px; }

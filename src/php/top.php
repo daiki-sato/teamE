@@ -32,13 +32,7 @@
   <div class="search-area">
     <h2 class="search-area__title">就活サービスから探す</h2>
   </div>
-<<<<<<< Updated upstream
-  <ul class="category-search__menu">
-    <li><a class="category-search__menu__list" href="">エージェント</a></li>
-    <li><a class="category-search__menu__list" href="">イベント</a></li>
-    <li><a class="category-search__menu__list" href="">サービス</a></li>
-  </ul>
-=======
+
 
   <div class="category-search__-menu">
     <div class="category-search__list">
@@ -72,25 +66,14 @@
 
   </div>
 
->>>>>>> Stashed changes
+
 </section>
 
 <section class="tag-search">
   <div class="search-area">
     <h2 class="search-area__title">タグからから探す</h2>
   </div>
-<<<<<<< Updated upstream
-  <ul class="tag-search__menu">
-    <li><a class="tag-search__menu__list" href="">理系</a></li>
-    <li><a class="tag-search__menu__list" href="">文系</a></li>
-    <li><a class="tag-search__menu__list" href="">星3以上</a></li>
-  </ul>
-</section>
 
-
-
-
-=======
 
   <ul class="tag-search__menu">
     <li class="tag-search__list"><a href="">理系</a></li>
@@ -167,7 +150,7 @@
 <?php 
   include("./_footer.php"); 
 ?>
->>>>>>> Stashed changes
+
 
 
 </body>

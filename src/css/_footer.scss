@@ -1,1 +1,35 @@
 // footerのcss
+
+
+.footer{
+  // display: flex;
+  text-align: center;
+
+  .footer__text{
+    font-size: 14px;
+    
+  }
+  
+  .footer__form-button{
+    // display: block;
+    // width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: $color-orange;;
+    
+    padding: 5px 25px;
+    font-size: 12px;
+  }
+  
+  .footer__reset-button{
+    // display: block;
+    // width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: $color-gray;
+    color: $color-white;
+    padding: 5px 25px;
+    
+    font-size: 12px;
+  }
+}

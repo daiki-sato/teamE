@@ -7,10 +7,8 @@ $color-green:#28A69A;
 $color-orange:#FFAB3F;
 $color-white:#ffffff;
 $color-lightGreen:#89CEC8;
-<<<<<<< Updated upstream
-=======
 $color-lightBlue:#E0E4EA;
->>>>>>> Stashed changes
+$color-gray:#757678;
 
 
 
@@ -26,13 +24,8 @@ $color-lightBlue:#E0E4EA;
 @mixin btn-tag {
   color: $color-white;
   background-color: $color-green;
-<<<<<<< Updated upstream
-  padding: 5px ;
-=======
   padding: 10px 15px;
   border-radius: 50px;
->>>>>>> Stashed changes
-  
 }
 
 .search-area{
