@@ -1,16 +1,7 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新規掲載</title>
-</head>
-
-<body>
-
 <div class="new_agent_information" style="display: inline-block; background: white;">
     <h1>新規掲載</h1>
 
-    <div>
+    <div >
         <h2>会社名</h2>
         <form action="/admin/index.php" method="POST">
             <input type="text" name="agent_name" required value="<?php echo htmlspecialchars($_POST['agent_name'], ENT_QUOTES); ?>">
@@ -123,6 +114,3 @@
     </form>
     <a href="/index.php">掲載情報一覧</a>
 </div>
-</body>
-
-</html>
