@@ -11,7 +11,7 @@
     height: 40px;
   }
   .keyword-search-form__button{
-    background-color: #757678;
+    background-color: $color-gray;
     color: $color-white;
     border: none;
     padding: 8px 30px;
@@ -122,6 +122,12 @@
     line-height: 30px;
   }
 }
+
+
+
+
+
+
 
 
 .pick-up{
