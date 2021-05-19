@@ -1,0 +1,33 @@
+
+
+// 共通部分用のcss
+
+// 色
+$color-green:#28A69A;
+$color-orange:#FFAB3F;
+$color-white:#ffffff;
+$color-lightGreen:#89CEC8;
+$color-lightBlue:#E0E4EA;
+$color-gray:#757678;
+
+
+
+
+@mixin search {
+  color: $color-white;
+  background-color: $color-lightGreen;
+  padding: 15px 10px;
+
+
+}
+
+@mixin btn-tag {
+  color: $color-white;
+  background-color: $color-green;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+.search-area{
+  @include search
+}
