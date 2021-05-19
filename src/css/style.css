@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  /* トップページのcss */
 /* // ここにheader.sass fotter.sassなどを挿入する */
 
@@ -85,10 +86,106 @@
   text-align: center;
 
   .search-box__button{
+=======
+@charset "UTF-8";
+.search-area {
+  color: #ffffff;
+  background-color: #89CEC8;
+  padding: 15px 10px; }
+
+.search-area {
+  color: #ffffff;
+  background-color: #89CEC8;
+  padding: 15px 10px; }
+
+.header {
+  background-color: #28A69A;
+  color: #ffffff;
+  margin-bottom: 50px;
+  text-align: center; }
+  .header .header-nav {
+    height: 130px; }
+    .header .header-nav__img {
+      height: 62px;
+      padding: 10px 0 10px 0;
+      cursor: pointer; }
+    .header .header-nav .header-nav__menu__list {
+      list-style: none;
+      display: inline-block;
+      padding: 10px 15px 15px; }
+    .header .header-nav .header-nav__menu__list a {
+      color: #ffffff;
+      height: auto;
+      font-size: 15px;
+      padding: 10px 8px 15px;
+      line-height: 1.5; }
+  .header .header-info {
+    background: #89CEC8;
+    height: 52px; }
+    .header .header-info__text {
+      display: block;
+      padding: 10px;
+      font-weight: bold;
+      height: 30px;
+      line-height: 30px; }
+
+/* トップページのcss */
+/* // ここにheader.sass fotter.sassなどを挿入する */
+.keyword-search .keyword-search-form__input {
+  width: 70%;
+  height: 40px; }
+
+.keyword-search .keyword-search-form__button {
+  background-color: #757678;
+  color: #ffffff;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 5px; }
+
+.category-search .category-search__list {
+  margin: 10px;
+  border: 1px solid black; }
+
+.category-search .category-search__title-box {
+  background-color: #28A69A;
+  padding: 5px 0; }
+
+.category-search .category-search__title {
+  color: #ffffff; }
+
+.category-search .category-search__text {
+  font-size: 12px;
+  padding: 5px 10px; }
+
+.tag-search .tag-search__menu {
+  margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+.tag-search .tag-search__list {
+  margin: 30px 20px;
+  list-style: none;
+  display: block; }
+
+.tag-search .tag-search__list a {
+  color: #ffffff;
+  background-color: #28A69A;
+  padding: 10px 15px;
+  border-radius: 50px; }
+
+.search-box {
+  background-color: #28A69A;
+  margin: 0 20px;
+  text-align: center; }
+  .search-box .search-box__button {
+>>>>>>> 1dc164f231fe8713fd5255db81bbb8f6d9e547eb
     display: block;
     width: 100%;
     cursor: pointer;
     border: none;
+<<<<<<< HEAD
     background-color: $color-green;
     color: $color-white;
     padding: 10px 30px;
@@ -105,12 +202,26 @@
     
   }
   .application-area__button{
+=======
+    background-color: #28A69A;
+    color: #ffffff;
+    padding: 10px 30px; }
+
+.application-area {
+  margin: 30px 0;
+  background-color: #E0E4EA;
+  text-align: center; }
+  .application-area .application-area__text {
+    line-height: 30px; }
+  .application-area .application-area__button {
+>>>>>>> 1dc164f231fe8713fd5255db81bbb8f6d9e547eb
     display: block;
     width: 80%;
     cursor: pointer;
     border: none;
     padding: 10px 30px;
     margin: 0 auto;
+<<<<<<< HEAD
 
     color: $color-white;
     background-color: $color-orange;
@@ -164,3 +275,43 @@
   }
 
 }
+=======
+    color: #ffffff;
+    background-color: #FFAB3F; }
+  .application-area .application-area__description {
+    line-height: 30px; }
+
+.pick-up {
+  height: 400px;
+  background-color: #89CEC8; }
+  .pick-up .pick-up__title {
+    color: white; }
+  .pick-up .pick-up-list__img {
+    width: 200px; }
+
+.footer {
+  text-align: center; }
+  .footer .footer__text {
+    font-size: 14px; }
+  .footer .footer__form-button {
+    cursor: pointer;
+    border: none;
+    background-color: #FFAB3F;
+    padding: 5px 25px;
+    font-size: 12px; }
+  .footer .footer__reset-button {
+    cursor: pointer;
+    border: none;
+    background-color: #757678;
+    color: #ffffff;
+    padding: 5px 25px;
+    font-size: 12px; }
+
+.entry-form {
+  border: 1px  solid gray;
+  margin-top: 10px;
+  height: 100vh;
+  padding: 10px 3px; }
+  .entry-form .entry-form__text {
+    margin: 20px 0; }
+>>>>>>> 1dc164f231fe8713fd5255db81bbb8f6d9e547eb

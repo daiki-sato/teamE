@@ -135,6 +135,7 @@
   height: 400px;
 
   background-color: $color-lightGreen;
+<<<<<<< HEAD
 
 
   .pick-up-list{
@@ -146,11 +147,14 @@
   .pick-up-list__1{
     display: flex;
   }
+=======
+>>>>>>> 1dc164f231fe8713fd5255db81bbb8f6d9e547eb
   .pick-up__title{
     color: white;
   }
 
   .pick-up-list__img{
+<<<<<<< HEAD
     width: 220px;
     height: 140px;
     margin: 0 auto;
@@ -161,6 +165,9 @@
     color: $color-white;
     padding: 20px;
     border: none;
+=======
+    width: 200px;
+>>>>>>> 1dc164f231fe8713fd5255db81bbb8f6d9e547eb
   }
 
 }

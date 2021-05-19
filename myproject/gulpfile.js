@@ -8,7 +8,7 @@ gulp.task("default", function() {
   // style.scssファイルを取得
   return (
     gulp
-      .src("../src/css/top.scss")
+      .src("../src/css/style.scss")
       // Sassのコンパイルを実行
       .pipe(sass())
       // cssフォルダー以下に保存
