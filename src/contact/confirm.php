@@ -16,20 +16,25 @@ if ( isset( $_POST[ 'ticket' ], $_SESSION[ 'ticket' ] ) ) {
   //トークンが存在しない場合は処理を中止（直接このページにアクセスするとエラーになる）
   die( 'Access Denied（直接このページにはアクセスできません）' );
 }
+
 //POSTされたデータを変数に格納
 $name = isset( $_POST[ 'name' ] ) ? $_POST[ 'name' ] : NULL;
+$furigana = isset( $_POST[ 'furigana' ] ) ? $_POST[ 'furigana' ] : NULL;
 $email = isset( $_POST[ 'email' ] ) ? $_POST[ 'email' ] : NULL;
 $email_check = isset( $_POST[ 'email_check' ] ) ? $_POST[ 'email_check' ] : NULL;
 $tel = isset( $_POST[ 'tel' ] ) ? $_POST[ 'tel' ] : NULL;
 $subject = isset( $_POST[ 'subject' ] ) ? $_POST[ 'subject' ] : NULL;
 $body = isset( $_POST[ 'body' ] ) ? $_POST[ 'body' ] : NULL;
+
 //POSTされたデータを整形（前後にあるホワイトスペースを削除）
 $name = trim( $name );
+$furigana = trim( $furigana );
 $email = trim( $email );
 $email_check = trim( $email_check );
 $tel = trim( $tel );
 $subject = trim( $subject );
 $body = trim( $body );
+
 //エラーメッセージを保存する配列の初期化
 $error = array();
 //値の検証（入力内容が条件を満たさない場合はエラーメッセージを配列 $error に設定）
@@ -39,6 +44,14 @@ if ( $name == '' ) {
 } else if ( preg_match( '/\A[[:^cntrl:]]{1,30}\z/u', $name ) == 0 ) {
   $error[ 'name' ] = '*お名前は30文字以内でお願いします。';
 }
+
+if ( $furigana == '' ) {
+  $error[ 'furigana' ] = '*ふりがなは必須項目です。';
+  //制御文字でないことと文字数をチェック
+} else if ( preg_match( '/\A[[:^cntrl:]]{1,30}\z/u', $name ) == 0 ) {
+  $error[ 'name' ] = '*ふりがなは30文字以内でお願いします。';
+}
+
 if ( $email == '' ) {
   $error[ 'email' ] = '*メールアドレスは必須です。';
 } else { //メールアドレスを正規表現でチェック
@@ -74,12 +87,14 @@ if ( $body == '' ) {
 }
 //POSTされたデータとエラーの配列をセッション変数に保存
 $_SESSION[ 'name' ] = $name;
+$_SESSION[ 'furigana' ] = $furigana;
 $_SESSION[ 'email' ] = $email;
 $_SESSION[ 'email_check' ] = $email_check;
 $_SESSION[ 'tel' ] = $tel;
 $_SESSION[ 'subject' ] = $subject;
 $_SESSION[ 'body' ] = $body;
 $_SESSION[ 'error' ] = $error;
+
 //チェックの結果にエラーがある場合は入力フォームに戻す
 if ( count( $error ) > 0 ) {
   //エラーがある場合
@@ -114,6 +129,10 @@ if ( count( $error ) > 0 ) {
       <tr>
         <th>お名前</th>
         <td><?php echo h($name); ?></td>
+      </tr>
+      <tr>
+        <th>ふりがな</th>
+        <td><?php echo h($furigana); ?></td>
       </tr>
       <tr>
         <th>Email</th>

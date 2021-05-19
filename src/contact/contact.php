@@ -7,25 +7,30 @@ session_regenerate_id( TRUE );
 require '../libs/functions.php';
 //初回以外ですでにセッション変数に値が代入されていれば、その値を。そうでなければNULLで初期化
 $name = isset( $_SESSION[ 'name' ] ) ? $_SESSION[ 'name' ] : NULL;
+$furigana =isset( $_SESSION[ 'furigana' ] ) ? $_SESSION[ 'furigana' ] : NULL;
 $email = isset( $_SESSION[ 'email' ] ) ? $_SESSION[ 'email' ] : NULL;
 $email_check = isset( $_SESSION[ 'email_check' ] ) ? $_SESSION[ 'email_check' ] : NULL;
 $tel = isset( $_SESSION[ 'tel' ] ) ? $_SESSION[ 'tel' ] : NULL;
 $subject = isset( $_SESSION[ 'subject' ] ) ? $_SESSION[ 'subject' ] : NULL;
 $body = isset( $_SESSION[ 'body' ] ) ? $_SESSION[ 'body' ] : NULL;
 $error = isset( $_SESSION[ 'error' ] ) ? $_SESSION[ 'error' ] : NULL;
+
 //個々のエラーを初期化
 $error_name = isset( $error['name'] ) ? $error['name'] : NULL;
+$error_furigana = isset( $error['furigana'] ) ? $error['furigana'] : NULL;
 $error_email = isset( $error['email'] ) ? $error['email'] : NULL;
 $error_email_check = isset( $error['email_check'] ) ? $error['email_check'] : NULL;
 $error_tel = isset( $error['tel'] ) ? $error['tel'] : NULL;
 $error_tel_format = isset( $error['tel_format'] ) ? $error['tel_format'] : NULL;
 $error_subject = isset( $error['subject'] ) ? $error['subject'] : NULL;
 $error_body = isset( $error['body'] ) ? $error['body'] : NULL;
+
 //CSRF対策の固定トークンを生成
 if ( !isset( $_SESSION[ 'ticket' ] ) ) {
   //セッション変数にトークンを代入
   $_SESSION[ 'ticket' ] = sha1( uniqid( mt_rand(), TRUE ) );
 }
+
 //トークンを変数に代入
 $ticket = $_SESSION[ 'ticket' ];
 ?>
@@ -49,7 +54,14 @@ $ticket = $_SESSION[ 'ticket' ];
       <label for="name">お名前（必須） 
         <span class="error"><?php echo h( $error_name ); ?></span>
       </label>
-      <input type="text" class="form-control validate max50 required" id="name" name="name" placeholder="氏名" value="<?php echo h($name); ?>">
+      <input type="text" class="form-control validate max50 required" id="name" name="name" placeholder="高橋日菜" value="<?php echo h($name); ?>">
+    </div>
+
+    <div class="form-group">
+      <label for="furigana">ふりがな（必須） 
+        <span class="error"><?php echo h( $error_furigana ); ?></span>
+      </label>
+      <input type="text" class="form-control validate max50 required" id="furigana" name="furingana" placeholder="たかはしひな" value="<?php echo h($furigana); ?>">
     </div>
 
     <div class="form-group">
