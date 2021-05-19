@@ -31,6 +31,7 @@ if ( isset( $_POST[ 'ticket' ], $_SESSION[ 'ticket' ] ) ) {
  
 //変数にエスケープ処理したセッション変数の値を代入
 $name = h( $_SESSION[ 'name' ] );
+$furigana = h( $_SESSION[ 'furigana' ] );
 $email = h( $_SESSION[ 'email' ] ) ;
 $tel =  h( $_SESSION[ 'tel' ] ) ;
 $subject = h( $_SESSION[ 'subject' ] );
@@ -40,6 +41,7 @@ $body = h( $_SESSION[ 'body' ] );
 $mail_body = 'コンタクトページからのお問い合わせ' . "\n\n";
 $mail_body .=  date("Y年m月d日 H時i分") . "\n\n"; 
 $mail_body .=  "お名前： " .$name . "\n";
+$mail_body .=  "ふりがな： " .$furigana . "\n";
 $mail_body .=  "Email： " . $email . "\n"  ;
 $mail_body .=  "お電話番号： " . $tel . "\n\n" ;
 $mail_body .=  "＜お問い合わせ内容＞" . "\n" . $body;
