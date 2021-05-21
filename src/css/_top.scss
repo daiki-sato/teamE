@@ -135,12 +135,36 @@
   height: 400px;
 
   background-color: $color-lightGreen;
+
+
+  .pick-up-list{
+    background-color: $color-white;
+    padding: 30px;
+    margin: 0 10px;
+  }
+
+  .pick-up-list__1{
+    display: flex;
+  }
   .pick-up__title{
     color: white;
   }
 
   .pick-up-list__img{
+
+    width: 220px;
+    height: 140px;
+    margin: 0 auto;
+  }
+
+  .pick-up-list__button button{
+    background-color: $color-lightGreen;
+    color: $color-white;
+    padding: 20px;
+    border: none;
+
     width: 200px;
+
   }
 
 }

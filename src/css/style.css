@@ -120,9 +120,23 @@
 .pick-up {
   height: 400px;
   background-color: #89CEC8; }
+  .pick-up .pick-up-list {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 0 10px; }
+  .pick-up .pick-up-list__1 {
+    display: flex; }
   .pick-up .pick-up__title {
     color: white; }
   .pick-up .pick-up-list__img {
+    width: 220px;
+    height: 140px;
+    margin: 0 auto; }
+  .pick-up .pick-up-list__button button {
+    background-color: #89CEC8;
+    color: #ffffff;
+    padding: 20px;
+    border: none;
     width: 200px; }
 
 .footer {
@@ -143,10 +157,10 @@
     padding: 5px 25px;
     font-size: 12px; }
 
-.entry-form {
+.entry-page {
   border: 1px  solid gray;
   margin-top: 10px;
   height: 100vh;
   padding: 10px 3px; }
-  .entry-form .entry-form__text {
+  .entry-page .entry-page__text {
     margin: 20px 0; }
