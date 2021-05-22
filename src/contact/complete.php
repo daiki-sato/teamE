@@ -36,48 +36,26 @@ $email = h( $_SESSION[ 'email' ] ) ;
 $tel =  h( $_SESSION[ 'tel' ] ) ;
 $subject = h( $_SESSION[ 'subject' ] );
 $body = h( $_SESSION[ 'body' ] );
- 
-//メール本文の組み立て
-$mail_body = 'コンタクトページからのお問い合わせ' . "\n\n";
-$mail_body .=  date("Y年m月d日 H時i分") . "\n\n"; 
-$mail_body .=  "お名前： " .$name . "\n";
-$mail_body .=  "ふりがな： " .$furigana . "\n";
-$mail_body .=  "Email： " . $email . "\n"  ;
-$mail_body .=  "お電話番号： " . $tel . "\n\n" ;
-$mail_body .=  "＜お問い合わせ内容＞" . "\n" . $body;
-  
-//-------- sendmail（mb_send_mail）を使ったメールの送信処理------------
- 
-//メールの宛先（名前<メールアドレス> の形式）。値は mailvars.php に記載
-$mailTo = mb_encode_mimeheader(MAIL_TO_NAME) ."<" . MAIL_TO. ">";
- 
-//Return-Pathに指定するメールアドレス
-$returnMail = MAIL_RETURN_PATH; //
-//mbstringの日本語設定
-mb_language( 'ja' );
-mb_internal_encoding( 'UTF-8' );
- 
-// 送信者情報（From ヘッダー）の設定
-$header = "From: " . mb_encode_mimeheader($name) ."<" . $email. ">\n";
-$header .= "Cc: " . mb_encode_mimeheader(MAIL_CC_NAME) ."<" . MAIL_CC.">\n";
-$header .= "Bcc: <" . MAIL_BCC.">";
- 
-//メールの送信（結果を変数 $result に格納）
-if ( ini_get( 'safe_mode' ) ) {
-  //セーフモードがOnの場合は第5引数が使えない
-  $result = mb_send_mail( $mailTo, $subject, $mail_body, $header );
-} else {
-  $result = mb_send_mail( $mailTo, $subject, $mail_body, $header, '-f' . $returnMail );
-}
- 
-//メール送信の結果判定
-if ( $result ) {
-  //成功した場合はセッションを破棄
-  $_SESSION = array(); //空の配列を代入し、すべてのセッション変数を消去 
-  session_destroy(); //セッションを破棄
-} else {
-  //送信失敗時（もしあれば）
-}
+
+//スプシのwebURL
+$url = 'https://script.google.com/macros/s/AKfycbza_W0W9nfKHOW-XGeuhvqSoYYer16177s6WdcuOQpV2UXTIR0Gcq24zEoCdhK9DAZXUw/exec';
+// すぷしに持っていくデータの設定
+$data = array(
+    'name' => $name,
+    'furigana' => $furigana,
+);
+// リクエスト情報の設定
+$context = array(
+    'http' => array(
+        'method'  => 'POST',
+        'header'  => implode("\r\n", array('Content-Type: application/x-www-form-urlencoded',)),
+        'content' => http_build_query($data)
+    )
+);
+// リクエストの実装
+$response_json = file_get_contents($url, false, stream_context_create($context));
+// jsonの文字列をPHPで扱いやすくしている
+$response_data = json_decode($response_json);
 ?>
 
 <!DOCTYPE html>
@@ -93,7 +71,8 @@ if ( $result ) {
 <body>
 <div class="container">
   <h2>お問い合わせフォーム</h2>
-  <?php if ( $result ): ?>
+  <!-- スプシにsession情報をおくれている　→　成功 -->
+  <?php if ( $response_data->status === 200 ): ?>
   <h3>送信完了!</h3>
   <p>お問い合わせいただきありがとうございます。</p>
   <p>送信完了いたしました。</p>
