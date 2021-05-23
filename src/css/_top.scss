@@ -123,10 +123,19 @@ button{
 .pick-up{
   // 消す
   height: 400px;
-
   background-color: $color-lightGreen;
 
+  .pick-up__title__box{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 10px;
 
+    .pick-up__title__img{
+      width: 30px;
+      margin-right: 10px;
+    }
+  }
+  
   .pick-up-list{
     background-color: $color-white;
     padding: 30px;
@@ -135,9 +144,6 @@ button{
 
   .pick-up-list__1{
     display: flex;
-  }
-  .pick-up__title{
-    color: white;
   }
 
   .pick-up-list__img{

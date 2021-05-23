@@ -155,6 +155,17 @@ button {
   background-color: #89CEC8;
 }
 
+.pick-up .pick-up__title__box {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 10px;
+}
+
+.pick-up .pick-up__title__box .pick-up__title__img {
+  width: 30px;
+  margin-right: 10px;
+}
+
 .pick-up .pick-up-list {
   background-color: #ffffff;
   padding: 30px;
@@ -163,10 +174,6 @@ button {
 
 .pick-up .pick-up-list__1 {
   display: flex;
-}
-
-.pick-up .pick-up__title {
-  color: white;
 }
 
 .pick-up .pick-up-list__img {
