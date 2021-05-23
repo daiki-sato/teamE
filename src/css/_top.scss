@@ -1,47 +1,39 @@
  /* トップページのcss */
 /* // ここにheader.sass fotter.sassなどを挿入する */
-
-
-
-
-.keyword-search{
-
-  .keyword-search-form__input{
-    width: 70%;
-    height: 40px;
-  }
-  .keyword-search-form__button{
-    background-color: $color-gray;
-    color: $color-white;
-    border: none;
-    padding: 8px 30px;
-    border-radius: 5px;
-
-  }
+button{
+  cursor: pointer;
+}
+.search-area{    
+  text-align: center;
 }
 
+
 .category-search{
+
+  
   .category-search__menu{
-
-
+    text-align: center;
   }
-  
   .category-search__list{
-    margin: 10px;
-    border:  1px solid black;
-    
+    // margin: 10px;
+    // border:  1px solid black;
+    margin: 20px 0;
+
   }
   
-  .category-search__title-box{
-    background-color: $color-green;
-    padding:5px 0;
+  .category-search__button{
     
-    
-  }
-  .category-search__title{
+    background-color: $color-gray;
+    border: none ;
+
     color: $color-white;
-    
+    width: 300px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
   }
+
   .category-search__text{
     font-size: 12px;
     padding: 5px 10px;
@@ -80,7 +72,7 @@
 
 .search-box{
 
-  background-color: $color-green;
+  background-color: $color-gray;
   margin: 0 20px;
   text-align: center;
 
@@ -124,7 +116,19 @@
 }
 
 
-
+.number-of-searches-box{
+  background-color: #E0E4EA;
+  margin: 10px auto;
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  
+  
+  .number-of-searches__text{
+    font-size: 10px;
+    text-align: center;
+  }
+}
 
 
 
