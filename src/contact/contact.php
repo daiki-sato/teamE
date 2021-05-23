@@ -61,7 +61,7 @@ $ticket = $_SESSION[ 'ticket' ];
       <label for="furigana">ふりがな（必須） 
         <span class="error"><?php echo h( $error_furigana ); ?></span>
       </label>
-      <input type="text" class="form-control validate max50 required" id="furigana" name="furingana" placeholder="たかはしひな" value="<?php echo h($furigana); ?>">
+      <input type="text" class="form-control validate max50 required" id="furigana" name="furigana" placeholder="たかはしひな" value="<?php echo h($furigana); ?>">
     </div>
 
     <div class="form-group">
