@@ -223,6 +223,7 @@ button {
   background-color: #FFAB3F;
   padding: 5px 25px;
   font-size: 12px;
+  border-radius: 5px;
 }
 
 .footer .footer__reset-button {
@@ -230,8 +231,8 @@ button {
   border: none;
   background-color: #c9c9c9;
   color: #ffffff;
-  padding: 5px 25px;
-  font-size: 12px;
+  padding: 3px 15px;
+  font-size: 10px;
 }
 
 .entry-page {
