@@ -8,7 +8,7 @@ $color-orange:#FFAB3F;
 $color-white:#ffffff;
 $color-lightGreen:#89CEC8;
 $color-lightBlue:#E0E4EA;
-$color-gray:#757678;
+$color-gray:#c9c9c9;
 
 
 
@@ -23,7 +23,7 @@ $color-gray:#757678;
 
 @mixin btn-tag {
   color: $color-white;
-  background-color: $color-green;
+  background-color: $color-gray;
   padding: 10px 15px;
   border-radius: 50px;
 }
