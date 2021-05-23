@@ -1,35 +1,25 @@
  /* トップページのcss */
 /* // ここにheader.sass fotter.sassなどを挿入する */
 
-
-
-
-.keyword-search{
-
-  .keyword-search-form__input{
-    width: 70%;
-    height: 40px;
-  }
-  .keyword-search-form__button{
-    background-color: $color-gray;
-    color: $color-white;
-    border: none;
-    padding: 8px 30px;
-    border-radius: 5px;
-
-  }
+button{
+  cursor: pointer;
 }
 
 .category-search{
-  .category-search__menu{
 
+
+  .category-search__button{
+    background-color: $color-gray;
+    color: $color-white;
+    border: none;
+    width: 350px;
+    padding: 10px 30px;
+    border-radius: 10px;
 
   }
   
   .category-search__list{
     margin: 10px;
-    border:  1px solid black;
-    
   }
   
   .category-search__title-box{
@@ -133,21 +123,26 @@
 .pick-up{
   // 消す
   height: 400px;
-
   background-color: $color-lightGreen;
 
+  .pick-up__title__box{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 10px;
 
+    .pick-up__title__img{
+      width: 30px;
+      margin-right: 10px;
+    }
+  }
+  
   .pick-up-list{
     background-color: $color-white;
     padding: 30px;
     margin: 0 10px;
   }
-
   .pick-up-list__1{
     display: flex;
-  }
-  .pick-up__title{
-    color: white;
   }
 
   .pick-up-list__img{
@@ -167,4 +162,27 @@
 
   }
 
+}
+
+
+.search-results{
+
+  .search-results__title-box{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 20px;
+
+    .fa-search{
+      background-color: orange;
+      border-radius: 50px;
+      padding: 7px;
+      color: $color-white;
+      margin-right: 10px;
+    }
+  }
+
+  .search-results__agent{
+    text-align: center;
+  }
 }
