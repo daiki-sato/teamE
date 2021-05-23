@@ -57,22 +57,21 @@
 
 /* トップページのcss */
 /* // ここにheader.sass fotter.sassなどを挿入する */
-.keyword-search .keyword-search-form__input {
-  width: 70%;
-  height: 40px;
+button {
+  cursor: pointer;
 }
 
-.keyword-search .keyword-search-form__button {
-  background-color: #757678;
+.category-search .category-search__button {
+  background-color: #c9c9c9;
   color: #ffffff;
   border: none;
-  padding: 8px 30px;
-  border-radius: 5px;
+  width: 350px;
+  padding: 10px 30px;
+  border-radius: 10px;
 }
 
 .category-search .category-search__list {
   margin: 10px;
-  border: 1px solid black;
 }
 
 .category-search .category-search__title-box {
@@ -105,7 +104,7 @@
 
 .tag-search .tag-search__list a {
   color: #ffffff;
-  background-color: #28A69A;
+  background-color: #c9c9c9;
   padding: 10px 15px;
   border-radius: 50px;
 }
@@ -203,7 +202,7 @@
 .footer .footer__reset-button {
   cursor: pointer;
   border: none;
-  background-color: #757678;
+  background-color: #c9c9c9;
   color: #ffffff;
   padding: 5px 25px;
   font-size: 12px;
