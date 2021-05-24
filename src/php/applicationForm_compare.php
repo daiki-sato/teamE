@@ -49,7 +49,7 @@
             <span class="applicationForm-compare-button__submit">お申し込みリストに<br>追加する</span>
           </p>  
         </div>
-     </div>
+      </div>
 
 </body>
 </html>
