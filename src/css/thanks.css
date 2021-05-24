@@ -1,0 +1,202 @@
+
+.thanksPafe-container{
+  margin: 10px;
+  padding: 20px;
+  font-size: 5px;
+  border: solid 1px #e5e5e5
+}
+
+.thanksPafe-title__text{
+  text-align: center;
+}
+/* Thanks! */
+.thanksPage-title__pagetop{
+  color: #f28d3c;
+  font-weight: 600;
+  font-size: 7vmin;
+  margin: 2vmax;
+}
+
+/* お申し込みありがとうございます */
+.thanksPage-title__pagetop2{
+  font-weight: 300;
+  font-size: 5.5vmin;
+  margin-top: 1vmax;
+  margin-bottom: 1vmax;
+  white-space: normal;
+}
+
+/* お申し込み内容の確認についてのメールを送信しました。 */
+.thanksPage-title__pagetop3{
+  font-weight: 300;
+  font-size: 3.2vmin;
+  padding: 2vmax 0;
+}
+
+/* 警告文 親*/
+.thanksPage-title__alert--parent{
+  text-align: center;
+  margin: 2vmax 0;
+}
+
+/* 警告文 子 */
+.thanksPage-title__alert--child{
+  display: inline-block;
+  text-overflow: ellipsis;
+  line-height: 130%;
+  font-weight: 300;
+  font-size: 2.5vmin;
+  padding: 1vmax;
+  background-color: #f9d0a8;
+  box-shadow: 4px 4px #ddd6ce;
+}
+
+
+/* あなたにおすすめのエージェント＿＿全体 */
+.thanksPage-recommended__title--parent{
+  padding: 2vmax 0;
+}
+
+.thanksPage-recommended__title--child{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 3vmax 0;
+}
+/* 下向きの三角形 */
+.thanksPage-recommended__triangle{
+  border-left: 2vmin solid transparent;
+  border-right: 2vmin solid transparent;
+  border-top: 3.5vmin solid  #80cbc5;
+  margin-right: 1vmax;
+  margin-left: 1vmax;
+}
+
+/* あなたにおすすめのエージェント */
+.thanksPage-recommended__text{
+  font-weight: 300;
+  font-size: 3.2vmin;
+}
+
+
+/* おすすめエージェント__画像,星 */
+.thanksPage-recommended__contents-summary{
+  display: flex;
+  justify-content: center;
+  margin: 1vmax;
+  align-items: center;
+}
+
+/* エージェント画像 */
+.thanksPage-recommended__contents-summary--left{
+  width: 32vmin;
+  height: 18vmin;
+  padding: 1vmax;
+  /* ↓とりあえず大きさ見るために付けてるだけ↓ */
+  border: 1px solid;
+}
+
+/* エージェント名,星 */
+.thanksPage-recommended__contents-summary--right{
+  margin: 1vmax;
+  padding: 1vmax;
+}
+
+
+/* エージェント名 */
+.thanksPage-recommended__agant-name{
+  font-size: 4.8vmin;
+  color: #000000;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* #星n以上 */
+.thanksPage-recommended__hashtag{
+  font-size: 4vmin;
+  margin: 1vmax 0;
+}
+
+
+.thanksPage-recommended__stars{
+  font-size: 3vmin;
+}
+
+/* 星5つ評価 */
+.thanksPage-recommended__stars-rating{
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: #CCCCCC; /* グレーカラー 自由に設定化 */
+  /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.thanksPage-recommended__stars-rating:before,.thanksPage-recommended__stars-rating:after{
+  content: '★★★★★';
+}
+
+.thanksPage-recommended__stars-rating:after{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+/* data-rateに数値が入った時の動き */
+.thanksPage-recommended__stars-rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.thanksPage-recommended__stars-rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.thanksPage-recommended__stars-rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.thanksPage-recommended__stars-rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.thanksPage-recommended__stars-rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.thanksPage-recommended__stars-rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.thanksPage-recommended__stars-rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.thanksPage-recommended__stars-rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.thanksPage-recommended__stars-rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.thanksPage-recommended__stars-rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.thanksPage-recommended__stars-rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
+
+/* エージェント詳細説明 */
+.thanksPage-recommended__contents-explanation{
+  font-size: 3vmin;
+  text-align: center;
+  padding: 2vmax;
+  line-height: 150%;
+}
+
+/* ボタン類 */
+.thanksPage-recommended-buttons{
+  text-align: center;
+  margin: 2vmax;
+}
+
+/* 詳細記事btn */
+.thanksPage-recommended-button__article{
+  width: 27vmin;
+  display: inline-block;
+  background-color: #80cbc5;
+  font-size: 3vmin;
+  color: #ffff;
+  padding: 3vmin 4vmin;
+  margin: 1vmin;
+  cursor: pointer;
+}
+
+/* 続けて申し込むbtn */
+.thanksPage-recommended-button__submit{
+  width: 27vmin;
+  display: inline-block;
+  background-color: #47a69b;
+  font-size: 3vmin;
+  color: #ffff;
+  padding-top: 3vmin;
+  padding-bottom: 3vmin;
+  padding-left: 4vmin;
+  padding-right: 4vmin;
+  margin: 1vmin;
+  cursor: pointer;
+}
