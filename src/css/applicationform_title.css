@@ -1,0 +1,18 @@
+/* ーお申し込みー */
+.applicationForm-title{
+  color: #000000;
+	font-size: 5vmin;
+  font-weight: 300;
+	display: flex;
+	align-items: center;
+  margin: 3vmax;
+  justify-content: center;
+}
+.applicationForm-title::before,
+.applicationForm-title::after {
+  content: "";
+	flex-grow: 0.1;
+	height: 1px;
+	background: #000000;
+	display: block;
+}
