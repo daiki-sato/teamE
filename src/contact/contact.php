@@ -49,6 +49,7 @@ $ticket = $_SESSION[ 'ticket' ];
 <div class="container">
   <h2>お問い合わせフォーム</h2>
   <p>以下のフォームからお問い合わせください。</p>
+  
   <form id="main_contact" method="post" action="confirm.php">
     <div class="form-group">
       <label for="name">お名前（必須） 
