@@ -83,6 +83,7 @@
     </div>
   </div>
 
-  <script src="../js/thanks.js"></script>
+  <script src="..js/thanks.js"></script>
+   
 </body>
 </html>

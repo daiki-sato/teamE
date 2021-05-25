@@ -1,5 +1,5 @@
 
-.thanksPafe-container{
+.thanksPage-container{
   margin: 10px;
   padding: 20px;
   font-size: 5px;
@@ -199,4 +199,49 @@
   padding-right: 4vmin;
   margin: 1vmin;
   cursor: pointer;
+  transition: 0.4s ease-in-out
 }
+
+/* モーダル */
+.thanksPafe-container__hidden{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  min-width: 0;
+}
+
+.thanksPage_modal-content{
+  background-color: white;
+  margin: 30% auto;
+  padding: 12% 0;
+  width: 60%;
+  border-radius: 6%/12%;
+}
+
+.thanksPage_modal-body{
+  font-size: 5vmin;
+  font-weight: 300;
+}
+
+#modal.show {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* モーダル表示時画面固定 */
+body .modal-open{
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px; /* 幅のリフローを避ける */
+  position: fixed;
+}
+
+
