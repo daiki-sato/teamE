@@ -129,3 +129,18 @@
   margin: 1vmin;
   cursor: pointer;
 }
+
+/* お申し込みリストから外すbtn */
+.applicationForm-compare-button__unsubmit{
+  width: 27vmin;
+  display: inline-block;
+  background-color: #c4c4c4;
+  font-size: 3vmin;
+  color: #ffff;
+  padding-top: 2vmin;
+  padding-bottom: 2vmin;
+  padding-left: 4vmin;
+  padding-right: 4vmin;
+  margin: 1vmin;
+  cursor: pointer;
+}
