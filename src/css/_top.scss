@@ -4,22 +4,46 @@
 button{
   cursor: pointer;
 }
+.category-tag-search{
+  display: none;
 
-.category-search{
+}
+@media screen and (min-width: 960px) {
+  .category-tag-search{
+    display: block;
+  }
+  .category-search{
+    display: none;
+  }
+  .tag-search{
+    display: none;
+  }
+  .aa{
+    display: flex;
+  }
+
+  .category-search__menu{
+    width: 100%;
+  }
+}
+
+
+
 
 
   .category-search__button{
-    background-color: $color-gray;
-    color: $color-white;
+    background-color: #c9c9c9;
+    color: #ffffff;
     border: none;
-    width: 350px;
+    width: 100%;
     padding: 10px 30px;
     border-radius: 10px;
+    margin: 0 auto;
 
   }
   
   .category-search__list{
-    margin: 10px;
+    margin: 10px 20px;
   }
   
   .category-search__title-box{
@@ -39,12 +63,12 @@ button{
 
   }
 
-}
+
 
   
   
 
-.tag-search{
+
 
   .tag-search__menu{
     margin: 0 20px;
@@ -66,7 +90,7 @@ button{
     @include btn-tag;
   
   }
-}
+
 
 .search-box{
 
