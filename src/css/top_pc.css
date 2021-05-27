@@ -62,9 +62,11 @@ button {
   width: 1.5em;
   height: 1.5em;
 }
-input[type="checkbox" i]{
+
+/* gattyannko_5/28 */
+/* input[type="checkbox" i]{
   display: none;
-}
+} */
 
 .category-search__button-text{
   font-size: 1.5em;
