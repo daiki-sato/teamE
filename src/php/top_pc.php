@@ -1,3 +1,12 @@
+<?php
+// セッションを開始
+session_start();
+require(dirname(__FILE__) . "/dbconnect.php");
+if (isset($_POST['tag']) && is_array($_POST['tag'])) {
+  $tag = $_POST["tag"]; 
+}
+?>
+
 <!-- header.phpとfooter.phpを挿入する -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -48,7 +57,7 @@
         </div>
   
         <h1 class="header-logo">
-          <img src="./logo.png" class="header-logo__img" alt="就活の教科書_ロゴ">
+          <img src="../img/shukatsu_text-logo-1.png" class="header-logo__img" alt="就活の教科書_ロゴ">
         </h1>
 
     </div>
@@ -87,6 +96,7 @@
   
     <div class="category-search__menu">
       <div class="category-search__list">
+
         <input type="checkbox" class="category-search__button">
           <p><img src="./checking.png" class="category-search__button-check" alt="チェックマーク"></p>
           <p class="category-search__button-text">エージェント</p>
@@ -114,65 +124,12 @@
     <div class="search-area">
       <h2 class="search-area__title">タグからから探す</h2>
     </div>
-  
-    <ul class="tag-search__menu">
-      <li class="tag-search__list"  ><a href="" onclick="buttonClick()">#理系</a></li>
-      <li class="tag-search__list"  onclick="buttonClick()"><a href="">#文系</a></li>
-      <li class="tag-search__list"  onclick="buttonClick()"><a href="">#星3以上</a></li>
-      <li class="tag-search__list"  onclick="buttonClick()"><a href="">#理系</a></li>
-      <li class="tag-search__list"  onclick="buttonClick()"><a href="">#文系</a></li>
-      <li class="tag-search__list"  onclick="buttonClick()"><a href="">#星3以上</a></li>
-      <li class="tag-search__list"  onclick="buttonClick()"><a href="">#理系</a></li>
-      <li class="tag-search__list"  onclick="buttonClick()"><a href="">#文系</a></li>
-      <li class="tag-search__list"  onclick="buttonClick()"><a href="">#星3以上</a></li>
-    </ul>
-  </section>
-  
-  <!-- だいきへー↓↓↓↓↓これはなんですか？↓↓↓ -->
-  
-  <!-- 
-  <section class="category-tag-search">
-    <div class="search-area">
-      <h2 class="search-area__title">サービス・タグから探す</h2>
-    </div>
-  
-    <div class="aa"> -->
-  
-      
-      <!-- <div class="category-search__menu">
-        <div class="category-search__list">
-          <button class="category-search__button">
-            <i class="fas fa-check">エージェント</i>
-          </button>
-        </div>
-        <div class="category-search__list">
-          <button class="category-search__button">
-            <i class="fas fa-check">イベント</i>
-          </button>
-        </div>
-        <div class="category-search__list">
-          <button class="category-search__button">
-            <i class="fas fa-check">サービス</i>
-          </button>
-        </div>
-      </div> -->
-  
-  
-      <!-- <ul class="tag-search__menu">
-        <li class="tag-search__list"  ><a href="" onclick="buttonClick()">#理系</a></li>
-        <li class="tag-search__list"  onclick="buttonClick()"><a href="">#文系</a></li>
-        <li class="tag-search__list"  onclick="buttonClick()"><a href="">#星3以上</a></li>
-        <li class="tag-search__list"  onclick="buttonClick()"><a href="">#理系</a></li>
-        <li class="tag-search__list"  onclick="buttonClick()"><a href="">#文系</a></li>
-        <li class="tag-search__list"  onclick="buttonClick()"><a href="">#星3以上</a></li>
-        <li class="tag-search__list"  onclick="buttonClick()"><a href="">#理系</a></li>
-        <li class="tag-search__list"  onclick="buttonClick()"><a href="">#文系</a></li>
-        <li class="tag-search__list"  onclick="buttonClick()"><a href="">#星3以上</a></li>
-      </ul> -->
-<!--   
-    </div>
-  </section> -->
-  
+
+<!-- ちよこが入力 -->
+<form method="post" action=""　class="tag-search__menu">
+     <input type="checkbox" name="tag[]" value="1"><a class="tag-search__list">理系</a>
+     <input type="checkbox" name="tag[]" value="2"><a class="tag-search__list">文系</a>
+
   <div class="application-area">
     <p class="application-area__text">就活相談なら</p>
     <button class="application-area__button">エージェント一括申し込み！</button>
@@ -181,7 +138,9 @@
   
   
   <div class="search-box"> 
-    <button class="search-box__button">検索</button>
+     <button class="search-box__button"type="submit">検索</button><br>
+    </form>
+<!-- ちよこが入力ここまで -->
   </div>
   
   <div class="number-of-searches-box">
@@ -198,6 +157,8 @@
   
     <div class="pick-up-lists">
       <!-- この中にcardを入れる -->
+    
+      <!-- cardここまで -->
       <div class="pick-up-list">
         <img class="pick-up-list__img" src="../img/キャリセン.png" alt="キャリセンの画像">
         <p>キャリセン</p>
@@ -214,29 +175,7 @@
       <p class="section__title-text">検索結果 n件表示</p>
     </div>
   
-    <p class="search-result__agent">&emsp;エージェント&emsp;</p>
-
-  
-    <div class="search-results-lists">
-      <div class="search-results-list">
-  
-      </div>
-      <div class="search-results-list">
-  
-      </div>
-      
-      <div class="application-area">
-        <p class="application-area__text">よくわからない方は</p>
-        <button class="application-area__button">一括申し込み！</button>
-        <span class="application-area__description">就活のプロが話を聞いてくれます</span>
-      </div>
-      
-      <div class="search-results-list">
-  
-      </div>
-      
-    </div>
-  
+    <p class="search-result__agent">&emsp;エージェント&emsp;</p>  
   </section>
   
   <section class="article">

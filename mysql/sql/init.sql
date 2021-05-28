@@ -24,7 +24,7 @@ CREATE TABLE agents (
   button_type BOOLEAN NOT NULL,
   pickup BOOLEAN,
   star FLOAT NOT NULL,
-  offcial_link VARCHAR(100) NOT NULL,
+  official_link VARCHAR(100) NOT NULL,
   article_link VARCHAR(100) NOT NULL,
   memo VARCHAR(200),
   status BOOLEAN NOT NULL,
@@ -32,15 +32,19 @@ CREATE TABLE agents (
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO agents SET 
-agent_name='キャリセン',
-image_url='https://careecen-shukatsu-agent.com/wp-content/themes/thinktwice/assets/images/logo.png',
-overview='株式会社シンクトワイスが運営する就職支援、新卒紹介のエージェントサービス。面接後にフィードバックをもらえる！自分に合った企業を見つけることができる！ESの添削、面接練習をすることで自信に繋がる！',
-button_type=TRUE,
-star=3.5,
-offcial_link='https://careecen-shukatsu-agent.com/ ',
-article_link='https://reashu.com/careecen-shukatsu-agent/',
-status=TRUE;
+-- INSERT INTO agents SET 
+-- agent_name='キャリセン',
+-- image_url='https://careecen-shukatsu-agent.com/wp-content/themes/thinktwice/assets/images/logo.png',
+-- overview='株式会社シンクトワイスが運営する就職支援、新卒紹介のエージェントサービス。面接後にフィードバックをもらえる！自分に合った企業を見つけることができる！ESの添削、面接練習をすることで自信に繋がる！',
+-- button_type=TRUE,
+-- star=3.5,
+-- offcial_link='https://careecen-shukatsu-agent.com/ ',
+-- article_link='https://reashu.com/careecen-shukatsu-agent/',
+-- status=TRUE;
+
+INSERT INTO `agents` (`id`, `agent_name`, `image_url`, `overview`, `upper_limit`, `deadline`, `button_type`, `pickup`, `star`, `official_link`, `article_link`, `memo`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'キャリセン', 'https://careecen-shukatsu-agent.com/wp-content/themes/thinktwice/assets/images/logo.png', '株式会社シンクトワイスが運営する就職支援、新卒紹介のエージェントサービス。面接後にフィードバックをもらえる！自分に合った企業を見つけることができる！ESの添削、面接練習をすることで自信に繋がる！', NULL, NULL, 1, NULL, 3.5, 'https://careecen-shukatsu-agent.com/ ', 'https://reashu.com/careecen-shukatsu-agent/', NULL, 1, '2021-05-22 04:35:50', '2021-05-22 04:35:50'),
+(2, 'キャリアチケット', 'https://careerticket.jp/img/top_ogp.jpg', '参加企業が厳選されておりブラック企業を避けられる！\r\nエントリーシート（ES）や面接のフィードバックがもらえる！\r\n早めに内定を確保できる！', NULL, NULL, 1, NULL, 4, 'https://careerticket.jp/', 'https://reashu.com/carrer-ticket/', NULL, 1, '2021-05-27 03:35:51', '2021-05-27 03:35:51');
 
 
 DROP TABLE IF EXISTS agent_tag_table;
@@ -50,9 +54,10 @@ CREATE TABLE agent_tag_table (
   tag_id INT NOT NULL
 );
 
-INSERT INTO agent_tag_table SET 
-agent_id=1,
-tag_id=2;
+INSERT INTO `agent_tag_table` (`id`, `agent_id`, `tag_id`) VALUES
+(1, 1, 2),
+(2, 1, 1),
+(3, 2, 1);
 
 DROP TABLE IF EXISTS agent_kw_table;
 CREATE TABLE agent_kw_table (
@@ -71,8 +76,9 @@ CREATE TABLE tag_table (
   tag_name VARCHAR(20) UNIQUE
 );
 
-INSERT INTO tag_table SET 
-tag_name='理系';
+INSERT INTO `tag_table` (`id`, `tag_name`) VALUES
+(1, '理系'),
+(2, '文系');
 
 DROP TABLE IF EXISTS kw_table;
 CREATE TABLE kw_table (
