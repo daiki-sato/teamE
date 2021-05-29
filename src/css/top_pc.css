@@ -181,10 +181,12 @@ button {
 }
 
 
+/* 一括申し込み */
 .application-area {
   margin-bottom: 3em;
   background-color: #E0E4EA;
   text-align: center;
+  display: grid;
 }
 
 .application-area .application-area__text {
@@ -196,14 +198,14 @@ button {
 
 .application-area .application-area__description {
   line-height: 30px;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 300;
   padding-top: 0.5em;
 }
 
 .application-area .application-area__button {
   display: block;
-  width: 80%;
+  width: 15em;
   cursor: pointer;
   border: none;
   padding: 0.5em 1em;
@@ -211,7 +213,7 @@ button {
   text-align: center;
   color: #ffffff;
   background-color: #FFAB3F;
-  font-size: 4em;
+  font-size: 6em;
   font-weight: 600;
 }
 
