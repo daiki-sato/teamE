@@ -311,15 +311,35 @@
     <h2 class="pick-up__title__text">PICK UP</h2>
   </div>
 
-  <div class="pick-up-lists">
-    <div class="pick-up-list">
-      <img class="pick-up-list__img" src="../img/キャリセン.png" alt="キャリセンの画像">
-      <p>キャリセン</p>
-      <p>採用コンサルタントが、じっくり1時間の個別面談。一人一人に合った納得内定獲得を徹底的にサポート。</p>
-      <button>解説記事</button>
-      <button>資料請求リストに追加する</button>
-    </div>
-  </div>
+
+      
+
+  <?php
+  require "top_sp_card.php"; //top_sp_card.phpのプログラムを使うよ
+  ?>
+  
+  <!--$thanksPage_recommended__image,:  エージェント画像    
+      $thanksPage_recommended__agant_name,：企業の名前 （例）キャリセン
+      $thanksPage_recommended__hashtag,    :（例）星3以上、理系,文系
+      $thanksPage_recommended__stars_rating  :（例）4.0 星の数
+      $thanksPage_recommended__contents_explanation: 企業の説明文
+      thanksPage_recommended_button__submit: 続けて申し込むor外部サイトから追加するor資料請求資料請求リストに追加する -->
+
+      <!-- ここの引数に関数を入れてfor文で回してね -->
+      
+  <?php
+  for ($i=0; $i < 1; $i++) { 
+    part_sp_card(
+      "../img/キャリセン.png",
+      "キャリセン",
+      "#星3以上",
+      "4.0",
+      "採用コンサルタントが、じっくり1時間の個別面談。
+      一人一人に合った納得内定獲得を徹底的にサポート。",
+      "続けて申し込む"
+    ); 
+  }
+  ?>
 </section>
 
 <section class="search-results">
@@ -334,6 +354,32 @@
 
   <div class="search-results-lists">
     <div class="search-results-list">
+    <?php
+  require "top_sp_card.php"; //top_sp_card.phpのプログラムを使うよ
+  ?>
+  
+  <!--$thanksPage_recommended__image,:  エージェント画像    
+      $thanksPage_recommended__agant_name,：企業の名前 （例）キャリセン
+      $thanksPage_recommended__hashtag,    :（例）星3以上、理系,文系
+      $thanksPage_recommended__stars_rating  :（例）4.0 星の数
+      $thanksPage_recommended__contents_explanation: 企業の説明文
+      thanksPage_recommended_button__submit: 続けて申し込むor外部サイトから追加するor資料請求資料請求リストに追加する -->
+
+      <!-- ここの引数に関数を入れてfor文で回してね -->
+      
+  <?php
+  for ($i=0; $i < 132; $i++) { 
+    part_sp_card(
+      "../img/キャリセン.png",
+      "キャリセン",
+      "#星3以上",
+      "4.0",
+      "採用コンサルタントが、じっくり1時間の個別面談。
+      一人一人に合った納得内定獲得を徹底的にサポート。",
+      "続けて申し込む"
+    ); 
+  }
+  ?>
 
     </div>
     <div class="search-results-list">

@@ -31,59 +31,39 @@
     <div class="thanksPage-recommended__title--parent">
       <div class="thanksPage-recommended__title--child">
         <div class="thanksPage-recommended__triangle"></div>
-        <h4 class="thanksPage-recommended__text">あなたにおすすめのエージェント</h4>
+          <h4 class="thanksPage-recommended__text">あなたにおすすめのエージェント</h4>
         <div class="thanksPage-recommended__triangle"></div>
-        <div class="thanksPage-recommended--parent"></div>
     </div>
 
-    <div class="thanksPage-reccomended__contents--parent">
-      <div class="thanksPage-recommended__contents-summary">
 
-        <div class="thanksPage-recommended__contents-summary--left">
-          <img src="#" class="thanksPage-recommended__image" alt="エージェント画像が入ります">
-        </div>
 
-        <div class="thanksPage-recommended__contents-summary--right">    
-          <p class="thanksPage-recommended__agant-name--box">
-            <a href="#" class="thanksPage-recommended__agant-name">キャリセン</a>
-          </p>
-          <p class="thanksPage-recommended__hashtag">
-            #星3以上
-          </p>
-          <p class="thanksPage-recommended__stars">
-            <span class="thanksPage-recommended__stars-rating" data-rate="3"></span>&ensp;3.0
-          </p>
-        </div>
+  <?php
+  require "top_sp_card.php"; //top_sp_card.phpのプログラムを使うよ
+  ?>
+  
+  <!--$thanksPage_recommended__image,:  エージェント画像    
+      $thanksPage_recommended__agant_name,：企業の名前 （例）キャリセン
+      $thanksPage_recommended__hashtag,    :（例）星3以上、理系,文系
+      $thanksPage_recommended__stars_rating  :（例）4.0 星の数
+      $thanksPage_recommended__contents_explanation: 企業の説明文
+      thanksPage_recommended_button__submit: 続けて申し込むor外部サイトから追加するor資料請求資料請求リストに追加する -->
 
-      </div>
+      <!-- ここの引数に関数を入れてfor文で回してね -->
+      
+  <?php
+  for ($i=0; $i < 132; $i++) { 
+    part_sp_card(
+      "../img/キャリセン.png",
+      "キャリセン",
+      "#星3以上",
+      "4.0",
+      "採用コンサルタントが、じっくり1時間の個別面談。
+      一人一人に合った納得内定獲得を徹底的にサポート。",
+      "続けて申し込む"
+    ); 
+  }
+  ?>
 
-      <div class="thanksPage-recommended__contents-explanation">
-        採用コンサルタントが、じっくり1時間の個別面談。<br>
-        一人一人に合った納得内定獲得を徹底的にサポート。
-      </div>
-
-      <div class="thanksPage-recommended-buttons">
-        <p>
-          <span class="thanksPage-recommended-button__article">解説記事</span>
-        </p>
-        <p id="submitbutton" onClick='showDialog()'>
-          <span class="thanksPage-recommended-button__submit">続けて申し込む</span>
-        </p>
-
-        <!-- 申し込み完了モーダル -->
-        <div id="modal" class="thanksPafe-container__hidden">
-          <div class="thanksPage_modal-content">
-            <div class="thanksPage_modal-body">
-            <h4>申し込み完了！</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <script src="..js/thanks.js"></script>
-   
+  <script src="../js/thanks.js"></script>
 </body>
 </html>

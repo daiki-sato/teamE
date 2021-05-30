@@ -96,6 +96,12 @@
   border: 1px solid;
 }
 
+.thanksPage-recommended__image{
+  width: 32vmin;
+  height: 18vmin;
+  padding: 1vmax;
+}
+
 /* エージェント名,星 */
 .thanksPage-recommended__contents-summary--right{
   margin: 1vmax;
