@@ -12,12 +12,32 @@
 body{
   /* emの文字サイズ指定 */
   font-size: 5px;
+  background-color: #eaedf2;
 }
 
 /* // ここにheader.sass fotter.sassなどを挿入する */
 button {
   cursor: pointer;
 }
+
+/* 全体のレイアウト（メインとサイドバー） */
+.container{
+  display: flex;
+  margin: 100px ;
+}
+.main{
+  padding-right: 100px;
+  width: 70%;
+}
+.sidebar{
+  border: solid 1px #000000;
+  width: 30%;
+}
+.search-place{
+  background-color: #ffffff;
+  padding-bottom: 10px;
+}
+
 
 
 .category-tag-search {
@@ -42,9 +62,11 @@ button {
   width: 1.5em;
   height: 1.5em;
 }
-input[type="checkbox" i]{
+
+/* gattyannko_5/28 */
+/* input[type="checkbox" i]{
   display: none;
-}
+} */
 
 .category-search__button-text{
   font-size: 1.5em;
@@ -159,10 +181,12 @@ input[type="checkbox" i]{
 }
 
 
+/* 一括申し込み */
 .application-area {
   margin-bottom: 3em;
   background-color: #E0E4EA;
   text-align: center;
+  display: grid;
 }
 
 .application-area .application-area__text {
@@ -174,14 +198,14 @@ input[type="checkbox" i]{
 
 .application-area .application-area__description {
   line-height: 30px;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 300;
   padding-top: 0.5em;
 }
 
 .application-area .application-area__button {
   display: block;
-  width: 80%;
+  width: 15em;
   cursor: pointer;
   border: none;
   padding: 0.5em 1em;
@@ -189,7 +213,7 @@ input[type="checkbox" i]{
   text-align: center;
   color: #ffffff;
   background-color: #FFAB3F;
-  font-size: 4em;
+  font-size: 6em;
   font-weight: 600;
 }
 
@@ -248,6 +272,11 @@ input[type="checkbox" i]{
   margin-top: 20px;
 }
 
+.section__title-text{
+  font-size: 5em;
+  font-weight: 600;
+}
+
 .search-results .search-results__title-box .fa-search {
   background-color: orange;
   width: 3em;
@@ -259,6 +288,27 @@ input[type="checkbox" i]{
 }
 .search-results .search-results__agent {
   text-align: center;
+}
+.search-result__agent{
+  color: #000000;
+	font-size: 4em;
+  font-weight: 600;
+	display: flex;
+	align-items: center;
+  margin: 3vmax;
+  justify-content: center;
+}
+.search-result__agent::before,
+.search-result__agent::after {
+  content: "";
+	flex-grow: 1;
+	height: 1px;
+	background: #000000;
+	display: block;
+}
+
+.article__items{
+  display: flex;
 }
 
 .article .article__title-box {
@@ -278,7 +328,7 @@ input[type="checkbox" i]{
 
 .article .article__item {
   background-color: #E0E4EA;
-  margin: 10px 30px;
+  margin: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -338,28 +388,37 @@ input[type="checkbox" i]{
 
 .footer {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2em;
 }
 
 .footer .footer__text {
-  font-size: 14px;
+  font-size: 5em;
+  font-weight: 600;
 }
 
 .footer .footer__form-button {
   cursor: pointer;
   border: none;
   background-color: #FFAB3F;
-  padding: 5px 25px;
-  font-size: 12px;
+  padding: 1em 5em;
+  font-size: 5em;
+  font-weight: 600;
   border-radius: 5px;
+  margin: 1em;
 }
 
 .footer .footer__reset-button {
   cursor: pointer;
   border: none;
-  background-color: #c9c9c9;
+  background-color: #c4c4c4;
   color: #ffffff;
-  padding: 3px 15px;
-  font-size: 10px;
+  padding: 0.7em 2em;
+  font-size: 3em;
+  font-weight: 300;
   border-radius: 5px;
 }
 

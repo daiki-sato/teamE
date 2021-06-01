@@ -64,6 +64,33 @@
   }
   ?>
 
+      <div class="thanksPage-recommended__contents-explanation">
+        採用コンサルタントが、じっくり1時間の個別面談。<br>
+        一人一人に合った納得内定獲得を徹底的にサポート。
+      </div>
+
+      <div class="thanksPage-recommended-buttons">
+        <p>
+          <span class="thanksPage-recommended-button__article">解説記事</span>
+        </p>
+        <p id="submitbutton" onClick='showDialog()'>
+          <span class="thanksPage-recommended-button__submit">続けて申し込む</span>
+        </p>
+
+        <!-- 申し込み完了モーダル -->
+        <div id="modal" class="thanksPafe-container__hidden">
+          <div class="thanksPage_modal-content">
+            <div class="thanksPage_modal-body">
+            <h4>申し込み完了！</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script src="../js/thanks.js"></script>
+
 </body>
 </html>
