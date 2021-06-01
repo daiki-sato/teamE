@@ -79,6 +79,8 @@
   <div class="main">
     
     <div class="search-place">
+
+      <div class="search__pc">
   
       <div class="search-area">
       <h2 class="search-area__title">サービス・タグから探す</h2>
@@ -91,24 +93,36 @@
             <input type="checkbox" id="agent"></input>
             <label for="agent" class="category-search__button">
               <div class="checkmark"></div>
-              <p class="category-search__button-text">エージェント</p>
-              <p class="category-search_button-q">?</p>
+              <div class="category-search__button-text">エージェント</div>
+              <div class="category-search_button-q">?
+                <span class="service-description">
+                  就活エージェントとは専任のキャリアコンサルタントが就職活動の始めから終わりまでを支援してくれるサービスです。 就職活動において、「自己分析が上手くできない」、「行きたい企業がわからない」という初期の段階での悩みは多くあります。
+                </span>
+              </div>
             </label>
           </div>
           <div class="category-search__list">
             <input type="checkbox" id="event"></input>
             <label for="event" class="category-search__button">
               <div class="checkmark"></div>
-              <p class="category-search__button-text">イベント</p>
-              <p class="category-search_button-q">?</p>
+              <div class="category-search__button-text">イベント</div>
+              <div class="category-search_button-q">?
+                <span class="service-description">
+                  就活エージェントとは専任のキャリアコンサルタントが就職活動の始めから終わりまでを支援してくれるサービスです。 就職活動において、「自己分析が上手くできない」、「行きたい企業がわからない」という初期の段階での悩みは多くあります。
+                </span>
+              </div>
             </label>
           </div>
           <div class="category-search__list">
-            <input type="checkbox" id="survice"></input>
-            <label for="survice" class="category-search__button">
+            <input type="checkbox" id="service"></input>
+            <label for="service" class="category-search__button">
               <div class="checkmark"></div>
-              <p class="category-search__button-text">サービス</p>
-              <p class="category-search_button-q">?</p>
+              <div class="category-search__button-text">サービス</div>
+              <div class="category-search_button-q">?
+                <span class="service-description">
+                  就活エージェントとは専任のキャリアコンサルタントが就職活動の始めから終わりまでを支援してくれるサービスです。 就職活動において、「自己分析が上手くできない」、「行きたい企業がわからない」という初期の段階での悩みは多くあります。
+                </span>
+              </div>
             </label>
           </div>
         </section>
@@ -181,10 +195,10 @@
 
       </div>
 
-    </div>
-  
-  
-    <div class="search__sp">
+      </div>
+    
+    
+      <div class="search__sp">
 
     <section>
       <div class="search-area">
@@ -196,7 +210,10 @@
         <label for="agent" class="category-search__button">
           <div class="checkmark"></div>
           <p class="category-search__button-text">エージェント</p>
-          <p class="category-search_button-q">?</p>
+          <p id="popup__btn0" class="category-search_button-q">?</p>
+          <p id="popup0" class="service-description__popup">就活エージェントとは専任のキャリアコンサルタントが就職活動の始めから終わりまでを支援してくれるサービスです。 就職活動において、「自己分析が上手くできない」、「行きたい企業がわからない」という初期の段階での悩みは多くあります。
+          </p>
+          <div id="overlay0" class="service-description__popup__closer"></div>
         </label>
       </div>
       <div class="category-search__list">
@@ -204,7 +221,10 @@
         <label for="event" class="category-search__button">
           <div class="checkmark"></div>
           <p class="category-search__button-text">イベント</p>
-          <p class="category-search_button-q">?</p>
+          <p id="popup__btn1" class="category-search_button-q">?</p>
+          <p id="popup1" class="service-description__popup">就活エージェントとは専任のキャリアコンサルタントが就職活動の始めから終わりまでを支援してくれるサービスです。 就職活動において、「自己分析が上手くできない」、「行きたい企業がわからない」という初期の段階での悩みは多くあります。
+          </p>
+          <div id="overlay1" class="service-description__popup__closer"></div>
         </label>
       </div>
       <div class="category-search__list">
@@ -212,7 +232,10 @@
         <label for="survice" class="category-search__button">
           <div class="checkmark"></div>
           <p class="category-search__button-text">サービス</p>
-          <p class="category-search_button-q">?</p>
+          <p id="popup__btn2" class="category-search_button-q">?</p>
+          <p id="popup2" class="service-description__popup">就活エージェントとは専任のキャリアコンサルタントが就職活動の始めから終わりまでを支援してくれるサービスです。 就職活動において、「自己分析が上手くできない」、「行きたい企業がわからない」という初期の段階での悩みは多くあります。
+          </p>
+          <div id="overlay2" class="service-description__popup__closer"></div>
         </label>
       </div>
     </div>
@@ -289,24 +312,26 @@
       </div>
     </section>
 
-    </div>
-    
-    <div class="application-area">
+      </div>
+      
+      <div class="application-area">
     <p class="application-area__text">就活相談なら</p>
       <button class="application-area__button">エージェント一括申し込み！</button>
       <div class="application-area__balloon">
         1分でできる！
       </div>
     <span class="application-area__description">就活のプロが話を聞いてくれます</span>
-    </div>
-    
-    
-    <div class="search-box"> 
+      </div>
+      
+      
+      <div class="search-box"> 
     <button class="search-box__button">検索</button>
-    </div>
-    
-    <div class="number-of-searches-box">
-      <p class="number-of-searches__text">↓検索結果がn件あります↓</p>
+      </div>
+      
+      <div class="number-of-searches-box">
+        <p class="number-of-searches__text">↓検索結果がn件あります↓</p>
+      </div>
+
     </div>
     
   
@@ -428,7 +453,10 @@
   </div>
 </footer>
 
-<!-- <script src="../js/top.js"></script> -->
+<!-- jquery↓↓↓↓  -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../js/top_popup.js"></script>
+
 
 
 </body>
