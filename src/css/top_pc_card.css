@@ -1,5 +1,5 @@
 /* おすすめエージェント__画像,星 */
-.applicationForm-compare__contents-summary{
+.card-pc__container{
   display: flex;
   justify-content: center;
   padding: 1vmax;
@@ -7,7 +7,7 @@
 }
 
 /* エージェント画像 */
-.applicationForm-compare__contents-summary--left{
+.card-pc__left{
   width: 64vmin;
   height: 36vmin;
   padding: 1vmax;
@@ -16,20 +16,20 @@
 }
 
 /* エージェント名,星,説明,ボタン */
-.applicationForm-compare__contents-summary--right{
+.card-pc__right{
   padding: 1vmax;
   align-content: center;
 }
 
 /* エージェント名,ハッシュタグ */
-.applicationForm-compare__agent-top{
+.card-pc__agent-top{
   display: flex;
   align-items: center;
   padding: 1vmax;
 }
 
 /* エージェント名 */
-.applicationForm-compare__agant-name{
+.card-pc__agant-name{
   font-size: 4vmin;
   color: #000000;
   font-weight: 600;
@@ -37,19 +37,19 @@
 }
 
 /* #星n以上 */
-.applicationForm-compare__hashtag{
+.card-pc__hashtag{
   font-size: 3vmin;
   margin-left: 1vmax;
 }
 
 
-.applicationForm-compare__stars{
+.card-pc__stars{
   font-size: 4vmin;
   padding: 1vmax;
 }
 
 /* 星5つ評価 */
-.applicationForm-compare__stars-rating{
+.card-pc__stars-rating{
   position: relative;
   z-index: 0;
   display: inline-block;
@@ -58,11 +58,11 @@
   /*font-size: 30px; フォントサイズ 自由に設定化 */
 }
 
-.applicationForm-compare__stars-rating:before,.applicationForm-compare__stars-rating:after{
+.card-pc__stars-rating:before,.card-pc__stars-rating:after{
   content: '★★★★★';
 }
 
-.applicationForm-compare__stars-rating:after{
+.card-pc__stars-rating:after{
   position: absolute;
   z-index: 1;
   top: 0;
@@ -73,28 +73,28 @@
 }
 
 /* data-rateに数値が入った時の動き */
-.applicationForm-compare__stars-rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
-.applicationForm-compare__stars-rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
-.applicationForm-compare__stars-rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
-.applicationForm-compare__stars-rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
-.applicationForm-compare__stars-rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
-.applicationForm-compare__stars-rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
-.applicationForm-compare__stars-rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
-.applicationForm-compare__stars-rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
-.applicationForm-compare__stars-rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
-.applicationForm-compare__stars-rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
-.applicationForm-compare__stars-rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+.card-pc__stars-rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.card-pc__stars-rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.card-pc__stars-rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.card-pc__stars-rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.card-pc__stars-rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.card-pc__stars-rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.card-pc__stars-rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.card-pc__stars-rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.card-pc__stars-rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.card-pc__stars-rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.card-pc__stars-rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
 
 
 /* エージェント詳細説明 */
-.applicationForm-compare__contents-explanation{
+.card-pc__agent-explanation{
   font-size: 2.5vmin;
   padding: 1vmax;
   line-height: 150%;
 }
 
 /* ボタン類 */
-.applicationForm-compare-buttons{
+.card-pc__buttons{
   text-align: center;
   padding: 1vmax;
   /* pc↓ */
@@ -102,45 +102,46 @@
   justify-content: space-around;
 }
 
+button{
+  border: none;
+}
+
 /* 詳細記事btn */
-.applicationForm-compare-button__article{
+.card-pc__button-article{
   width: 27vmin;
+  height: 8vmin;
   display: inline-block;
   background-color: #80cbc5;
   font-size: 3vmin;
   color: #ffff;
-  padding: 2.5vmin 4vmin;
-  margin: 1vmin;
+  padding: 1vmin 2.5vmin;
+  margin-right: 2vmin;
   cursor: pointer;
   line-height: initial;
 }
 
 /* お申し込みリストに追加するbtn */
-.applicationForm-compare-button__submit{
+.card-pc__button-submit{
   width: 27vmin;
+  height: 8vmin;
   display: inline-block;
   background-color: #47a69b;
-  font-size: 3vmin;
+  font-size: 2vmin;
   color: #ffff;
-  padding-top: 2vmin;
-  padding-bottom: 2vmin;
-  padding-left: 4vmin;
-  padding-right: 4vmin;
-  margin: 1vmin;
+  padding: 1vmin 2vmin;
+  margin-left: 2vmin;
   cursor: pointer;
 }
 
 /* お申し込みリストから外すbtn */
-.applicationForm-compare-button__unsubmit{
+.card-pc__button-unsubmit{
   width: 27vmin;
+  height: 8vmin;
   display: inline-block;
   background-color: #c4c4c4;
-  font-size: 3vmin;
+  font-size: 2vmin;
   color: #ffff;
-  padding-top: 2vmin;
-  padding-bottom: 2vmin;
-  padding-left: 4vmin;
-  padding-right: 4vmin;
-  margin: 1vmin;
+  padding: 1vmin 2vmin;
+  margin-left: 2vmin;
   cursor: pointer;
 }

@@ -10,44 +10,49 @@
 </head>
 <body>
 
-        <div class="applicationForm-compare__contents-summary">
+        <div class="card-pc__container">
   
-          <div class="applicationForm-compare__contents-summary--left">
-            <img src="#" class="applicationForm-compare__image" alt="エージェント画像が入ります">
+          <div class="card-pc__left">
+            <img src="#" class="card-pc__img" alt="エージェント画像が入ります">
           </div>
   
-          <div class="applicationForm-compare__contents-summary--right"> 
+          <div class="card-pc__right"> 
 
-　　　　　　　<div class="applicationForm-compare__agent-top">
-              <p class="applicationForm-compare__agant-name--box">
-                <a href="#" class="applicationForm-compare__agant-name">キャリセン</a>
+　　　　　　　<div class="card-pc__agent-top">
+              <p>
+                <a href="#" class="card-pc__agant-name">キャリセン</a>
               </p>
-              <p class="applicationForm-compare__hashtag">
+              <p class="card-pc__hashtag">
                 #星3以上
               </p>
             </div>
             
-            <p class="applicationForm-compare__stars">
-              <span class="applicationForm-compare__stars-rating" data-rate="3"></span>&ensp;3.0
+            <p class="card-pc__stars">
+              <span class="card-pc__stars-rating" data-rate="3"></span>&ensp;3.0
             </p>
   
-            <div class="applicationForm-compare__contents-explanation">
+            <div class="card-pc__agent-explanation">
               採用コンサルタントが、じっくり1時間の個別面談。<br>
               一人一人に合った納得内定獲得を徹底的にサポート。
             </div>
   
-            <div class="applicationForm-compare-buttons">
-              <p>
-                <span class="applicationForm-compare-button__article">解説記事</span>
-              </p>
-              <p id="submitbutton" onClick='showDialog()'>
-                <span class="applicationForm-compare-button__submit">お申し込みリストに<br>追加する</span>
-              </p>  
+            <div class="card-pc__buttons">
+              <button id="articlebtn" class="card-pc__button-article">
+                解説記事
+              </button>
+              <button id="submitbtn" class="card-pc__button-submit">
+                <p id="text">お申し込みリストに<br>追加する</p>
+              </button>  
+              <!-- <button id="addedbtn" class="applicationForm-compare-button__submit">
+                リストから外す
+              </button>   -->
             </div>
 
           </div>
 
         </div>
       
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../js/card.js"></script>        
 </body>
 </html> 
