@@ -43,9 +43,9 @@
               <button id="submitbtn" class="card-pc__button-submit">
                 <p id="text">お申し込みリストに<br>追加する</p>
               </button>  
-              <!-- <button id="addedbtn" class="applicationForm-compare-button__submit">
-                リストから外す
-              </button>   -->
+              <button id="exterminalsitebtn" class="card-pc__button-submit">
+                <p id="text"><a href="#">外部サイトから<br>申し込む</a></p>
+              </button>
             </div>
 
           </div>
