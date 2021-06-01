@@ -1,0 +1,213 @@
+body{
+  font-size: 5px;
+}
+.header{
+  background-color: #26a69a;
+  padding-top: 2em;
+}
+.header__top{
+  /* display: flex; */
+  align-items: center;
+}
+
+/* 就活の教科書ロゴ */
+.header-logo{
+  height: auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.header-logo__img{
+  height: 62px;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* ナビゲーション */
+.header-nav{
+  margin: 4em 16em;
+}
+.header-nav__group{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-nav__content-text{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: 300;
+}
+.header-nav__content-text::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2.5px;
+  background: #FFFFFF;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .4s;
+}
+.header-nav__content-text:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+/* header-info */
+.header-info{
+  background: #80cbc4;
+  text-align: center;
+  padding: 1vmax;
+}
+
+.header-info__text{
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 3em;
+}
+
+
+/* レスポンシブ対応 */
+/* 767px以下の時 */
+@media screen and (max-width: 767px) {
+  .header{
+    width: 100%;
+    position: fixed;
+  }
+  .header-logo{
+    margin-bottom: 3em;
+  }
+  .header-nav{
+    display: none;
+  }
+}
+/* 767px以上の時 */
+@media screen and (min-width: 767px) {
+  #nav-drawer{
+    display: none;
+  }
+}
+
+
+/* ハンバーガーメニュー */
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  /* width: 30px;
+  height: 22px; */
+  vertical-align: middle;
+  float: left;
+  padding-left: 20px;
+}
+
+/*ハンバーガーの形をCSSで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: #ffffff;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+.nav-title{
+  color: #ffffff;
+}
+
+/*閉じる用の薄黒箇所*/
+#nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*メニューの中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 90%;
+  max-width: 330px;/*最大幅（お好みで調整を）*/
+  height: 100%;
+  background: #fff;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+}
+
+/*チェックがついたら表示させる*/
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.header-logo-menu{
+ display: flex;
+ display: -moz-flex;
+ display: -o-flex;
+ display: -webkit-flex;
+ display: -ms-flex;
+ flex-direction: row;
+ -moz-flex-direction: row;
+ -o-flex-direction: row;
+ -webkit-flex-direction: row;
+ -ms-flex-direction: row;
+}
+
+/*ロゴやサイトタイトルをセンタリング*/
+.logo-area{text-align:center;margin:auto;}
+
+
+.sidebar-wrap__menu{
+  color: #ffffff;
+  background-color: #80cbc4;
+  height: 20px;
+  width: auto;
+}
+
+.sidebar-wrap__searcharea{
+  height: 20px;
+  width: auto;
+}
+
+.sidebar-wrap__title{
+  height: 20px;
+  background-color: #80cbc4;
+}
