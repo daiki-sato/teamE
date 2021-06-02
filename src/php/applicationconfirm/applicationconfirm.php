@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>入力内容確認ページ</title>
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/applicationconfirm.css">
+  <link rel="stylesheet" href="/css/reset/reset.css">
+  <link rel="stylesheet" href="/css/applicationconfirm/applicationconfirm.css">
   <!-- google font のリンク-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
 　<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">

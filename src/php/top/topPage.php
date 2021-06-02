@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>top_pc</title>
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/topPage.css">
-  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="/css/reset/reset.css">
+  <link rel="stylesheet" href="/css/top/topPage.css">
+  <link rel="stylesheet" href="/css/parts/header.css">
 
   <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 
@@ -455,7 +455,7 @@
 
 <!-- jquery↓↓↓↓  -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="../js/topPage.js"></script>
+<script src="/js/topPage.js"></script>
 
 
 
