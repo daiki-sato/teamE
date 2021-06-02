@@ -145,3 +145,7 @@ button{
   margin-left: 2vmin;
   cursor: pointer;
 }
+/* 外部サイトから申し込むbtn　※noneにしてあります */
+#exterminalsitebtn{
+  display: none;
+}
