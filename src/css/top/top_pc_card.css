@@ -107,45 +107,49 @@ button{
 }
 
 /* 詳細記事btn */
-.card-pc__button-article{
-  width: 27vmin;
-  height: 8vmin;
+.card__button-article{
+  width: 30vmin;
   display: inline-block;
+  height: calc( 2vh * 5 );
   background-color: #80cbc5;
   font-size: 3vmin;
   color: #ffff;
-  padding: 1vmin 2.5vmin;
   margin-right: 2vmin;
   cursor: pointer;
   line-height: initial;
 }
 
 /* お申し込みリストに追加するbtn */
-.card-pc__button-submit{
-  width: 27vmin;
-  height: 8vmin;
-  display: inline-block;
+.card__button-submit{
+  width: 30vmin;
+  height: calc( 2vh * 5 );
+  display: grid;
+  align-items: center;
   background-color: #47a69b;
   font-size: 2vmin;
   color: #ffff;
-  padding: 1vmin 2vmin;
   margin-left: 2vmin;
   cursor: pointer;
 }
 
 /* お申し込みリストから外すbtn */
-.card-pc__button-unsubmit{
-  width: 27vmin;
-  height: 8vmin;
-  display: inline-block;
+.card__button-unsubmit{
+  width: 30vmin;
+  height: calc( 2vh * 5 );
+  display: grid;
+  align-items: center;
   background-color: #c4c4c4;
   font-size: 2vmin;
   color: #ffff;
-  padding: 1vmin 2vmin;
   margin-left: 2vmin;
   cursor: pointer;
 }
+
 /* 外部サイトから申し込むbtn　※noneにしてあります */
 #exterminalsitebtn{
+  display: none;
+}
+
+input[type="checkbox"] {
   display: none;
 }

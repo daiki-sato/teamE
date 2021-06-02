@@ -37,15 +37,18 @@
             </div>
   
             <div class="card-pc__buttons">
-              <button id="articlebtn" class="card-pc__button-article">
-                解説記事
+              <button id="articlebtn" class="card__button-article">
+                <p>解説記事</p> 
               </button>
-              <button id="submitbtn" class="card-pc__button-submit">
+              <input type="checkbox" id="application">
+              <label for="application">
+              <span id="submitbtn" class="card__button-submit">
                 <p id="text">お申し込みリストに<br>追加する</p>
-              </button>  
-              <button id="exterminalsitebtn" class="card-pc__button-submit">
+              </span>  
+            　</label>
+              <button id="exterminalsitebtn" class="card__button-submit">
                 <p id="text"><a href="#">外部サイトから<br>申し込む</a></p>
-              </button>
+              </button>  
             </div>
 
           </div>
