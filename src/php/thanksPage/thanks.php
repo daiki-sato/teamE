@@ -51,7 +51,7 @@
       <!-- ここの引数に関数を入れてfor文で回してね -->
       
   <?php
-  for ($i=0; $i < 132; $i++) { 
+  for ($i=0; $i < 2; $i++) { 
     part_sp_card(
       "../img/キャリセン.png",
       "キャリセン",
@@ -64,18 +64,7 @@
   }
   ?>
 
-      <div class="thanksPage-recommended__contents-explanation">
-        採用コンサルタントが、じっくり1時間の個別面談。<br>
-        一人一人に合った納得内定獲得を徹底的にサポート。
-      </div>
-
-      <div class="thanksPage-recommended-buttons">
-        <p>
-          <span class="thanksPage-recommended-button__article">解説記事</span>
-        </p>
-        <p id="submitbutton" onClick='showDialog()'>
-          <span class="thanksPage-recommended-button__submit">続けて申し込む</span>
-        </p>
+      
 
         <!-- 申し込み完了モーダル -->
         <div id="modal" class="thanksPafe-container__hidden">
