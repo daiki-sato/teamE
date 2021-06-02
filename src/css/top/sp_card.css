@@ -100,40 +100,45 @@
 
 /* 詳細記事btn */
 .card-sp-button__article{
-  width: 32vw;
-  height: 6vh;
+  width: 30vmin;
   display: inline-block;
+  height: calc( 1.5vh * 3.5 );
   background-color: #80cbc5;
   font-size: 3vmin;
   color: #ffff;
-  padding: 2vmin;
   cursor: pointer;
   line-height: initial;
+  margin: 0.5vh 0;
 }
 
 /* お申し込みリストに追加するbtn */
-.card-sp-button__submit{
-  width: 32vw;
-  height: 6vh;
-  display: inline-block;
+.card-sp__button-submit{
+  width: 30vmin;
+  height: calc( 1.5vh * 3.5 );
+  line-height: 1.5vh;
+  display: grid;
+  align-items: center;
   background-color: #47a69b;
-  font-size: 3vmin;
+  font-size: 2vmin;
   color: #ffff;
-  padding: 2vmin;
-  margin-top: 3vmin;
+  cursor: pointer;
+  margin: 0.5vh 0;
+}
+
+/* お申し込みリストから外すbtn */
+.card-sp__button-unsubmit{
+  width: 30vmin;
+  height: calc( 1.5vh * 3.5 );
+  display: grid;
+  align-items: center;
+  background-color: #c4c4c4;
+  font-size: 2vmin;
+  color: #ffff;
   cursor: pointer;
 }
-/* お申し込みリストから外すbtn */
-.card-sp-button__unsubmit{
-  width: 32vw;
-  height: 6vh;
-  display: inline-block;
-  background-color: #c4c4c4;
-  font-size: 3vmin;
-  color: #ffff;
-  padding: 2vmin;
-  margin-top: 3vmin;
-  cursor: pointer;
+
+input[type="checkbox"] {
+  display: none;
 }
 
 /* 外部サイトから申し込むbtn　※noneにしてあります */

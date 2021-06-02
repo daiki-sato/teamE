@@ -39,10 +39,13 @@
       <button id="articlebtn" class="card-sp-button__article">
         <p>解説記事</p>
       </button>
-      <button id="submitbtn" class="card-sp-button__submit">
+      <input type="checkbox" id="application">
+      <label for="application">
+      <span id="submitbtn" class="card-sp__button-submit">
         <p id="text">お申し込みリストに<br>追加する</p>
-      </button>  
-      <button id="exterminalsitebtn" class="card__button-submit">
+      </span>  
+      </label>  
+      <button id="exterminalsitebtn" class="card-sp__button-submit">
         <p id="text"><a href="#">外部サイトから<br>申し込む</a></p>
       </button>
     </div>
@@ -51,6 +54,6 @@
 
 
 
-<script src="../js/card_sp.js"></script>
+<script src="./card_sp.js"></script>
 </body>
 </html>
