@@ -44,7 +44,7 @@
             </div>
 
             <div class="thanksPage-recommended__contents-explanation">
-              <? echo $thanksPage_recommended__contents_explanatio?>
+              <? echo $thanksPage_recommended__contents_explanation?>
             </div>
 
             <div class="thanksPage-recommended-buttons">
@@ -52,7 +52,7 @@
                 <span class="thanksPage-recommended-button__article">解説記事</span>
               </p>
               <p id="submitbutton" onClick='showDialog()'>
-                <span class="thanksPage-recommended-button__submit"><? echo $thanksPage_recommended_button__submit?></span>
+                <span class="thanksPage-recommended-button__submit"><?= $thanksPage_recommended_button__submit?></span>
               </p>
 
               <!-- 申し込み完了モーダル -->
