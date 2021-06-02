@@ -62,3 +62,11 @@ $(function () {
 //     })
 //   })};
 
+
+// 検索結果n件ありますの表示（ボタン押下時）
+const search = document.getElementById('searchbtn');
+const searched = document.getElementById('searched');
+search.addEventListener('click',() => {
+  searched.style.display = "block";
+  console.log('検索ボタンが押されました');
+})
