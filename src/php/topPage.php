@@ -328,7 +328,7 @@
     <button class="search-box__button">検索</button>
       </div>
       
-      <div class="number-of-searches-box">
+      <div id="searched" class="number-of-searches-box">
         <p class="number-of-searches__text">↓検索結果がn件あります↓</p>
       </div>
 
@@ -455,7 +455,7 @@
 
 <!-- jquery↓↓↓↓  -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="../js/top_popup.js"></script>
+<script src="../js/topPage.js"></script>
 
 
 

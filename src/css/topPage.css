@@ -307,9 +307,9 @@ input[type="checkbox"]{
 /* 検索結果がn件あります */
 .number-of-searches-box{
   width: 50vmin;
-  /* border-radius: 1.5em; */
   margin: 1vmin auto;
   text-align: center;
+  display: none;
 }
 .number-of-searches-box .number-of-searches__text{
   background-color: #cdcccc;
