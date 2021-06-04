@@ -1,3 +1,28 @@
+const categorypush = document.querySelectorAll('#category');
+categorypush.forEach(function(target){
+  target.addEventListener('click', () => {
+    if(target.classList.contains('category-pushed__button')){
+  　//　containsメソッドで、クラスが既に付与されているか判定 
+      target.classList.remove('category-pushed__button');
+  　//　クラスがついている場合、test２クラスを削除する 
+    }else{
+      target.classList.add('category-pushed__button');
+  　//　クラスがついていない場合、test２クラスを追加する 
+}})});
+const tagpush = document.querySelectorAll('#tag');
+tagpush.forEach(function(target){
+  target.addEventListener('click', () => {
+    if(target.classList.contains('tag-pushed__button')){
+  　//　containsメソッドで、クラスが既に付与されているか判定 
+      target.classList.remove('tag-pushed__button');
+  　//　クラスがついている場合、test２クラスを削除する 
+    }else{
+      target.classList.add('tag-pushed__button');
+  　//　クラスがついていない場合、test２クラスを追加する 
+}})});
+
+
+
 // スマホ版用語説明popup
 $(function () {
   $('#popup__btn0').click(function(){

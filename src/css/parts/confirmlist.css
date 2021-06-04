@@ -1,0 +1,29 @@
+
+.confirmlist__box {
+  border: 1px solid #aaa;
+  text-align: center;
+  margin: 4vmax 1vmax;
+}
+
+.confirmlist__title {
+  font-weight: 300;
+  font-size: 3vmin;
+  padding: 1.5vw;
+  cursor: pointer;
+}
+
+.confirmlist[open] {
+  padding: .5em;
+}
+
+.confirmlist[open] .confirmlist__title {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: .5em;
+}
+
+@media screen and (min-width: 767px) {
+  .confirmlist__box{
+    width: 60%;
+    margin: 0 auto;
+  }
+}

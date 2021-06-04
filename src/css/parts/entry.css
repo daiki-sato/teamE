@@ -1,0 +1,246 @@
+body{
+  font-size: 5px;
+}
+/* 大枠の余白など */
+.entry-container{
+  border: solid 1px #c4c4c4;
+}
+.entry-area{
+  margin: 3.5vw;
+}
+.entry-page__top{
+  margin: 0 3vw;
+}
+
+/* ーお申し込みー */
+.entry-title{
+  color: #000000;
+	font-size: 1.5vmax;
+  font-weight: 300;
+	display: flex;
+	align-items: center;
+  margin: 3vmax;
+  justify-content: center;
+}
+.entry-title::before,
+.entry-title::after {
+  content: "";
+	flex-grow: 0.1;
+	height: 1px;
+	background: #000000;
+	display: block;
+}
+
+/* 基本情報をご入力ください__全体 */
+.entry-page__title{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-top: 2vmax;
+  padding-bottom: 0;
+}
+/* 三角形 */
+.entry-page__title-triangle{
+  border-top: 1vmax solid transparent;
+  border-bottom: 1vmax solid transparent;
+  border-left: 1.5vmax solid #80cbc5;
+  margin-right: 1vmax;
+}
+/* 文字 */
+.entry-page__title-text{
+  font-size: 3vmin;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-left: 0px;
+}
+
+/* whereareyouat */
+.entry-page__whereareyouat{
+  display: flex;
+	align-items: center;
+  justify-content: flex-end;
+}
+.whereareyouat__icon{
+  margin: 0 0 0 1vmax;
+  display: flex;
+}
+.whereareyouat__valid{
+  height: 2vmax;
+  width: 2vmax;
+  border-radius: 50%;
+  line-height: 2vmax;
+  text-align: center;
+  border: solid 1px #a0d8d4;
+}
+.whereareyouat__invalid{
+  height: 2vmax;
+  width: 2vmax;
+  border-radius: 50%;
+  line-height: 2vmax;
+  text-align: center;
+  border: solid 1px #676666;
+}
+.whereareyouat__valid-number{
+  color: #a0d8d4;
+  font-size: 1vmax;
+}
+.whereareyouat__invalid-number{
+  color: #676666;
+  font-size: 1vmax;
+}
+
+
+/* compare-agent card */
+.compare__box{
+  margin: 4vmax 1vmax;
+}
+/* よく比較・検討されているエージェント＿＿全体 */
+.compare__title{
+  padding: 1vmax 2vmax;
+  text-align: center;
+  border: solid 1px;
+}
+
+/* よく比較・検討されているエージェント */
+.compare__title-text{
+  font-weight: 600;
+  font-size: 3.6vmin;
+}
+/* 内定者は平均5エージェントから話を聞いています！ */
+.compare__title-text2{
+  font-weight: 300;
+  font-size: 2.5vmin;
+}
+/* cardが入るとこ */
+.compare__contents{
+  padding: 2vmax 0;
+  border: solid 1px;
+  border-top: none;
+}
+
+/* 送信・キャンセルボタン類 */
+.entry__buttons{
+  text-align: center;
+  margin: 3vmax;
+}
+
+/* 次へbtn */
+.entry__submitbutton{
+  width: 40vmin;
+  height: 5vmin;
+  display: inline-block;
+  background-color: #47a69b;
+  font-size: 5vmin;
+  font-weight: 300;
+  color: #ffff;
+  padding: 3vmin;
+  margin: 4vmin 0;
+  cursor: pointer;
+}
+
+/* キャンセルbtn */
+.entry__cancelbutton{
+  width: auto;
+  display: inline-block;
+  background-color: #c4c4c4;
+  font-size: 1.5vmin;
+  color: #ffff;
+  padding: 2vmin;
+  margin: 0vmin 4vmin;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 767px) {
+  /* .entry-page__top{
+    margin: 1vh 3vw;
+  } */
+  .entry-container{
+    margin: 2vw;
+    padding: 2vw;
+  }
+  .entry-page__whereareyouat {
+    margin: 1vw;
+  }
+  .inputarea{
+    display: flex;
+    /* justify-content: flex-start; */
+    flex-grow: 1;
+  }
+  .form-group{
+    display: flex;
+    align-items: center;
+  }
+  .entry-label{
+    font-size: 2.5vmin;
+    font-weight: 300;
+    padding: 2vh 0;
+    width: 20%;
+  }
+  #familyname, #firstname, #familyfurigana, #firstfurigana, #university, #department, #subject, #email, #email_check, #tel{
+    padding: 0.5vh 1vw;
+    width: 30%;
+    height: 4vh;
+  }
+  #year, #month, #day, #sex, #prefecture, #graduationyear, #worklocation{
+    padding: 0;
+    width: 15%;
+    height: 5vh;
+  }
+  #familyname, #firstname, #familyfurigana, #firstfurigana,#year, #month, #day, #sex, #prefecture, #university, #department, #subject, #graduationyear, #worklocation, #email, #email_check, #tel{
+    margin: 1vw;
+    line-height: 2vh;
+  }
+  #body{
+    padding: 0.5vh 1vw;
+    width: 50%;
+    height: 30vh;
+    margin: 1vw;
+    line-height: 2vh;
+  }
+  .compare__box{
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* .entry-page__top{
+    margin: 1vh 3vw;
+  } */
+  .entry-container{
+    margin: 20px;
+    padding: 0;
+  }
+  .entry-area{
+    margin: 4vh 3vw;
+  }
+  label, .entry-label{
+    font-size: 4vmin;
+    font-weight: 300;
+    padding: 2vh 0;
+    text-indent: 1vw;
+  }
+  #familyname, #firstname, #familyfurigana, #firstfurigana, #sex, #prefecture,#university, #department, #subject, #graduationyear, #worklocation, #email, #email_check, #tel{
+    width: 89%;
+  }
+  #year, #month, #day{
+    width: 30%;
+  }
+  #familyname, #firstname, #familyfurigana, #firstfurigana,#year, #month, #day, #sex, #prefecture,#university, #department, #subject, #graduationyear, #worklocation, #email, #email_check, #tel{
+    margin: 2vw 0;
+    padding: 0;
+    line-height: 2vh;
+    height: 4vh;
+  }
+  #body{
+    margin: 2vw 0;
+    padding: 0;
+    line-height: 2vh;
+    height: 10vh;
+    width: 89%;
+  }
+  .inputarea{
+    text-align: center;
+  }
+}
