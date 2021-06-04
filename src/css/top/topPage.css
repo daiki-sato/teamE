@@ -18,6 +18,10 @@ body{
   min-height: 100vh; */
 }
 
+header{
+  z-index: 6;
+}
+
 /* .container{
   flex: 1;
 } */
@@ -69,6 +73,18 @@ input[type="checkbox"]{
   border-radius: 4em;
   cursor: pointer;
 }
+.category-pushed__button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28A69A;
+  color: #ffffff;
+  border: none;
+  padding: 0.8vw;
+  border-radius: 4em;
+  cursor: pointer;
+}
+
 
 .category-search__button-text{
   font-size: 1.2vw;
@@ -87,7 +103,44 @@ input[type="checkbox"]{
   text-align: center;
 }
 
+/* タグ検索 */
+.tag-search__menu {
+  padding: 1vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
+.tag-search__button{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c9c9c9;
+  color: #ffffff;
+  border: none;
+  border-radius: 3.5em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tag-pushed__button{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28A69A;
+  color: #ffffff;
+  border: none;
+  border-radius: 3.5em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tag-search__button-text{
+  font-weight: 600;
+  margin: 0 1vmin;
+}
 
  /* for sp */
 @media screen and (max-width: 767px) {
@@ -162,6 +215,10 @@ input[type="checkbox"]{
     width: 100%;
     z-index: 2;
   }
+   /* 検索結果n件の大きさ */
+  .number-of-searches-box{
+    width: 40%;
+  }
 }
 
 /* for pc */
@@ -231,6 +288,10 @@ input[type="checkbox"]{
     content: "";                  
     position: absolute;               
   }
+/* 検索結果n件の大きさ */
+.number-of-searches-box{
+  width: 30%;
+}
 /* 記事横並び */
   .article__items{
     display: flex;
@@ -256,33 +317,6 @@ input[type="checkbox"]{
   padding: 5px 10px;
 }
 
-/* タグ検索 */
-.tag-search__menu {
-  padding: 1vw;
-  box-sizing: border-box;
-  overflow: hidden;
-  align-items: center;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.tag-search__button{
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #c9c9c9;
-  color: #ffffff;
-  border: none;
-  border-radius: 3.5em;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.tag-search__button-text{
-  font-weight: 600;
-  margin: 0 1vmin;
-}
 
 /* 検索ボタン */
 .search-box {
@@ -306,20 +340,18 @@ input[type="checkbox"]{
 
 /* 検索結果がn件あります */
 .number-of-searches-box{
-  width: 50vmin;
-  margin: 1vmin auto;
+  margin: 2vmin auto;
   text-align: center;
   display: none;
 }
 .number-of-searches-box .number-of-searches__text{
   background-color: #cdcccc;
-  border-radius: 1.5em;
-  padding: 0.5vw;
+  border-radius: 3vmin;
+  padding: 1vmax;
   color: #000000;
   white-space: nowrap;
   font-size: 1vw;
   border: none;
-  padding: 1em;
 }
 
 
@@ -447,12 +479,11 @@ input[type="checkbox"]{
 .search-results .search-results__title-box {
   display: flex;
   align-items: center;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin: 1vw;
 }
 
 .section__title-text{
-  font-size: 5em;
+  font-size: 3vmin;
   font-weight: 600;
 }
 
@@ -490,8 +521,7 @@ input[type="checkbox"]{
 .article .article__title-box {
   display: flex;
   align-items: center;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin: 1vw;
 }
 
 .article .article__title-box .fa-book {

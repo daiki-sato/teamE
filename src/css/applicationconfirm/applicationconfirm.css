@@ -84,3 +84,12 @@
   margin: 0.5em 0;
   cursor: pointer;
 }
+
+@media screen and (min-width: 767px) {
+  .applicationfirm-content__group{
+    display: flex;
+    margin: 1vmax 5vmax;
+    align-items: center;
+    text-align: right;
+  }
+}
