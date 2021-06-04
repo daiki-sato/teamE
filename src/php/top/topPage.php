@@ -91,7 +91,7 @@
         <section class="category-search__menu">
           <div class="category-search__list">
             <input type="checkbox" id="agent"></input>
-            <label for="agent" class="category-search__button">
+            <label id="category" for="agent" class="category-search__button">
               <div class="checkmark"></div>
               <div class="category-search__button-text">エージェント</div>
               <div class="category-search_button-q">?
@@ -103,7 +103,7 @@
           </div>
           <div class="category-search__list">
             <input type="checkbox" id="event"></input>
-            <label for="event" class="category-search__button">
+            <label id="category" for="event" class="category-search__button">
               <div class="checkmark"></div>
               <div class="category-search__button-text">イベント</div>
               <div class="category-search_button-q">?
@@ -115,7 +115,7 @@
           </div>
           <div class="category-search__list">
             <input type="checkbox" id="service"></input>
-            <label for="service" class="category-search__button">
+            <label id="category" for="service" class="category-search__button">
               <div class="checkmark"></div>
               <div class="category-search__button-text">サービス</div>
               <div class="category-search_button-q">?
@@ -130,63 +130,63 @@
         <section class="tag-search__menu">
           <div class="tag-search__list">
             <input type="checkbox" id="1"></input>
-            <label for="1" class="tag-search__button">
+            <label id="tag" for="1" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">理系</p>
             </label>
           </div>
           <div class="tag-search__list">
             <input type="checkbox" id="2"></input>
-            <label for="2" class="tag-search__button">
+            <label id="tag" for="2" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">文系</p>
             </label>
           </div>
           <div class="tag-search__list">
             <input type="checkbox" id="3"></input>
-            <label for="3" class="tag-search__button">
+            <label id="tag" for="3" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">星3以上</p>
             </label>
           </div>
           <div class="tag-search__list">
             <input type="checkbox" id="4"></input>
-            <label for="4" class="tag-search__button">
+            <label id="tag" for="4" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">理系</p>
             </label>
           </div>
           <div class="tag-search__list">
             <input type="checkbox" id="5"></input>
-            <label for="5" class="tag-search__button">
+            <label id="tag" for="5" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">文系</p>
             </label>
           </div>
           <div class="tag-search__list">
             <input type="checkbox" id="6"></input>
-            <label for="6" class="tag-search__button">
+            <label id="tag" for="6" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">星3以上</p>
             </label>
           </div>
           <div class="tag-search__list">
             <input type="checkbox" id="7"></input>
-            <label for="7" class="tag-search__button">
+            <label id="tag" for="7" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">理系</p>
             </label>
           </div>
           <div class="tag-search__list">
             <input type="checkbox" id="8"></input>
-            <label for="8" class="tag-search__button">
+            <label id="tag" for="8" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">文系</p>
             </label>
           </div>
           <div class="tag-search__list">
             <input type="checkbox" id="9"></input>
-            <label for="9" class="tag-search__button">
+            <label id="tag" for="9" class="tag-search__button">
               <div class="checkmark"></div>
               <p class="tag-search__button-text">星3以上</p>
             </label>
@@ -207,7 +207,7 @@
       <div class="category-search__menu">
       <div class="category-search__list">
         <input type="checkbox" id="agent"></input>
-        <label for="agent" class="category-search__button">
+        <label id="category" for="agent" class="category-search__button">
           <div class="checkmark"></div>
           <p class="category-search__button-text">エージェント</p>
           <p id="popup__btn0" class="category-search_button-q">?</p>
@@ -218,7 +218,7 @@
       </div>
       <div class="category-search__list">
         <input type="checkbox" id="event"></input>
-        <label for="event" class="category-search__button">
+        <label id="category" for="event" class="category-search__button">
           <div class="checkmark"></div>
           <p class="category-search__button-text">イベント</p>
           <p id="popup__btn1" class="category-search_button-q">?</p>
@@ -229,7 +229,7 @@
       </div>
       <div class="category-search__list">
         <input type="checkbox" id="survice"></input>
-        <label for="survice" class="category-search__button">
+        <label id="category" for="survice" class="category-search__button">
           <div class="checkmark"></div>
           <p class="category-search__button-text">サービス</p>
           <p id="popup__btn2" class="category-search_button-q">?</p>
@@ -248,63 +248,63 @@
       <div class="tag-search__menu">
         <div class="tag-search__list">
         <input type="checkbox" id="1"></input>
-        <label for="1" class="tag-search__button">
+        <label id="tag" for="1" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">理系</p>
         </label>
         </div>
         <div class="tag-search__list">
         <input type="checkbox" id="2"></input>
-        <label for="2" class="tag-search__button">
+        <label id="tag" for="2" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">文系</p>
         </label>
         </div>
         <div class="tag-search__list">
         <input type="checkbox" id="3"></input>
-        <label for="3" class="tag-search__button">
+        <label id="tag" for="3" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">星3以上</p>
         </label>
         </div>
         <div class="tag-search__list">
         <input type="checkbox" id="4"></input>
-        <label for="4" class="tag-search__button">
+        <label id="tag" for="4" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">理系</p>
         </label>
         </div>
         <div class="tag-search__list">
         <input type="checkbox" id="5"></input>
-        <label for="5" class="tag-search__button">
+        <label id="tag" for="5" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">文系</p>
         </label>
         </div>
         <div class="tag-search__list">
         <input type="checkbox" id="6"></input>
-        <label for="6" class="tag-search__button">
+        <label id="tag" for="6" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">星3以上</p>
         </label>
         </div>
         <div class="tag-search__list">
         <input type="checkbox" id="7"></input>
-        <label for="7" class="tag-search__button">
+        <label id="tag" for="7" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">理系</p>
         </label>
         </div>
         <div class="tag-search__list">
         <input type="checkbox" id="8"></input>
-        <label for="8" class="tag-search__button">
+        <label id="tag" for="8" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">文系</p>
         </label>
         </div>
         <div class="tag-search__list">
         <input type="checkbox" id="9"></input>
-        <label for="9" class="tag-search__button">
+        <label id="tag" for="9" class="tag-search__button">
           <div class="checkmark"></div>
           <p class="tag-search__button-text">星3以上</p>
         </label>
@@ -325,7 +325,7 @@
       
       
       <div class="search-box"> 
-    <button class="search-box__button">検索</button>
+    <button id="searchbtn" class="search-box__button">検索</button>
       </div>
       
       <div id="searched" class="number-of-searches-box">
@@ -445,10 +445,10 @@
 
 <footer class="footer">
   <div>
-    <p class="footer__text"><span>2</span>件の製品が資料請求リストにあります。</p>
+    <p class="footer__text"><span>2</span>件の製品がお申し込みリストにあります。</p>
   </div>
   <div class="footer__buttons">
-    <button class="footer__form-button">資料請求フォームへ</button>
+    <button class="footer__form-button">お申し込みフォームへ</button>
     <button class="footer__reset-button">リストをリセット</button>
   </div>
 </footer>
