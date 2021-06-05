@@ -20,94 +20,96 @@
     </div>
 
     <div class="applicationconfirm-content">
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">お名前</li>
         <ol>
           <li class="applicationconfirm-content__answer">高橋　日菜</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">フリガナ</li>
         <ol>
           <li class="applicationconfirm-content__answer">タカハシ　ヒナ</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">生年月日</li>
         <ol>
           <li class="applicationconfirm-content__answer">2001年4月14日</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">性別</li>
         <ol>
           <li class="applicationconfirm-content__answer">女性</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">お住まい</li>
         <ol>
           <li class="applicationconfirm-content__answer">東京都</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">大学・大学院</li>
         <ol>
           <li class="applicationconfirm-content__answer">慶應義塾大学</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">学部名</li>
         <ol>
           <li class="applicationconfirm-content__answer">商学部</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">学科名</li>
         <ol>
           <li class="applicationconfirm-content__answer">商学科</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">卒業予定年</li>
         <ol>
           <li class="applicationconfirm-content__answer">2024年</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">勤務希望地</li>
         <ol>
           <li class="applicationconfirm-content__answer">北海道</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">電話番号</li>
         <ol>
           <li class="applicationconfirm-content__answer">08012343456</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">メールアドレス</li>
         <ol>
           <li class="applicationconfirm-content__answer">disclosure@gmail.com</li>
         </ol>
       </ul>  
-      <ul>
+      <ul class="applicationfirm-content__group">
         <li class="applicationconfirm-content__question">ご要望欄（任意）</li>
         <ol>
           <li class="applicationconfirm-content__answer">なし</li>
         </ol>
       </ul>
-　　　
+　　　 
       <div class="applicationconfirm-button">
-        <a href="#">
-          <span class="applicationconfirm-button__submit">同意して送信する</span>
-        </a>
-      </div>
-      <div class="applicationconfirm-button">
-        <a href="#">
-          <span class="applicationconfirm-button__cancel">戻る・修正する</span>
-        </a>
+        <button>
+          <a href="#">
+            <span class="applicationconfirm-button__submit">同意して送信する</span>
+          </a>
+        </button>
+        <button>
+          <a href="#">
+            <span class="applicationconfirm-button__cancel">戻る・修正する</span>
+          </a>
+        </button>
       </div>
     </div>
     

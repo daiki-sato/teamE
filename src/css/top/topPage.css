@@ -10,28 +10,20 @@
 /* トップページのcss */
 
 body{
-  /* emの文字サイズ指定 */
+  /* 文字サイズ指定 */
   font-size: 5px;
-  padding-bottom: 25%;
-  /* display: flex;
-  flex-flow: column;
-  min-height: 100vh; */
 }
 
 header{
   z-index: 6;
 }
 
-/* .container{
-  flex: 1;
-} */
-
 
 button {
   cursor: pointer;
 }
 
-/* サービス・タグ検索のチェックまーく */
+/* サービス・タグ検索のチェックマーク */
 .checkmark{
   content: '';
   width: 10px;
@@ -146,6 +138,9 @@ input[type="checkbox"]{
 @media screen and (max-width: 767px) {
   body{
     background-color: #ffffff;
+  }
+  .container{
+    padding-top: 28%;
   }
   .search__pc{
     display: none;
@@ -592,6 +587,8 @@ input[type="checkbox"]{
   border: none;
 }
 
+/* フッター */
+
 .footer {
   text-align: center;
   justify-content: center;
@@ -614,7 +611,7 @@ input[type="checkbox"]{
   cursor: pointer;
   border: none;
   background-color: #FFAB3F;
-  padding: 2vh 5vw;
+  padding: 1.5vh 3vw;
   font-size: 2vmax;
   font-weight: 600;
   border-radius: 5px;

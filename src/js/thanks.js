@@ -1,19 +1,14 @@
-const showDialog = () => {
-  document.getElementById('modal').classList.add('show');
-  const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-  const body = document.body;
-  body.style.position = 'fixed';
-  body.style.top = `-${scrollY}`;
-};
-
-const closeDialog = () => {
-  const body = document.body;
-  const scrollY = body.style.top;
-  window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  document.getElementById('modal').classList.remove('show');
-}
-
-window.addEventListener('scroll', () => {
-  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+// サンクスページのモーダルの表示、1.5秒後に非表示
+$(function () {
+  $('#submitbutton').click(function(){
+    $('#modal').fadeIn();
+    scrollPosition = $(window).scrollTop();
+    $("html,body").css("overflow", "hidden");
+    $('body').addClass('fixed').css({'top': -scrollPosition});
+    setTimeout(function(){
+    $('#modal').fadeOut();
+    $("html,body").removeAttr("style");
+		window.scrollTo( 0 , scrollPosition );
+  },1500)
+  })
 });
-

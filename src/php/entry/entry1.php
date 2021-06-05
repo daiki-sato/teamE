@@ -106,7 +106,7 @@
     <div class="form-group">
       <label for="familyname" class="entry-label">お名前</label>
       <div class="inputarea">
-        <span class="error"><?php echo h( $error_familyname ); ?></span>
+        <!-- <span class="error"><?php echo h( $error_familyname ); ?></span> -->
         <input type="text" class="form-control validate max50 required" id="familyname" name="familyname" placeholder="高橋" value="<?php echo h($familyname); ?>">
         <label for="firstname"></label>
         <span class="error"><?php echo h( $error_firstname ); ?></span>
