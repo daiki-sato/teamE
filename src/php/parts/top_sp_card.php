@@ -1,81 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>top_sp_card</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/top_sp_card.css">
-  </head>
-  
-  
-  
-  <body>
-    
-    
-    <?php function part_sp_card($thanksPage_recommended__image,
-                                $thanksPage_recommended__agant_name,
-                                $thanksPage_recommended__hashtag,
-                                $thanksPage_recommended__stars_rating,
-                                $thanksPage_recommended__contents_explanation,
-                                $thanksPage_recommended_button__submit) { ?>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>top_sp_card</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/sp_card.css">
+</head>
+<body>
+  <div class="card-sp">
+    <div class="card-sp-summary">
 
-    
-          <div class="thanksPage-reccomended__contents--parent">
-            <div class="thanksPage-recommended__contents-summary">
+      <div class="card-sp-summary-left">
+        <img src="#" class="card-sp__image" alt="エージェント画像が入ります">
+      </div>
 
-              <div class="thanksPage-recommended__contents-summary--left">
-                <img src="<?php echo $thanksPage_recommended__image?>" class="thanksPage-recommended__image" alt="エージェント画像が入ります">
-              </div>
+      <div class="card-sp-summary-right">    
+        <p>
+          <a href="#" class="card-sp__agent-name">キャリセン</a>
+        </p>
+        <p class="card-sp__hashtag">
+          #星3以上
+        </p>
+        <p class="card-sp__stars">
+          <span class="card-sp__stars-rating" data-rate="3"></span>&ensp;3.0
+        </p>
+      </div>
 
-              <div class="thanksPage-recommended__contents-summary--right">    
-                <p class="thanksPage-recommended__agant-name--box">
-                  <a href="#" class="thanksPage-recommended__agant-name"><?php echo $thanksPage_recommended__agant_name?></a>
-                </p>
-                <p class="thanksPage-recommended__hashtag">
-                  <? echo $thanksPage_recommended__hashtag?>
-                </p>
-                <p class="thanksPage-recommended__stars">
-                  <span class="thanksPage-recommended__stars-rating" data-rate="3"></span>&ensp;<? echo $thanksPage_recommended__stars_rating?>
-                </p>
-              </div>
+    </div>
 
-            </div>
+    <div class="card-sp-explanation">
+      採用コンサルタントが、じっくり1時間の個別面談。<br>
+      一人一人に合った納得内定獲得を徹底的にサポート。
+    </div>
 
-            <div class="thanksPage-recommended__contents-explanation">
-              <? echo $thanksPage_recommended__contents_explanation?>
-            </div>
-
-            <div class="thanksPage-recommended-buttons">
-              <p>
-                <span class="thanksPage-recommended-button__article">解説記事</span>
-              </p>
-              <p id="submitbutton" onClick='showDialog()'>
-                <span class="thanksPage-recommended-button__submit"><?= $thanksPage_recommended_button__submit?></span>
-              </p>
-
-              <!-- 申し込み完了モーダル -->
-              <div id="modal" class="thanksPafe-container__hidden">
-                <div class="thanksPage_modal-content">
-                  <div class="thanksPage_modal-body">
-                    <h4>申し込み完了！</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-    <?php } ?>
+    <div class="card-sp-buttons">
+      <button id="articlebtn" class="card-sp-button__article">
+        <p>解説記事</p>
+      </button>
+      <input type="checkbox" id="application">
+      <label for="application">
+      <span id="submitbtn" class="card-sp__button-submit">
+        <p id="text">お申し込みリストに<br>追加する</p>
+      </span>  
+      </label>  
+      <button id="exterminalsitebtn" class="card-sp__button-submit">
+        <p id="text"><a href="#">外部サイトから<br>申し込む</a></p>
+      </button>
+    </div>
+</div>
+</div>
 
 
 
-
-
-
-
-
+<script src="./card_sp.js"></script>
 </body>
 </html>

@@ -1,8 +1,9 @@
-
-<footer class="footer">
-  <p class="footer__text">2件の製品が資料請求リストにあります。</p>
+<footer class="footer" id="footer">
   <div>
-    <button class="footer__form-button">資料請求フォームへ</button>
+    <p class="footer__text"><span>2</span>件の製品がお申し込みリストにあります。</p>
+  </div>
+  <div class="footer__buttons">
+    <button class="footer__form-button">お申し込みフォームへ</button>
     <button class="footer__reset-button">リストをリセット</button>
   </div>
 </footer>
