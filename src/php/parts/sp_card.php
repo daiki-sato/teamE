@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>top_sp_card</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/sp_card.css">
+  <link rel="stylesheet" href="../css/top_sp_card.css">
 </head>
 <body>
   <div class="card-sp">
