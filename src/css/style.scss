@@ -1,9 +1,22 @@
-@import './common';
-@import './header';
-@import './_top.scss';
-@import './footer';
+// reset
+@import "reset/reset";
 
-@import './entry';
+//parts
+@import "parts/header";
+@import "parts/footer";
+@import "parts/pc_card";
+@import "parts/sp_card";
+@import "parts/confirmlist";
 
+//top
+@import "top/topPage";
 
+//entry
+@import "entry/entry";
+
+//applicationconfirm
+@import "applicationconfirm/applicationconfirm";
+
+//thanksPage
+@import "thanksPage/thanks";
 
