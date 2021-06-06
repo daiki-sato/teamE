@@ -8,6 +8,7 @@ body{
 .header__top{
   /* display: flex; */
   align-items: center;
+  padding-top: 2em;
 }
 
 /* 就活の教科書ロゴ */
@@ -17,9 +18,7 @@ body{
   line-height: 1.5;
 }
 
-.header-logo__img{
-  height: 62px;
-  width: auto;
+.header-logo__img{ 
   vertical-align: middle;
 }
 
@@ -73,7 +72,7 @@ body{
 
 
 /* レスポンシブ対応 */
-/* 767px以下の時 */
+/* for sp */
 @media screen and (max-width: 767px) {
   .header{
     width: 100%;
@@ -82,12 +81,20 @@ body{
   .header-logo{
     margin-bottom: 3em;
   }
+  .header-logo__img{
+    height: 50px;
+    width: auto;
+  }
   .header-nav{
     display: none;
   }
 }
-/* 767px以上の時 */
+/* for pc */
 @media screen and (min-width: 767px) {
+  .header-logo__img{
+    height: 62px;
+    width: auto;
+  }
   #nav-drawer{
     display: none;
   }
