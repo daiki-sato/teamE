@@ -1,0 +1,82 @@
+.newpublish, .fa-plus{
+  color: #28A69A;
+}
+
+/* 新規掲載画面　情報入力欄 */
+
+.inputfield{
+  display: inline-block;
+}
+.form-group{
+  display: flex;
+  align-items: center;
+}
+.label{
+  font-size: 1.2vw;
+  font-weight: 600;
+  width: 20vw;
+  text-align: right;
+  padding-top: 0.8vw;
+  padding-bottom: 0.8vw;
+  padding-right: 3vw;
+}
+input[type="text"], #companyname, #companylink, #articlelink{
+  height: 3vh;
+  width: 30vw;
+}
+input[type="text"], #overview, #notes{
+  height: 10vh;
+  width: 30vw;
+}
+input[type="text"],#hashtag{
+  height: 5vh;
+  width: 30vw;
+}
+select{
+  height: 4vh;
+  width: 8vw;
+  margin-right: 1vw;
+}
+input[type="radio"], input[type="checkbox"]{
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0.5em; 
+}
+.option__text{
+  font-size: 1vw;
+  margin-right: 1.5vw;
+}
+/* 写真ドラッグ */
+#dragDropArea{
+  background-color: #f4f4f4;
+  margin: 10px;
+  padding: 10px;
+  border: #ddd dashed 5px;
+  min-height: 150px;
+  width: 300px;
+  text-align: center;
+}
+#dragDropArea p{
+    color: #999;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 1.4em;
+}
+#dragDropArea .drag-drop-buttons{
+    margin-top: 20px;
+    font-size: 12px;
+    font-size: 1.2em;
+}
+.drag-drop-buttons input{
+    margin: auto;
+}
+
+/* 登録ボタン */
+.submitbtn{
+  display: block;
+  margin: 3vw auto;
+  width: 10vw;
+  font-size: 2vw;
+  font-weight: 600;
+  cursor: pointer;
+}
