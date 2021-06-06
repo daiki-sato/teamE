@@ -1,15 +1,3 @@
-// header固定
-$(function() {
-  var height=$("#header").height();
-  $(".container").css("margin-top", height + "15px");
-});
-//footer固定
-$(function() {
-  var height=$("#footer").height();
-  $("body").css("padding-bottom", height +"15px");
-});
-
-
 const categorypush = document.querySelectorAll('#category');
 categorypush.forEach(function(target){
   target.addEventListener('click', () => {
