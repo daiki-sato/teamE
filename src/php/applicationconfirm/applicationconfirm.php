@@ -5,13 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>入力内容確認ページ</title>
-  <link rel="stylesheet" href="/css/reset/reset.css">
-  <link rel="stylesheet" href="/css/applicationconfirm/applicationconfirm.css">
+  <link rel="stylesheet" href="/css/style.css">
   <!-- google font のリンク-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
 　<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/_header.php"); ?>
+
   <div class="applicationconfirm-container">
 
     <div class="applicationconfirm-title">
@@ -114,5 +116,7 @@
     </div>
     
   </div>
+
+<script src="/js/thanks.js"></script>  
 </body>
 </html>

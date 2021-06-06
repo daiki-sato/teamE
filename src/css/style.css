@@ -946,11 +946,9 @@ input[type="checkbox"] {
 
 /* for sp */
 @media screen and (max-width: 767px) {
-  body {
-    background-color: #ffffff;
-  }
   .container {
     padding-top: 28%;
+    background-color: #ffffff;
   }
   .search__pc {
     display: none;
@@ -1028,13 +1026,11 @@ input[type="checkbox"] {
 
 /* for pc */
 @media screen and (min-width: 767px) {
-  body {
-    background-color: #eaedf2;
-  }
   /* 全体のレイアウト（メインとサイドバー） */
   .container {
     display: flex;
     margin: 10vmax;
+    background-color: #eaedf2;
   }
   .main {
     padding-right: 10vmax;
