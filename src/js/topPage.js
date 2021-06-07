@@ -95,3 +95,74 @@ search.addEventListener('click',() => {
   searched.style.display = "block";
   console.log('検索ボタンが押されました');
 })
+
+
+
+//一括申し込みのjs
+function allcheck( tf ) {
+  
+  var ElementsCount = document.sampleform.elements.length; // チェックボックスの数
+  for( i=0 ; i<ElementsCount ; i++ ) {
+     document.sampleform.elements[i].checked = tf; // ON・OFFを切り替え
+  }
+}
+
+
+
+// <form name="sampleform">
+// <p>
+//    <label><input type="checkbox" value="YES" name="sc5">チェックボックスA</label><br>
+//    <label><input type="checkbox" value="YES" name="sc6">チェックボックスB</label><br>
+//    <label><input type="checkbox" value="YES" name="sc7">チェックボックスC</label><br>
+//    <label><input type="checkbox" value="YES" name="sc8">チェックボックスD</label><br>
+// </p>
+// </form>
+
+
+// <p>
+//   <input type="button" value="全部ON！" onclick="allcheck(true);">
+//   <input type="button" value="全部OFF！" onclick="allcheck(false);">
+// </p>
+
+
+
+
+
+//「全て選択」のチェックボックス
+let checkAll = document.getElementById("checkAll");
+//「全て選択」以外のチェックボックス
+let el = document.getElementsByClassName("checks");
+
+//全てのチェックボックスをON/OFFする
+const funcCheckAll = (bool) => {
+    for (let i = 0; i < el.length; i++) {
+        el[i].checked = bool;
+    }
+};
+//「checks」のclassを持つ要素のチェック状態で「全て選択」のチェック状態をON/OFFする
+const funcCheck = () => {
+    let count = 0;
+    for (let i = 0; i < el.length; i++) {
+        if (el[i].checked) {
+            count += 1;
+        }
+    }
+    if (el.length === count) {
+        checkAll.checked = true;
+    } else {
+        checkAll.checked = false;
+    }
+};
+//「全て選択」のチェックボックスをクリックした時
+checkAll.addEventListener(
+    "click",
+    () => {
+        funcCheckAll(checkAll.checked);
+    },
+    false
+);
+//「全て選択」以外のチェックボックスをクリックした時
+for (let i = 0; i < el.length; i++) {
+    el[i].addEventListener("click", funcCheck, false);
+}
+

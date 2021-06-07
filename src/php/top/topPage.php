@@ -291,7 +291,7 @@
         <p>キャリセン</p>
         <p>採用コンサルタントが、じっくり1時間の個別面談。一人一人に合った納得内定獲得を徹底的にサポート。</p>
         <button>解説記事</button>
-        <button>資料請求リストに追加する</button>
+        <button class="checks">資料請求リストに追加する</button>
       </div>
     </div>
     </section>
@@ -316,7 +316,7 @@
       
       <div class="application-area">
         <p class="application-area__text">よくわからない方は</p>
-          <button class="application-area__button">エージェント一括申し込み！</button>
+          <button class="application-area__button" id="checkAll">エージェント一括申し込み！</button>
           <div class="application-area__balloon">
             1分でできる！
           </div>
