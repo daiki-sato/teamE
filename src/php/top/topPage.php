@@ -11,7 +11,7 @@
   <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="topPage__body">
   
 　<?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/_header.php"); ?>
 
@@ -280,20 +280,12 @@
     
     <section class="pick-up">
     <div class="pick-up__title__box">
-      <img src="../img/指差しの手の線画アイコン.png" class="pick-up__title__img" alt="">
+      <img src="/img/指差しの手の線画アイコン.png" class="pick-up__title__img" alt="pickup">
       <h2 class="pick-up__title__text">PICK UP</h2>
     </div>
   
-    <div class="pick-up-lists">
-      <!-- この中にcardを入れる -->
-      <div class="pick-up-list">
-        <img class="pick-up-list__img" src="../img/キャリセン.png" alt="キャリセンの画像">
-        <p>キャリセン</p>
-        <p>採用コンサルタントが、じっくり1時間の個別面談。一人一人に合った納得内定獲得を徹底的にサポート。</p>
-        <button>解説記事</button>
-        <button>資料請求リストに追加する</button>
-      </div>
-    </div>
+    　<?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/card-internal_pc.php"); ?>
+
     </section>
     
     <section class="search-results">
@@ -390,6 +382,7 @@
 <!-- jquery↓↓↓↓  -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/js/topPage.js"></script>
+<script src="/js/card.js"></script>
 
 
 

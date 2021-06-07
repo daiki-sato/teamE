@@ -89,7 +89,7 @@
 }
 
 /* ボタン類 */
-.card-sp-buttons{
+.card-sp__buttons{
   text-align: center;
   padding: 1vmax;
   display: flex;
@@ -99,7 +99,7 @@
 }
 
 /* 詳細記事btn */
-.card-sp-button__article{
+.card-sp__button-article{
   width: 30vmin;
   display: inline-block;
   height: calc( 1.5vh * 3.5 );
