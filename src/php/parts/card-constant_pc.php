@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>top_pc_card</title>
+  <title>top_sp_card</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -36,25 +36,29 @@
             </div>
   
             <div class="card-pc__buttons">
-              <button id="articlebtn" class="card__button-article">
+              <button id="articlebtn" class="card_pc__button-article">
                 <p>解説記事</p> 
               </button>
-              <input type="checkbox" id="application">
-              <label for="application">
-              <span id="submitbtn" class="card__button-submit">
-                <p id="text">お申し込みリストに<br>追加する</p>
-              </span>  
-            　</label>
-              <button id="exterminalsitebtn" class="card__button-submit">
-                <p id="text"><a href="#">外部サイトから<br>申し込む</a></p>
+              
+              <button id="continueapply" class="card-pc__button-submit">
+                <p>続けて申し込む</p>
               </button>  
             </div>
+
+            <!-- 申し込み完了モーダル -->
+            <div id="modal" class="thanksPafe-container__hidden">
+              <div class="thanksPage_modal-content">
+                <div class="thanksPage_modal-body">
+                <p>申し込み完了！</p>
+                </div>
+              </div>
+            </div>            
 
           </div>
 
         </div>
       
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="/js/card.js"></script>        
+<script src="./card.js"></script>        
 </body>
 </html> 
