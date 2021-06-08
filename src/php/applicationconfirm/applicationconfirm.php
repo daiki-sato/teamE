@@ -14,6 +14,8 @@
 
   <?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/_header.php"); ?>
 
+  <div class="container">
+
   <div class="applicationconfirm-container">
 
     <div class="applicationconfirm-title">
@@ -117,6 +119,9 @@
     
   </div>
 
-<script src="/js/thanks.js"></script>  
+  </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="/js/header.js"></script>
 </body>
 </html>

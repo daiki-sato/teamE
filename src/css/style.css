@@ -392,8 +392,8 @@ body {
 
 /* エージェント画像 */
 .card-pc__left {
-  width: 64vmin;
-  height: 36vmin;
+  width: 60vmin;
+  height: 30vmin;
   padding: 1vmax;
   /* ↓とりあえず大きさ見るために付けてるだけ↓ */
   border: 1px solid;
@@ -414,7 +414,7 @@ body {
 
 /* エージェント名 */
 .card-pc__agant-name {
-  font-size: 4vmin;
+  font-size: 3vmin;
   color: #000000;
   font-weight: 600;
   text-decoration: underline;
@@ -515,7 +515,7 @@ body {
 /* 星0 */
 /* エージェント詳細説明 */
 .card-pc__agent-explanation {
-  font-size: 2.5vmin;
+  font-size: 2vmin;
   padding: 1vmax;
   line-height: 150%;
 }
@@ -534,7 +534,7 @@ button {
 }
 
 /* 詳細記事btn */
-.card__button-article {
+.card-pc__button-article {
   width: 30vmin;
   display: inline-block;
   height: calc( 2vh * 5);
@@ -547,7 +547,7 @@ button {
 }
 
 /* お申し込みリストに追加するbtn */
-.card__button-submit {
+.card-pc__button-submit {
   width: 30vmin;
   height: calc( 2vh * 5);
   display: grid;
@@ -560,7 +560,7 @@ button {
 }
 
 /* お申し込みリストから外すbtn */
-.card__button-unsubmit {
+.card-pc__button-unsubmit {
   width: 30vmin;
   height: calc( 2vh * 5);
   display: grid;
@@ -713,7 +713,7 @@ input[type="checkbox"] {
 }
 
 /* ボタン類 */
-.card-sp-buttons {
+.card-sp__buttons {
   text-align: center;
   padding: 1vmax;
   display: flex;
@@ -723,7 +723,7 @@ input[type="checkbox"] {
 }
 
 /* 詳細記事btn */
-.card-sp-button__article {
+.card-sp__button-article {
   width: 30vmin;
   display: inline-block;
   height: calc( 1.5vh * 3.5);
@@ -946,10 +946,12 @@ input[type="checkbox"] {
 
 /* for sp */
 @media screen and (max-width: 767px) {
-  .container {
-    padding-top: 28%;
+  .topPage__body {
     background-color: #ffffff;
   }
+  /* .container {
+    padding-top: 28%;
+  } */
   .search__pc {
     display: none;
   }
@@ -1026,11 +1028,13 @@ input[type="checkbox"] {
 
 /* for pc */
 @media screen and (min-width: 767px) {
+  .topPage__body {
+    background-color: #eaedf2;
+  }
   /* 全体のレイアウト（メインとサイドバー） */
   .container {
     display: flex;
     margin: 10vmax;
-    background-color: #eaedf2;
   }
   .main {
     padding-right: 10vmax;
@@ -1225,9 +1229,8 @@ input[type="checkbox"] {
 }
 
 .pick-up {
-  height: 400px;
   background-color: #89CEC8;
-  margin: 3em 0;
+  margin: 4em 0;
 }
 
 .pick-up .pick-up__title__box {
@@ -1630,7 +1633,7 @@ body {
   .entry-area {
     margin: 4vh 3vw;
   }
-  label, .entry-label {
+  .entry-label {
     font-size: 4vmin;
     font-weight: 300;
     padding: 2vh 0;
@@ -1773,8 +1776,8 @@ button {
 }
 
 .thanksPage-container {
-  margin: 10px;
-  padding: 20px;
+  margin: 40vw 3vw;
+  padding: 1vw;
   font-size: 5px;
   border: solid 1px #e5e5e5;
 }
@@ -1787,14 +1790,14 @@ button {
 .thanksPage-title__pagetop {
   color: #f28d3c;
   font-weight: 600;
-  font-size: 7vmin;
+  font-size: 5vmin;
   margin: 2vmax;
 }
 
 /* お申し込みありがとうございます */
 .thanksPage-title__pagetop2 {
   font-weight: 300;
-  font-size: 5.5vmin;
+  font-size: 4vmin;
   margin-top: 1vmax;
   margin-bottom: 1vmax;
   white-space: normal;
@@ -1803,7 +1806,7 @@ button {
 /* お申し込み内容の確認についてのメールを送信しました。 */
 .thanksPage-title__pagetop3 {
   font-weight: 300;
-  font-size: 3.2vmin;
+  font-size: 2.5vmin;
   padding: 2vmax 0;
 }
 

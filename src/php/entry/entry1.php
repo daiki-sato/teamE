@@ -11,6 +11,8 @@
 
   <?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/_header.php"); ?>
 
+  <div class="container">
+
   <h1 class="entry-title">&emsp;お申し込み&emsp;</h1>
 
   <div class="entry-container">
@@ -249,6 +251,10 @@
   
   </div>
 
-<script src="/js/thanks.js"></script>
+  </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="/js/header.js"></script>
+
 </body>
 </html>

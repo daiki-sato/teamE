@@ -382,6 +382,8 @@
 <!-- jquery↓↓↓↓  -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/js/topPage.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/footer.js"></script>
 <script src="/js/card.js"></script>
 
 
