@@ -8,8 +8,8 @@
 
 /* エージェント画像 */
 .card-pc__left{
-  width: 64vmin;
-  height: 36vmin;
+  width: 60vmin;
+  height: 30vmin;
   padding: 1vmax;
   /* ↓とりあえず大きさ見るために付けてるだけ↓ */
   border: 1px solid;
@@ -30,7 +30,7 @@
 
 /* エージェント名 */
 .card-pc__agant-name{
-  font-size: 4vmin;
+  font-size: 3vmin;
   color: #000000;
   font-weight: 600;
   text-decoration: underline;
@@ -88,7 +88,7 @@
 
 /* エージェント詳細説明 */
 .card-pc__agent-explanation{
-  font-size: 2.5vmin;
+  font-size: 2vmin;
   padding: 1vmax;
   line-height: 150%;
 }
@@ -107,7 +107,7 @@ button{
 }
 
 /* 詳細記事btn */
-.card__button-article{
+.card-pc__button-article{
   width: 30vmin;
   display: inline-block;
   height: calc( 2vh * 5 );
@@ -120,7 +120,7 @@ button{
 }
 
 /* お申し込みリストに追加するbtn */
-.card__button-submit{
+.card-pc__button-submit{
   width: 30vmin;
   height: calc( 2vh * 5 );
   display: grid;
@@ -133,7 +133,7 @@ button{
 }
 
 /* お申し込みリストから外すbtn */
-.card__button-unsubmit{
+.card-pc__button-unsubmit{
   width: 30vmin;
   height: calc( 2vh * 5 );
   display: grid;
