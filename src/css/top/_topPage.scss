@@ -136,7 +136,7 @@ input[type="checkbox"]{
 
  /* for sp */
 @media screen and (max-width: 767px) {
-  body{
+  .topPage__body{
     background-color: #ffffff;
   }
   .container{
@@ -218,7 +218,7 @@ input[type="checkbox"]{
 
 /* for pc */
 @media screen and (min-width: 767px) {
-  body{
+  .topPage__body{
     background-color: #eaedf2;
   }
   /* 全体のレイアウト（メインとサイドバー） */
@@ -421,9 +421,8 @@ input[type="checkbox"]{
 
 
 .pick-up {
-  height: 400px;
   background-color: #89CEC8;
-  margin: 3em 0;
+  margin: 4em 0;
 }
 
 .pick-up .pick-up__title__box {
