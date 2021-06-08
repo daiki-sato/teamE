@@ -1,10 +1,5 @@
 <?php
-    session_start();
-    echo session_save_path();
-    if($_SESSION['admin_login'] == false){
-        header("Location:./index.html");
-        exit;
-    }
+require(dirname(__FILE__) . "/check.php");
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +28,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="/css/reset/_reset.scss">
-    <link rel="stylesheet" href="/admin_hina_css/style.css">
+    <link rel="stylesheet" href="/admin_css/style.css">
 </head>
 
 <body>
@@ -51,13 +46,21 @@
                 <div class="wrapper-title">
                     <h3>ダッシュボード</h3>
                 </div>
+
                 <div class="boxs">
-                    <a href="news.php" class="box">
+                    <a href="newagent.php" class="box">
                     <i class="far fa-folder-plus"></i><!-- fontawesome利用部分 -->
                         <p>新規掲載</p>
                     </a>
-
                 </div>
+
+                <div class="boxs">
+                    <a href="infosetting.php" class="box">
+                    <i class="far fa-folder-plus"></i><!-- fontawesome利用部分 -->
+                        <p>掲載情報一覧</p>
+                    </a>
+                </div>
+
             </div>
         </div>
     </main>

@@ -1,17 +1,12 @@
 <?php
-session_start();
-require(dirname(__FILE__,2) . "/dbconnect.php");
-?>
+require(dirname(__FILE__) . "/check.php");
 
-<!-- 登録ボタン押したらdbに登録-->
-<?php
   try {
     //new_agent.phpの値を取得
     $agent_name = $_SESSION['agent_name'];
     $image_url = $_SESSION['image_url'];
     $overview = $_SESSION['overview'];
     $upper_limit = $_SESSION['upper_limit'];
-    var_dump($upper_limit);
     $deadline = $_SESSION['deadline'];
     $button_type = $_SESSION['button_type'];
     $pickup = $_SESSION['pickup'];
