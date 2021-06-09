@@ -109,13 +109,14 @@ body {
 
 .header {
   background-color: #26a69a;
-  padding-top: 2em;
+  top: 0;
+  margin: 0;
 }
 
 .header__top {
   /* display: flex; */
   align-items: center;
-  padding-top: 2em;
+  padding-top: 4em;
 }
 
 /* 就活の教科書ロゴ */
@@ -537,7 +538,7 @@ button {
 .card-pc__button-article {
   width: 30vmin;
   display: inline-block;
-  height: calc( 2vh * 5);
+  height: calc( 1vh * 8);
   background-color: #80cbc5;
   font-size: 3vmin;
   color: #ffff;
@@ -549,7 +550,7 @@ button {
 /* お申し込みリストに追加するbtn */
 .card-pc__button-submit {
   width: 30vmin;
-  height: calc( 2vh * 5);
+  height: calc( 1vh * 8);
   display: grid;
   align-items: center;
   background-color: #47a69b;
@@ -562,7 +563,7 @@ button {
 /* お申し込みリストから外すbtn */
 .card-pc__button-unsubmit {
   width: 30vmin;
-  height: calc( 2vh * 5);
+  height: calc( 1vh * 8);
   display: grid;
   align-items: center;
   background-color: #c4c4c4;
@@ -726,7 +727,7 @@ input[type="checkbox"] {
 .card-sp__button-article {
   width: 30vmin;
   display: inline-block;
-  height: calc( 1.5vh * 3.5);
+  height: calc( 1.5vh * 3);
   background-color: #80cbc5;
   font-size: 3vmin;
   color: #ffff;
@@ -738,7 +739,7 @@ input[type="checkbox"] {
 /* お申し込みリストに追加するbtn */
 .card-sp__button-submit {
   width: 30vmin;
-  height: calc( 1.5vh * 3.5);
+  height: calc( 1.5vh * 3);
   line-height: 1.5vh;
   display: grid;
   align-items: center;
@@ -778,6 +779,18 @@ input[type="checkbox"] {
 
 button {
   border: none;
+}
+
+@media screen and (min-width: 767px) {
+  .card-sp__container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-pc__container {
+    display: none;
+  }
 }
 
 .confirmlist__box {
@@ -949,6 +962,9 @@ input[type="checkbox"] {
   .topPage__body {
     background-color: #ffffff;
   }
+  .container {
+    padding-top: 28%;
+  }
   .search__pc {
     display: none;
   }
@@ -1038,8 +1054,10 @@ input[type="checkbox"] {
     width: 70%;
   }
   .sidebar {
-    border: solid 1px #000000;
     width: 30%;
+  }
+  .sidebarimg {
+    width: 100%;
   }
   .search-place {
     background-color: #ffffff;
@@ -1117,22 +1135,20 @@ input[type="checkbox"] {
 
 /* 検索ボタン */
 .search-box {
-  background-color: #28A69A;
   margin: 1vw auto;
-  width: 60vmin;
 }
 
 .search-box .search-box__button {
   display: block;
-  width: 100%;
   cursor: pointer;
   border: none;
   background-color: #28A69A;
   color: #ffffff;
   padding: 1vw;
+  width: 60vmin;
   font-size: 5em;
   font-weight: 400;
-  margin: 0.5vw 0;
+  margin: 0.5vw auto;
 }
 
 /* 検索結果がn件あります */
