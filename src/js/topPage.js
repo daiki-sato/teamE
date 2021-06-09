@@ -99,50 +99,12 @@ search.addEventListener('click',() => {
 
 
 //一括申し込みのjs
-// function allcheck( tf ) {
-  
-//   var ElementsCount = document.sampleform.elements.length; // チェックボックスの数
-//   for( i=0 ; i<ElementsCount ; i++ ) {
-//      document.sampleform.elements[i].checked = tf; // ON・OFFを切り替え
-//   }
-// }
-
-
-
-// <form name="sampleform">
-// <p>
-//    <label><input type="checkbox" value="YES" name="sc5">チェックボックスA</label><br>
-//    <label><input type="checkbox" value="YES" name="sc6">チェックボックスB</label><br>
-//    <label><input type="checkbox" value="YES" name="sc7">チェックボックスC</label><br>
-//    <label><input type="checkbox" value="YES" name="sc8">チェックボックスD</label><br>
-// </p>
-// </form>
-
-
-// <p>
-//   <input type="button" value="全部ON！" onclick="allcheck(true);">
-//   <input type="button" value="全部OFF！" onclick="allcheck(false);">
-// </p>
-
-
-
-
-
-//「全て選択」のチェックボックス
-// $(function(){
-//   $('button.application-area__button').each(function(i){
-//       $(this).attr('id','checkAll' + (i));
-//   });
-// });
-
-
-// for (let i = 0; i< document.getElementById(`"checkAll + ${i}"`).length; i++) {
-// }
 
 
 let checkAlls = document.getElementsByClassName("application-area__button");
 checkAlls = Array.from(checkAlls);
 checkAlls.forEach(function(checkAll) {
+
   //「全て選択」のチェックボックスをクリックした時
 checkAll.addEventListener(
   "click",
@@ -152,11 +114,9 @@ checkAll.addEventListener(
   },
   false
 );
-
   console.log(checkAll);
 });
 
-// console.log(checkAll);
 
 //「全て選択」以外のチェックボックス
 let check = document.getElementsByClassName("checks");
@@ -164,14 +124,6 @@ let check = document.getElementsByClassName("checks");
 // checks.forEach(function(check) {
 //   console.log(checks);
 // });
-// // let check = document.getElementsByClassName("checks");
-
-
-
-
-
-// console.log(el);
-
 
 
 //全てのチェックボックスをON/OFFする
@@ -180,6 +132,7 @@ const funcCheckAll = (bool) => {
       check[i].checked = bool;
     }
 };
+
 //「checks」のclassを持つ要素のチェック状態で「全て選択」のチェック状態をON/OFFする
 const funcCheck = () => {
     let count = 0;
