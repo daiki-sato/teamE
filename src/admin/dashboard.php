@@ -34,7 +34,7 @@ require(dirname(__FILE__) . "/check.php");
 <body>
     <header class="header">
     <span class="header__text">管理画面</span>
-    <img src="../logo.png" class="header__logo" alt="就活の教科書ロゴ">
+    <img src="/img/logo.png" class="header__logo" alt="就活の教科書ロゴ">
     <nav class="menu">
         <a href="logout.php" class="header__logout">ログアウト</a>
     </nav>

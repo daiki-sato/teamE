@@ -1,5 +1,5 @@
 
-  <div class="card-sp">
+  <div class="card-sp__container">
     <div class="card-sp-summary">
 
       <div class="card-sp-summary-left">
