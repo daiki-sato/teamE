@@ -123,7 +123,7 @@ button{
 /* お申し込みリストに追加するbtn */
 .card-pc__button-submit{
   width: 30vmin;
-  height: calc( 2vh * 5 );
+  height: calc( 1vh * 8 );
   display: grid;
   align-items: center;
   background-color: #47a69b;
@@ -155,7 +155,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-//=====card sp=====//@at-root
+//=====card sp=====//
 
 /* おすすめエージェント__画像,星 */
 .card-sp-summary{
@@ -260,7 +260,7 @@ input[type="checkbox"] {
 .card-sp__button-article{
   width: 30vmin;
   display: inline-block;
-  height: calc( 1.5vh * 3.5 );
+  height: calc( 1.5vh * 3 );
   background-color: #80cbc5;
   font-size: 3vmin;
   color: #ffff;
@@ -272,7 +272,7 @@ input[type="checkbox"] {
 /* お申し込みリストに追加するbtn */
 .card-sp__button-submit{
   width: 30vmin;
-  height: calc( 1.5vh * 3.5 );
+  height: calc( 1.5vh * 3 );
   line-height: 1.5vh;
   display: grid;
   align-items: center;
