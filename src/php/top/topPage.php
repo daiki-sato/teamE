@@ -285,7 +285,7 @@
     </div>
   
 
-    <?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/card-internal_pc.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/card-internal.php"); ?>
 
 
     </section>
@@ -310,7 +310,7 @@
       
       <div class="application-area">
         <p class="application-area__text">よくわからない方は</p>
-          <button class="application-area__button" id="checkAll">エージェント一括申し込み！</button>
+          <button class="application-area__button">エージェント一括申し込み！</button>
           <div class="application-area__balloon">
             1分でできる！
           </div>
