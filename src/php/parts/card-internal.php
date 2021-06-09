@@ -41,8 +41,8 @@
         </button>
         <input type="checkbox" id="application">
         <label for="application">
-        <span id="submitbtn" class="card-pc__button-submit">
-          <p id="text">お申し込みリストに<br>追加する</p>
+        <span id="submit__pc" class="card-pc__button-submit">
+          <p id="text__pc">お申し込みリストに<br>追加する</p>
         </span>  
       </div>
 
@@ -82,8 +82,8 @@
       </button>
       <input type="checkbox" id="application">
       <label for="application">
-      <span id="submitbtn" class="card-sp__button-submit">
-        <p id="text">お申し込みリストに<br>追加する</p>
+      <span id="submit__sp" class="card-sp__button-submit">
+        <p id="text__sp">お申し込みリストに<br>追加する</p>
       </span>  
       </label>  
     </div>
