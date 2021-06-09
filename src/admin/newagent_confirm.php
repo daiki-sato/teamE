@@ -20,6 +20,7 @@ $article_link = isset( $_POST[ 'article_link' ] ) ? $_POST[ 'article_link' ] : N
 $tag = isset( $_POST[ 'tag' ] ) ? $_POST[ 'tag' ] : NULL;
 $memo = !empty( $_POST[ 'memo' ] ) ? $_POST[ 'memo' ] : NULL;
 $status = isset( $_POST[ 'status' ] ) ? $_POST[ 'status' ] : NULL;
+$id = !empty( $_POST[ 'id' ] ) ? $_POST[ 'id' ] : NULL;
 
 //POSTされたデータを整形（前後にあるホワイトスペースを削除）
 $agent_name = trim( $agent_name );
@@ -50,6 +51,7 @@ $_SESSION[ 'article_link' ] = $article_link;
 $_SESSION[ 'tag' ] = $tag;
 $_SESSION[ 'memo' ] = $memo;
 $_SESSION[ 'status' ] = $status;
+$_SESSION[ 'id' ] = $id;
 ?>
 
 

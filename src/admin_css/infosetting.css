@@ -5,11 +5,9 @@
   display: flex;
   justify-content: space-between;
   padding: 2vw 1vw;
-  align-items: center;
 }
 .info{
   display: flex;
-  align-items: center;
 }
 .companycard{
   margin: 1vw;
@@ -21,23 +19,28 @@
   margin: 1vw;
 }
 .companyinfo__left{
-  width: 30%;
-  height: 10vw;
-  border: solid 1px;
+  width: 40%;
   margin: 0.5vw;
+}
+.companyimg{
+  width: 100%;
 }
 .companyinfo__right{
   margin: 0.5vw;
+  width: 50%;
 }
 .info__title{
   font-size: 1vw;
   font-weight: 600;
   white-space: nowrap;
-  width: 30%;
+  width: 35%;
+  margin-top: 0.5vw;
 }
 .overview, .max-data-limit, .limitdate, .buttontype, .companylink, .articlelink, .hashtag, .notes{
   font-size: 1vw;
   font-weight: 300;
   margin: 0.5vw;
+  padding-left: 3vw;
   word-break: break-all;
+  width: 60%;
 }
