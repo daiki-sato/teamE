@@ -39,7 +39,7 @@
         <button id="articlebtn" class="card-pc__button-article">
           <p>解説記事</p> 
         </button>
-        <input type="checkbox" id="application">
+        <input type="checkbox" id="application" class="checks">
         <label for="application">
         <span id="submit__pc" class="card-pc__button-submit">
           <p id="text__pc">お申し込みリストに<br>追加する</p>
@@ -80,7 +80,7 @@
       <button id="articlebtn" class="card-sp__button-article">
         <p>解説記事</p>
       </button>
-      <input type="checkbox" id="application">
+      <input type="checkbox" id="application" class="checks">
       <label for="application">
       <span id="submit__sp" class="card-sp__button-submit">
         <p id="text__sp">お申し込みリストに<br>追加する</p>

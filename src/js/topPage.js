@@ -99,13 +99,13 @@ search.addEventListener('click',() => {
 
 
 //一括申し込みのjs
-function allcheck( tf ) {
+// function allcheck( tf ) {
   
-  var ElementsCount = document.sampleform.elements.length; // チェックボックスの数
-  for( i=0 ; i<ElementsCount ; i++ ) {
-     document.sampleform.elements[i].checked = tf; // ON・OFFを切り替え
-  }
-}
+//   var ElementsCount = document.sampleform.elements.length; // チェックボックスの数
+//   for( i=0 ; i<ElementsCount ; i++ ) {
+//      document.sampleform.elements[i].checked = tf; // ON・OFFを切り替え
+//   }
+// }
 
 
 
@@ -129,40 +129,77 @@ function allcheck( tf ) {
 
 
 //「全て選択」のチェックボックス
-let checkAll = document.getElementById("checkAll");
+// $(function(){
+//   $('button.application-area__button').each(function(i){
+//       $(this).attr('id','checkAll' + (i));
+//   });
+// });
+
+
+// for (let i = 0; i< document.getElementById(`"checkAll + ${i}"`).length; i++) {
+// }
+
+
+let checkAlls = document.getElementsByClassName("application-area__button");
+checkAlls = Array.from(checkAlls);
+checkAlls.forEach(function(checkAll) {
+  //「全て選択」のチェックボックスをクリックした時
+checkAll.addEventListener(
+  "click",
+  () => {
+      funcCheckAll(checkAll.checked);
+      console.log("ok");
+  },
+  false
+);
+
+  console.log(checkAll);
+});
+
+// console.log(checkAll);
+
 //「全て選択」以外のチェックボックス
-let el = document.getElementsByClassName("checks");
+let check = document.getElementsByClassName("checks");
+// checks = Array.from(checks);
+// checks.forEach(function(check) {
+//   console.log(checks);
+// });
+// // let check = document.getElementsByClassName("checks");
+
+
+
+
+
+// console.log(el);
+
+
 
 //全てのチェックボックスをON/OFFする
 const funcCheckAll = (bool) => {
-    for (let i = 0; i < el.length; i++) {
-        el[i].checked = bool;
+    for (let i = 0; i < check.length; i++) {
+      check[i].checked = bool;
     }
 };
 //「checks」のclassを持つ要素のチェック状態で「全て選択」のチェック状態をON/OFFする
 const funcCheck = () => {
     let count = 0;
-    for (let i = 0; i < el.length; i++) {
-        if (el[i].checked) {
+    for (let i = 0; i < check.length; i++) {
+        if (check[i].checked) {
             count += 1;
         }
     }
-    if (el.length === count) {
+    if (check.length === count) {
         checkAll.checked = true;
     } else {
         checkAll.checked = false;
     }
 };
-//「全て選択」のチェックボックスをクリックした時
-checkAll.addEventListener(
-    "click",
-    () => {
-        funcCheckAll(checkAll.checked);
-    },
-    false
-);
+
 //「全て選択」以外のチェックボックスをクリックした時
-for (let i = 0; i < el.length; i++) {
-    el[i].addEventListener("click", funcCheck, false);
+for (let i = 0; i < check.length; i++) {
+  check[i].addEventListener("click", funcCheck, false);
 }
+
+
+
 
