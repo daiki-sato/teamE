@@ -14,7 +14,7 @@ if (!empty($_POST)) {
     $_SESSION = array();
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['time'] = time();
-    header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin/index.php');
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin/newagent.php');
     exit();
   } else {
     $error = 'fail';
@@ -26,21 +26,42 @@ if (!empty($_POST)) {
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>管理者ログイン</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理画面ログイン</title>
+    <link rel="icon" href="favicon.ico">
+    <!-- css -->
+    <link rel="stylesheet" href="/css/reset/_reset.scss">
+    <link rel="stylesheet" href="/admin_css/style.css">
 </head>
 
 <body>
-    <div>
-        <h1>管理者ログイン</h1>
-        <form action="/admin/login.php" method="POST">
-            <input type="email" name="email" required value="<?php echo htmlspecialchars($_POST['email'], ENT_QUOTES); ?>">
-            <input type="password" required name="password">
-            <input type="submit" value="ログイン">
-        </form>
-        <a href="/index.php">イベント一覧</a>
+    <header class="header">
+        <span class="header__text">管理画面</span>
+        <img src="./logo.png" class="header__logo" alt="就活の教科書ロゴ">
+    </header>
+
+    <div class="login-wrapper" id="login">
+        <div class="container">
+            <div class="login">
+                <div class="login-wrapper-title">
+                    <h3>管理者ログイン</h3>
+                </div>
+                <form class="login-form" action="/admin/login.php" method="POST">
+                    <div class="form-group">
+                        <p>メールアドレス</p>
+                        <input type="email" name="email" required value="<?php echo htmlspecialchars($_POST['email'], ENT_QUOTES); ?>">
+                    </div>
+                    <div class="form-group">
+                        <p>パスワード</p>
+                        <input type="password" required name="password">
+                    </div>
+                    <button type="submit" value="ログイン" class="btn btn-submit">ログイン</button>
+                </form>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 

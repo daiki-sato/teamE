@@ -1,3 +1,6 @@
+<?php
+require(dirname(__FILE__) . "/check.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +13,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/reset/_reset.scss">
-    <link rel="stylesheet" href="/admin_hina_css/style.css">
-    <link rel="stylesheet" href="/admin_hina_css/newagent.css">
+    <link rel="stylesheet" href="/admin_css/style.css">
+    <link rel="stylesheet" href="/admin_css/newagent.css">
 </head>
 
 <body>
@@ -53,7 +56,7 @@
                         <h3>新規掲載</h3>
                     </div>
                     <div class="inputfield">
-                        <form id="#" action="/admin_hina/newagent_confirm.php" method="POST" enctype="multipart/form-data">
+                        <form id="#" action="/admin/newagent_confirm.php" method="POST" enctype="multipart/form-data">
 
                             <div class="form-group">
                                 <label for="companyname" class="label">会社名</label>
@@ -164,16 +167,15 @@
                                 <input id="radio-d" type="radio" name="status" required value="1"><label for="radio-d"
                                     class="option__text">非掲載</label>
                             </div>
-
                     </div>
-                    <input type="submit" name="confirm" value="新規登録" class="submitbtn">
+                    <button type="submit" name="confirm" class="btn btn-success" value="確認画面へ">
                 </div>
             </div>
         </main>
         </form>
     </div>
 
-    <script src="/admin_hina_js/dragdrop.js"></script>
+    <script src="/admin_js/dragdrop.js"></script>
 </body>
 
 </html>
