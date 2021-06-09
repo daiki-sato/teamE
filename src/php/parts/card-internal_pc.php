@@ -30,7 +30,7 @@
               <button id="articlebtn" class="card_pc__button-article">
                 <p>解説記事</p> 
               </button>
-              <input type="checkbox" id="application">
+              <input type="checkbox" id="application" class="checks">
               <label for="application">
               <span id="submitbtn" class="card-pc__button-submit">
                 <p id="text">お申し込みリストに<br>追加する</p>
