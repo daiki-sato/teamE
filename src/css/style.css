@@ -962,9 +962,6 @@ input[type="checkbox"] {
   .topPage__body {
     background-color: #ffffff;
   }
-  .container {
-    padding-top: 28%;
-  }
   .search__pc {
     display: none;
   }
