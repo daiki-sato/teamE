@@ -1,25 +1,25 @@
-const add_pc = document.getElementById('submit__pc');
-const add_sp = document.getElementById('submit__sp');
-const text_pc = document.getElementById('text__pc');
-const text_sp = document.getElementById('text__sp');
-
-//cardのクラス付与、文字の書き換え PC
-add_pc.addEventListener('click', () => {
+function test(index){
+  add_pc = document.getElementById('submit__pc' + index);
+  //cardのクラス付与、文字の書き換え PC
   if(add_pc.classList.contains('card-pc__button-unsubmit')){
 　//　containsメソッドで、test2クラスが既に付与されているか判定 
     add_pc.classList.remove('card-pc__button-unsubmit');
 　//　test2クラスがついている場合、test２クラスを削除する 
   }else{
     add_pc.classList.add('card-pc__button-unsubmit');
-　//　test2クラスがついていない場合、test２クラスを追加する 
-  }});
+  //　test2クラスがついていない場合、test２クラスを追加する 
+  }
 
-add_pc.addEventListener('click', () => {
+  text_pc = document.getElementById('text__pc' + index);
   if (text_pc.innerHTML == "お申し込みリストに<br>追加する") {
     text_pc.innerHTML = "リストから外す";
   } else {
     text_pc.innerHTML = "お申し込みリストに<br>追加する";
-  }});
+  };
+}
+
+const add_sp = document.getElementById('submit__sp');
+const text_sp = document.getElementById('text__sp');
 
 // sp版
 //cardのクラス付与、文字の書き換え
