@@ -1075,6 +1075,7 @@ input[type="checkbox"] {
   /* hover  */
   .category-search_button-q:hover .service-description {
     display: block;
+    opacity: 1;
     /* インライン要素として表示 */
   }
   .category-search_button-q {
