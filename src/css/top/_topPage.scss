@@ -290,6 +290,15 @@ input[type="checkbox"]{
   .article__items{
     display: flex;
   }
+// ボタンのホバー
+button:hover{
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+label:hover{
+  opacity: 0.35;
+}
 }
 
 
@@ -593,12 +602,3 @@ input[type="checkbox"]{
 }
 
 
-// ボタンのホバー
-button:hover{
-  background-color: #000000;
-  opacity: 0.5;
-}
-
-label:hover{
-  opacity: 0.35;
-}
