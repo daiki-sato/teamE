@@ -1,6 +1,5 @@
 <?php
 require(dirname(__FILE__) . "/check.php");
-
 //new_agent.phpの値を取得
 $agent_name = $_SESSION['agent_name'];
 $image_url = $_SESSION['image_url'];

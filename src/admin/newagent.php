@@ -1,5 +1,6 @@
 <?php
 require(dirname(__FILE__) . "/check.php");
+
 $id = $_GET['id'];
 if (isset($id)) {
     try {
@@ -27,8 +28,7 @@ if (isset($id)) {
                                 echo "新規掲載画面";
                             } ?></title>
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/reset/_reset.scss">
     <link rel="stylesheet" href="/admin_css/style.css">
     <link rel="stylesheet" href="/admin_css/newagent.css">
@@ -82,8 +82,7 @@ if (isset($id)) {
 
                             <div class="form-group">
                                 <label for="companyname" class="label">会社名</label>
-                                <input type="text" name="agent_name" id="companyname" required
-                                    value="<?php echo htmlspecialchars($_POST['agent_name'], ENT_QUOTES); ?>">
+                                <input type="text" name="agent_name" id="companyname" required value="<?= $agent['agent_name']; ?>">
 
                             </div>
 

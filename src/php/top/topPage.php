@@ -13,7 +13,7 @@
 </head>
 <body class="topPage__body">
   
-　<?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/_header.php"); ?>
+  <?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/_header.php"); ?>
 
 
   <div class="container">
@@ -285,7 +285,7 @@
     </div>
   
 
-    　<?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/card-internal_pc.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/php/parts/card-internal.php"); ?>
 
 
     </section>
@@ -310,7 +310,7 @@
       
       <div class="application-area">
         <p class="application-area__text">よくわからない方は</p>
-          <button class="application-area__button" id="checkAll">エージェント一括申し込み！</button>
+          <button class="application-area__button">エージェント一括申し込み！</button>
           <div class="application-area__balloon">
             1分でできる！
           </div>
@@ -375,7 +375,9 @@
     
   </div>
   
-  <div class="sidebar"></div>
+  <div class="sidebar">
+    <img src="/img/sidebar.png" class="sidebarimg" alt="サイドバー__就活の教科書">
+  </div>
 
   </div>
 
