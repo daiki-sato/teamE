@@ -1,5 +1,7 @@
 // header固定
-$(function() {
-  var height=$("#header").height();
+$(document).ready(function(){
+  if ($(window).width() < 767) {
+    var height=$("#header").height();
   $(".container").css("margin-top", height );
-});
+  }}
+);
