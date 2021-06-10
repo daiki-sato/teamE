@@ -1,0 +1,54 @@
+.tagsetting, .fa-hashtag{
+  color: #28A69A;
+}
+.newtag-add-area{
+  margin: 4vw;
+}
+.newtag__title{
+  font-size: 1.5vw;
+  font-weight: 600;
+  cursor: text;
+}
+#newtag{
+  height: 2vw;
+  width: 15vw;
+  margin: 0 2vw;
+}
+.submitbtn{
+  height: 2vw;
+  width: 5vw;
+  font-weight: 600;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+.tagarea{
+  display: flex;
+  background-color: #f3f3f3;
+  margin: 4vw;
+  width: 80%;
+  height: 25vh;
+  border-radius: 10px;
+}
+.tagname-area{
+  width: 15%;
+  margin: 1vw;
+}
+.tagname{
+  background-color: #c4c4c4;
+  text-align: center;
+  padding: 0.5vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+.agentarea{
+  width: 80%;
+  padding: 0.5vw;
+
+}
+.agentname{
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin: 1vw;
+}
