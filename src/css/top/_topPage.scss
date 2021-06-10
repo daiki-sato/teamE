@@ -221,10 +221,10 @@ input[type="checkbox"]{
   /* 全体のレイアウト（メインとサイドバー） */
   .container{
     display: flex;
-    margin: 10vmax;
+    margin: 5vmax;
   }
   .main{
-    padding-right: 10vmax;
+    padding-right: 5vmax;
     width: 70%;
   }
   .sidebar {
@@ -593,3 +593,12 @@ input[type="checkbox"]{
 }
 
 
+// ボタンのホバー
+button:hover{
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+label:hover{
+  opacity: 0.35;
+}
