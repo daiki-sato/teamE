@@ -62,7 +62,11 @@ $_SESSION[ 'id' ] = $id;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新規掲載画面</title>
+    <title><?php if (isset($id)) {
+                                echo "登録情報変更画面";
+                            } else {
+                                echo "新規掲載画面";
+                            } ?></title>
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -107,7 +111,12 @@ $_SESSION[ 'id' ] = $id;
             <div class="wrapper">
                 <div class="container">
                     <div class="wrapper-title">
-                        <h3>新規掲載</h3>
+                        <h3><?php if (isset($id)) {
+                                echo "登録内容変更";
+                            } else {
+                                echo "新規登録";
+                            } ?>
+                        </h3>
                     </div>
                     <div class="inputfield">
 
