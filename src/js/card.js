@@ -3,7 +3,7 @@ function test(index){
   //cardのクラス付与、文字の書き換え PC
   if(add_pc.classList.contains('card-pc__button-unsubmit')){
 　//　containsメソッドで、test2クラスが既に付与されているか判定 
-  add_pc.classList.remove('card-pc__button-unsubmit');
+    add_pc.classList.remove('card-pc__button-unsubmit');
 　//　test2クラスがついている場合、test２クラスを削除する 
   }else{
     add_pc.classList.add('card-pc__button-unsubmit');
