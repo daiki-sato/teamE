@@ -6,4 +6,5 @@
     <button class="footer__form-button">お申し込みフォームへ</button>
     <button class="footer__reset-button">リストをリセット</button>
   </div>
+  </form>
 </footer>
