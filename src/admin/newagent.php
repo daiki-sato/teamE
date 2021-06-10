@@ -96,7 +96,8 @@ if (isset($id)) {
                                             <input id="fileInput" type="file" name="image_url" accept="image/*" onChange="photoPreview(event)" required>
                                         </p>
                                     </div>
-                                    <div id="previewArea"></div>
+                                    <div id="previewArea">
+                                    </div>
                                 </div>
                             </div>
 
@@ -239,6 +240,17 @@ if (isset($id)) {
     </div>
 
     <script src="/admin_js/dragdrop.js"></script>
+    <script>
+    let id = "<?= $id; ?>"
+    window.onload = function(){
+    if(id){
+        var img_element = document.createElement('img');
+        img_element.src = '<?= $agent['image_url']; ?>';
+        img_element.alt = 'ここにエージェント画像が入ります'; 
+        var editagent = document.getElementById("previewArea");
+        editagent.appendChild(img_element);
+    }}
+    </script>
 </body>
 
 </html>
