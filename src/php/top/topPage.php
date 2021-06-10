@@ -317,8 +317,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                         </button>
                                         <input type="checkbox" id="application" class="checks" name="agent[]" value="<?= $agent_internal["id"]; ?>">
                                         <label for="application">
-                                            <span id="submit__pc" class="card-pc__button-submit">
-                                                <p id="text__pc">お申し込みリストに<br>追加する</p>
+                                            <span id="submit__pc<?= $index ?>" class="card-pc__button-submit">
+                                                <p id="text__pc<?= $index ?>" onclick="test(<?= $index ?>)">お申し込みリストに<br>追加する</p>
                                             </span>
                                     </div>
                                 </div>
