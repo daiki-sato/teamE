@@ -37,7 +37,7 @@
       </div>
 
       <div class="card-pc__buttons">
-        <button id="articlebtn" class="card__button-article">
+        <button id="articlebtn" class="card-pc__button-article">
           <p>解説記事</p> 
         </button>
       　<button id="continueapply" class="card-pc__button-submit">
@@ -86,8 +86,8 @@
       一人一人に合った納得内定獲得を徹底的にサポート。
     </div>
 
-    <div class="card-sp-buttons">
-      <button id="articlebtn" class="card-sp-button__article">
+    <div class="card-sp__buttons">
+      <button id="articlebtn" class="card-sp__button-article">
         <p>解説記事</p>
       </button>
       <button id="continueapply" class="card-sp__button-submit">

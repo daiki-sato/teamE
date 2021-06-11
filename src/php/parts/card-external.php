@@ -39,11 +39,11 @@
       </div>
 
       <div class="card-pc__buttons">
-        <button id="articlebtn" class="card__button-article">
+        <button id="articlebtn" class="card-pc__button-article">
           <p>解説記事</p>
         </button>
-        <button id="exterminalsitebtn" class="card__button-submit">
-          <p id="text"><a href="#">外部サイトから<br>申し込む</a></p>
+        <button id="exterminalsitebtn" class="card-pc__button-submit">
+          <p id="text__pc"><a href="#">外部サイトから<br>申し込む</a></p>
         </button>
       </div>
 
@@ -85,7 +85,7 @@
       </button>
 
       <button id="exterminalsitebtn" class="card-sp__button-submit">
-        <p id="text"><a href="#">外部サイトから<br>申し込む</a></p>
+        <p id="text__sp"><a href="#">外部サイトから<br>申し込む</a></p>
       </button>
     </div>
   </div>
