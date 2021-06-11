@@ -18,35 +18,26 @@ function test(index){
   };
 }
 
-function test(index){
-  add_sp = document.getElementById('submit__sp' + index);
-  //cardのクラス付与、文字の書き換え sp
+const add_sp = document.getElementById('submit__sp');
+const text_sp = document.getElementById('text__sp');
+
+// sp版
+//cardのクラス付与、文字の書き換え
+add_sp.addEventListener('click', () => {
   if(add_sp.classList.contains('card-sp__button-unsubmit')){
 　//　containsメソッドで、test2クラスが既に付与されているか判定 
     add_sp.classList.remove('card-sp__button-unsubmit');
 　//　test2クラスがついている場合、test２クラスを削除する 
   }else{
     add_sp.classList.add('card-sp__button-unsubmit');
-  //　test2クラスがついていない場合、test２クラスを追加する 
-  }
+　//　test2クラスがついていない場合、test２クラスを追加する 
+  }});
 
-  text_sp = document.getElementById('text__sp' + index);
-  if (text_sp.innerHTML == "お申し込みリストに<br>追加する") {
-    text_sp.innerHTML = "リストから外す";
+add_sp.addEventListener('click', () => {
+  if (text.innerHTML == "お申し込みリストに<br>追加する") {
+    text.innerHTML = "リストから外す";
   } else {
-    text_sp.innerHTML = "お申し込みリストに<br>追加する";
-  };
-}
-
-
-
-
-
-
-
-
-
-
-
+    text.innerHTML = "お申し込みリストに<br>追加する";
+  }});
 
 

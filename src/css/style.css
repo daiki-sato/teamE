@@ -810,6 +810,7 @@ button {
   border: 1px solid #aaa;
   text-align: center;
   margin: 4vmax 1vmax;
+  display: none;
 }
 
 .confirmlist__title {
@@ -1545,6 +1546,7 @@ body {
 /* compare-agent card */
 .compare__box {
   margin: 4vmax 1vmax;
+  display: none;
 }
 
 /* よく比較・検討されているエージェント＿＿全体 */
@@ -1815,7 +1817,7 @@ select:required {
   background-color: #47a69b;
   font-size: 4vmin;
   color: #ffff;
-  padding: 2.5vw 3vw;
+  padding: 2vw;
   cursor: pointer;
   margin: 1vw auto;
 }
@@ -1827,7 +1829,7 @@ select:required {
   background-color: #979797;
   font-size: 4vmin;
   color: #ffff;
-  padding: 2.5vw 3vw;
+  padding: 2vw;
   cursor: pointer;
   margin: 1vw auto;
 }
@@ -1860,7 +1862,7 @@ button {
 }
 
 .thanksPage-container {
-  margin: 40vw 3vw;
+  margin: 4vw 3vw;
   padding: 1vw;
   font-size: 5px;
   border: solid 1px #e5e5e5;
