@@ -1,6 +1,6 @@
 // サンクスページのモーダルの表示、1.5秒後に非表示
 $(function () {
-  $('#submitbutton').click(function(){
+  $('#continueapply').click(function(){
     $('#modal').fadeIn();
     scrollPosition = $(window).scrollTop();
     $("html,body").css("overflow", "hidden");
