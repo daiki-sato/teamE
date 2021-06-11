@@ -22,22 +22,22 @@
     </header>
 
     <div class="body">
-      <div class="sidebar">
-        <div class="sidebar__content">
-          <i class="fas fa-plus fa-6x"></i>
-          <a class="newpublish">新規掲載</a>
-        </div>
+        <div class="sidebar">
+            <div class="sidebar__content">
+                <i class="fas fa-plus fa-6x"></i>
+                <a class="newpublish">新規掲載</a>
+            </div>
 
-        <div class="sidebar__content">
-          <i class="far fa-address-book fa-6x"></i>
-          <a class="infosetting">掲載情報一覧</a>
-        </div>
+            <div class="sidebar__content">
+                <i class="far fa-address-book fa-6x"></i>
+                <a class="infosetting">掲載情報一覧</a>
+            </div>
 
-        <div class="sidebar__content">
-          <i class="fas fa-hashtag fa-6x"></i>
-          <a class="tagsetting">タグ管理</a>
-        </div>
-      </div> 
+            <div class="sidebar__content">
+                <i class="fas fa-hashtag fa-6x"></i>
+                <a class="tagsetting">タグ管理</a>
+            </div>
+          </div>
 
       <main>
           <div class="wrapper">
@@ -66,6 +66,7 @@
           </div>
       </main>
     </div>
+    <script src="/admin_js/side_bar.js"></script>
 
 </body>
 </html>

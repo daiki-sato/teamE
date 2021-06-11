@@ -14,13 +14,6 @@ if (isset($id)) {
         exit;
     }
 }
-
-
-if(isset($_POST['add'])) {
-    echo "登録ボタンが押下されました";
-} else if(isset($_POST['remove'])) {
-    echo "削除ボタンが押下されました";
-}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -52,17 +45,9 @@ if(isset($_POST['add'])) {
 
     <div class="body">
         <div class="sidebar">
-
-        <?php
-    // if(isset(get_class($newpublish) )) {
-    //     echo "登録ボタンが押下されました";
-    // } else if(isset($_POST['remove'])) {
-    //     echo "削除ボタンが押下されました";
-    // }
-?>
             <div class="sidebar__content">
                 <i class="fas fa-plus fa-6x"></i>
-                <a class="newpublish">新規登録</a>
+                <a class="newpublish">新規掲載</a>
             </div>
 
             <div class="sidebar__content">
@@ -70,12 +55,12 @@ if(isset($_POST['add'])) {
                 <a class="infosetting">掲載情報一覧</a>
             </div>
 
-
             <div class="sidebar__content">
                 <i class="fas fa-hashtag fa-6x"></i>
                 <a class="tagsetting">タグ管理</a>
             </div>
         </div>
+
 
         <main>
             <div class="wrapper">
@@ -250,7 +235,9 @@ if(isset($_POST['add'])) {
         </form>
     </div>
 
+    <script src="/admin_js/side_bar.js"></script>
     <script src="/admin_js/dragdrop.js"></script>
+
     <script>
     let id = "<?= $id; ?>"
     window.onload = function(){

@@ -11,7 +11,7 @@ require(dirname(__FILE__) . "/check.php");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -166,6 +166,9 @@ require(dirname(__FILE__) . "/check.php");
         </main>
         <!-- <script src="./post.js"></script> -->
     </div>
+
+    
+    <script src="/admin_js/side_bar.js"></script>
 </body>
 
 </html>
