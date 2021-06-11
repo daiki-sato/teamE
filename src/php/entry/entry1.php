@@ -45,6 +45,7 @@ $ticket = $_SESSION['ticket'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>申し込みフォーム1</title>
   <link rel="stylesheet" href="/css/style.css">
+</head>
 
 <body>
 
@@ -57,12 +58,12 @@ $ticket = $_SESSION['ticket'];
     <div class="entry-container">
 
       <div class="entry-page__top">
-        　<div class="entry-page__title">
-          　<div class="entry-page__title-triangle"></div>
-          　<h1 class="entry-page__title-text">基本情報をご入力ください</h1>
-          　</div>
+          <div class="entry-page__title">
+            <div class="entry-page__title-triangle"></div>
+            <h1 class="entry-page__title-text">基本情報をご入力ください</h1>
+          </div>
 
-        　<div class="entry-page__whereareyouat">
+          <div class="entry-page__whereareyouat">
           <div class="whereareyouat__icon">
             <span class="whereareyouat__valid">
               <span class="whereareyouat__valid-number">1</span>
@@ -267,17 +268,15 @@ $ticket = $_SESSION['ticket'];
       <div class="entry__buttons">
 
         <div class="entry__submitbutton">
-        <button type="submit" class="btn btn-primary">次へ</button>
+        <button type="submit" class="btn btn-primary" id="nextbutton">次へ</button>
           <!--確認ページへトークンをPOSTする、隠しフィールド「ticket」-->
           <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
           </form>
         </div>
 
-        <div class="entry__cancelbutton">
-          <p>
-            <span>申し込みをキャンセルする<br>(入力情報は保存されません)</span>
-          </p>
-        </div>
+        <button class="entry__cancelbutton">
+        申し込みをキャンセルする<br>(入力情報は保存されません)
+        </button>
 
       </div>
 

@@ -133,7 +133,6 @@ button{
   background-color: #47a69b;
   font-size: 2vmin;
   color: #ffff;
-  margin-left: 2vmin;
   cursor: pointer;
 }
 
@@ -329,4 +328,11 @@ button{
   .card-pc__container{
     display: none;
   }
+}
+
+.card-pc__button-article a{
+  color: #ffffff;
+}
+.card-sp__button-article a{
+  color: #ffffff;
 }
