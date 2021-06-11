@@ -11,7 +11,7 @@ require(dirname(__FILE__) . "/check.php");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@ require(dirname(__FILE__) . "/check.php");
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/reset/_reset.scss">
+    <!-- <link rel="stylesheet" href="/css/reset/_reset.scss"> -->
     <link rel="stylesheet" href="/admin_css/style.css">
     <link rel="stylesheet" href="/admin_css/infosetting.css">
 </head>
@@ -39,17 +39,17 @@ require(dirname(__FILE__) . "/check.php");
         <div class="sidebar">
             <div class="sidebar__content">
                 <i class="fas fa-plus fa-6x"></i>
-                <p class="newpublish">新規掲載</p>
+                <a class="newpublish">新規掲載</a>
             </div>
 
             <div class="sidebar__content">
                 <i class="far fa-address-book fa-6x"></i>
-                <p class="infosetting">掲載情報一覧</p>
+                <a class="infosetting">掲載情報一覧</a>
             </div>
 
             <div class="sidebar__content">
                 <i class="fas fa-hashtag fa-6x"></i>
-                <p class="tagsetting">タグ管理</p>
+                <a class="tagsetting">タグ管理</a>
             </div>
         </div>
 
@@ -166,6 +166,9 @@ require(dirname(__FILE__) . "/check.php");
         </main>
         <!-- <script src="./post.js"></script> -->
     </div>
+
+    
+    <script src="/admin_js/side_bar.js"></script>
 </body>
 
 </html>

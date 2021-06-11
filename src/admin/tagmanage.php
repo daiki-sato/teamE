@@ -32,10 +32,13 @@ if (isset($_POST['new_tagname'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>タグ管理</title>
   <!-- fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/reset/_reset.scss">
-  <link rel="stylesheet" href="/admin_css/style.css">
-  <link rel="stylesheet" href="/admin_css/tagmanage.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/css/reset/_reset.scss"> -->
+    <link rel="stylesheet" href="/admin_css/style.css">
+    <link rel="stylesheet" href="/admin_css/tagmanage.css">
+
 </head>
 
 <body>
@@ -47,12 +50,25 @@ if (isset($_POST['new_tagname'])) {
     </nav>
   </header>
 
-  <div class="body">
-    <div class="sidebar">
-      <div class="sidebar__content">
-        <i class="fas fa-plus fa-6x"></i>
-        <p class="newpublish">新規掲載</p>
-      </div>
+
+    <div class="body">
+        <div class="sidebar">
+            <div class="sidebar__content">
+                <i class="fas fa-plus fa-6x"></i>
+                <a class="newpublish">新規掲載</a>
+            </div>
+
+            <div class="sidebar__content">
+                <i class="far fa-address-book fa-6x"></i>
+                <a class="infosetting">掲載情報一覧</a>
+            </div>
+
+            <div class="sidebar__content">
+                <i class="fas fa-hashtag fa-6x"></i>
+                <a class="tagsetting">タグ管理</a>
+            </div>
+          </div>
+
 
       <div class="sidebar__content">
         <i class="far fa-address-book fa-6x"></i>
@@ -64,6 +80,7 @@ if (isset($_POST['new_tagname'])) {
         <p class="tagsetting">タグ管理</p>
       </div>
     </div>
+    <script src="/admin_js/side_bar.js"></script>
 
     <main>
       <div class="wrapper">

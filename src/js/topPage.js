@@ -99,8 +99,6 @@ search.addEventListener('click',() => {
 
 
 //一括申し込みのjs
-
-
 let checkAlls = document.getElementsByClassName("application-area__button");
 checkAlls = Array.from(checkAlls);
 checkAlls.forEach(function(checkAll) {
