@@ -7,9 +7,9 @@ session_regenerate_id(TRUE);
 require '../libs/functions.php';
 
 // 申し込みエージェント情報
+
 $agent = isset($_POST['agent']) ? $_POST['agent'] : NULL;
 $_SESSION['agent'] = $agent;
-var_dump($agent);
 $agent = isset($_SESSION['agent']) ? $_SESSION['agent'] : NULL;
 var_dump($agent);
 

@@ -18,7 +18,7 @@
         infosetting.onclick = function() {
           //   画面遷移
           window.location.href = '../admin/infosetting.php'; // 通常の遷移
-          console.log(newpublish);
+          console.log(infosetting);
                 
         };
     });

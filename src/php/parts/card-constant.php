@@ -9,6 +9,7 @@
 </head>
 <body>
   
+<!-- PC版無限ループ用カード -->
   <div class="card-pc__container">
   
     <div class="card-pc__left">
@@ -43,6 +44,7 @@
       　  <p>続けて申し込む</p>
       　</button>  
     　</div>
+    <!-- PC版無限ループ用カードここまで -->
 
     　<!-- 申し込み完了モーダル -->
     　<div id="modal" class="thanksPafe-container__hidden">
@@ -57,6 +59,7 @@
 
   </div>
 
+  <!-- SP版無限ループ用カード -->
   <div class="card-sp__container">
     <div class="card-sp-summary">
 
@@ -91,6 +94,7 @@
         <p>続けて申し込む</p>
       </button>
     </div>
+    <!-- SP版無限ループ用カードここまで -->
 
     <!-- 申し込み完了モーダル -->
     <div id="modal" class="thanksPafe-container__hidden">
