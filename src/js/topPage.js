@@ -100,7 +100,7 @@ checkAlls.forEach(function(checkAll) {
 });
 
 
-//「全て選択」以外のチェックボックス
+//一括申し込み以外のチェックボックス
 let check = document.getElementsByClassName("checks");
 // checks = Array.from(checks);
 // checks.forEach(function(check) {
@@ -115,7 +115,7 @@ const funcCheckAll = (bool) => {
     }
 };
 
-//「checks」のclassを持つ要素のチェック状態で「全て選択」のチェック状態をON/OFFする
+//「checks」のclassを持つ要素のチェック状態で一括申し込みのチェック状態をON/OFFする
 const funcCheck = () => {
     let count = 0;
     for (let i = 0; i < check.length; i++) {
@@ -130,10 +130,6 @@ const funcCheck = () => {
     }
 };
 
-//「全て選択」以外のチェックボックスをクリックした時
-for (let i = 0; i < check.length; i++) {
-  check[i].addEventListener("click", funcCheck, false);
-}
 
 
 
