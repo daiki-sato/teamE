@@ -1205,6 +1205,7 @@ input[type="checkbox"] {
   font-size: 4em;
   font-weight: 600;
   padding: 0.5em;
+  padding-bottom: 0;
 }
 
 .application-area__description {
@@ -1650,7 +1651,7 @@ body {
     padding: 1vw 2vw;
   }
   /* キャンセルbtn */
-  .entry__cancelbutton {
+  #cancelbutton {
     width: auto;
     display: inline-block;
     background-color: #c4c4c4;
@@ -1723,7 +1724,7 @@ body {
     padding: 3vw 4vw;
   }
   /* キャンセルbtn */
-  .entry__cancelbutton {
+  #cancelbutton {
     width: auto;
     display: block;
     background-color: #c4c4c4;
@@ -1734,6 +1735,16 @@ body {
     cursor: pointer;
     margin: 4vw auto;
   }
+}
+
+input[type=text]:required {
+  background-color: #f9dada;
+  opacity: 0.5;
+}
+
+select:required {
+  background-color: #f9dada;
+  opacity: 0.5;
 }
 
 /* 入力内容確認 */

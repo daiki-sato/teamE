@@ -197,7 +197,7 @@ body{
     padding: 1vw 2vw;
   }
   /* キャンセルbtn */
-  .entry__cancelbutton{
+  #cancelbutton{
     width: auto;
     display: inline-block;
     background-color: #c4c4c4;
@@ -270,7 +270,7 @@ body{
     padding: 3vw 4vw;
   }
   /* キャンセルbtn */
-  .entry__cancelbutton{
+  #cancelbutton{
     width: auto;
     display: block;
     background-color: #c4c4c4;
@@ -281,4 +281,14 @@ body{
     cursor: pointer;
     margin: 4vw auto;
   }
+}
+
+// 未入力の場合は赤く表示
+input[type=text]:required{
+  background-color: #f9dada;
+  opacity: 0.5;
+}
+select:required {
+  background-color: #f9dada;
+  opacity: 0.5;
 }
