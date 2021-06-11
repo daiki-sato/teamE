@@ -1,3 +1,55 @@
+<?php
+//セッションを開始
+session_start();
+//エスケープ処理やデータチェックを行う関数のファイルの読み込み
+require '../libs/functions.php';
+//POSTされたデータをチェック
+$_POST = checkInput($_POST);
+//固定トークンを確認（CSRF対策）
+if (isset($_POST['ticket'], $_SESSION['ticket'])) {
+  $ticket = $_POST['ticket'];
+  if ($ticket !== $_SESSION['ticket']) {
+    //トークンが一致しない場合は処理を中止
+    die('Access Denied!');
+  }
+} else {
+  //トークンが存在しない場合は処理を中止（直接このページにアクセスするとエラーになる）
+  die('Access Denied（直接このページにはアクセスできません）');
+}
+
+// 申し込みエージェント情報
+$agent = isset($_SESSION['agent']) ? $_SESSION['agent'] : NULL;
+var_dump($agent);
+
+
+//初回以外ですでにセッション変数に値が代入されていれば、その値を。そうでなければNULLで初期化
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : NULL;
+$email_check = isset($_SESSION['email_check']) ? $_SESSION['email_check'] : NULL;
+$tel = isset($_SESSION['tel']) ? $_SESSION['tel'] : NULL;
+$body = isset($_SESSION['body']) ? $_SESSION['body'] : NULL;
+
+//POSTされたデータを変数に格納
+$university = isset($_POST['university']) ? $_POST['university'] : NULL;
+$department = isset($_POST['department']) ? $_POST['department'] : NULL;
+$subject = isset($_POST['subject']) ? $_POST['subject'] : NULL;
+$graduationyear = isset($_POST['graduationyear']) ? $_POST['graduationyear'] : NULL;
+$worklocation = isset($_POST['worklocation']) ? $_POST['worklocation'] : NULL;
+
+
+//POSTされたデータを整形（前後にあるホワイトスペースを削除）
+$university = trim($university);
+$department = trim($department);
+$subject = trim($subject);
+
+//POSTされたデータとエラーの配列をセッション変数に保存
+$_SESSION['university'] = $university;
+$_SESSION['department'] = $department;
+$_SESSION['subject'] = $subject;
+$_SESSION['graduationyear'] = $graduationyear;
+$_SESSION['worklocation'] = $worklocation;
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -43,7 +95,7 @@
     </div>
   
     <div class="entry-area">
-      <form id="main_contact" method="post" action="confirm.php">
+      <form id="main_contact" method="post" action="../applicationconfirm/applicationconfirm.php">
         <div class="form-group">
           <label for="email" class="entry-label">メールアドレス</label>
           <div class="inputarea">
@@ -77,8 +129,6 @@
             <!-- <span id="count"> </span>/1000 -->
           </div>
         </div>
-        
-      </form>
     </div>
     
     <div class="compare__box">
@@ -94,15 +144,16 @@
     <div class="entry__buttons">
       
       <div class="entry__submitbutton">
-        <p>
-          <span>確認画面へ</span>
-        </p>
+            <!-- 完了ページへ渡すトークンの隠しフィールド -->
+            <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
+            <button type="submit" class="btn btn-success" id="nextbutton">確認画面へ</button>
+          </form>
       </div>
       
       <div class="entry__cancelbutton">
-        <p>
-          <span>申し込みをキャンセルする<br>(入力情報は保存されません)</span>
-        </p>
+      <form action="entry1.php" method="post" class="confirm">
+            <button type="submit" class="btn btn-secondary" id="cancelbutton">申し込みをキャンセルする<br>(入力情報は保存されません)</button>
+          </form>
       </div>
       
     </div>

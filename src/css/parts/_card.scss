@@ -5,15 +5,19 @@
   justify-content: center;
   padding: 1vmax;
   align-items: center;
+  background-color: #ffffff;
 }
 
-/* エージェント画像 */
+/* エージェント画像枠 */
 .card-pc__left{
   width: 60vmin;
   height: 30vmin;
   padding: 1vmax;
-  /* ↓とりあえず大きさ見るために付けてるだけ↓ */
-  border: 1px solid;
+}
+
+/* エージェント画像 */
+.card-pc__img{
+  width: 100%;
 }
 
 /* エージェント名,星,説明,ボタン */
@@ -129,7 +133,6 @@ button{
   background-color: #47a69b;
   font-size: 2vmin;
   color: #ffff;
-  margin-left: 2vmin;
   cursor: pointer;
 }
 
@@ -170,8 +173,10 @@ input[type="checkbox"] {
   width: 32vmin;
   height: 18vmin;
   padding: 1vmax;
-  /* ↓とりあえず大きさ見るために付けてるだけ↓ */
-  border: 1px solid;
+}
+
+.card-sp__image{
+  width: 100%;
 }
 
 /* エージェント名,星 */
@@ -323,4 +328,11 @@ button{
   .card-pc__container{
     display: none;
   }
+}
+
+.card-pc__button-article a{
+  color: #ffffff;
+}
+.card-sp__button-article a{
+  color: #ffffff;
 }
