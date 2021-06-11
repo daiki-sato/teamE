@@ -72,22 +72,6 @@ $(function () {
 
 
 
-// for (var i = 0; i < length; i++) {
-//   $(function () {
-//     $("#popup__btn" + i).click(function(){
-//       $("#popup" + i, "#overlay" + i).fadeIn();
-//       scrollPosition = $(window).scrollTop();
-//       $("html,body").css("overflow", "hidden");
-//     })
-//     $("#overlay" + i).click(function(){
-//       $("#popup" + i, "#overlay" + i).fadeOut();
-//       $("html,body").removeAttr("style");
-//     //	$('body').removeClass('fixed').css({'top': 0});
-//       window.scrollTo( 0 , scrollPosition );
-//     })
-//   })};
-
-
 // 検索結果n件ありますの表示（ボタン押下時）
 const search = document.getElementById('searchbtn');
 const searched = document.getElementById('searched');
@@ -98,25 +82,25 @@ search.addEventListener('click',() => {
 
 
 
+
 //一括申し込みのjs
 let checkAlls = document.getElementsByClassName("application-area__button");
 checkAlls = Array.from(checkAlls);
 checkAlls.forEach(function(checkAll) {
 
-  //「全て選択」のチェックボックスをクリックした時
-checkAll.addEventListener(
-  "click",
-  () => {
-      funcCheckAll(checkAll.checked);
-      console.log("ok");
-  },
-  false
-);
-  console.log(checkAll);
+    //一括申し込みクリックした時
+  checkAll.addEventListener(
+    "click",
+    () => {
+        funcCheckAll(checkAll.checked);
+        console.log("all ok");
+    },
+    false
+  );
 });
 
 
-//「全て選択」以外のチェックボックス
+//一括申し込み以外のチェックボックス
 let check = document.getElementsByClassName("checks");
 // checks = Array.from(checks);
 // checks.forEach(function(check) {
@@ -131,7 +115,7 @@ const funcCheckAll = (bool) => {
     }
 };
 
-//「checks」のclassを持つ要素のチェック状態で「全て選択」のチェック状態をON/OFFする
+//「checks」のclassを持つ要素のチェック状態で一括申し込みのチェック状態をON/OFFする
 const funcCheck = () => {
     let count = 0;
     for (let i = 0; i < check.length; i++) {
@@ -146,10 +130,6 @@ const funcCheck = () => {
     }
 };
 
-//「全て選択」以外のチェックボックスをクリックした時
-for (let i = 0; i < check.length; i++) {
-  check[i].addEventListener("click", funcCheck, false);
-}
 
 
 
