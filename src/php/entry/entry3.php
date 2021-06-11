@@ -171,5 +171,6 @@ $_SESSION['worklocation'] = $worklocation;
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/js/header.js"></script>
+<script src="/js/entry.js"></script>
 </body>
 </html>
