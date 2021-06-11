@@ -152,7 +152,7 @@ $_SESSION['worklocation'] = $worklocation;
       
       <div class="entry__cancelbutton">
       <form action="entry1.php" method="post" class="confirm">
-            <button type="submit" class="btn btn-secondary">申し込みをキャンセルする<br>(入力情報は保存されません)</button>
+            <button type="submit" class="btn btn-secondary" id="cancelbutton">申し込みをキャンセルする<br>(入力情報は保存されません)</button>
           </form>
       </div>
       

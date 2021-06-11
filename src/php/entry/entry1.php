@@ -84,7 +84,7 @@ $ticket = $_SESSION['ticket'];
       </div>
 
       <div class="entry-area">
-        <form id="main_contact" method="post" action="entry2.php">
+        <form id="main_contact" method="post" action="entry2.php" onsubmit="return formCheck()">
           <div class="form-group">
             <label for="familyname" class="entry-label">お名前</label>
             <div class="inputarea">
@@ -274,7 +274,7 @@ $ticket = $_SESSION['ticket'];
           </form>
         </div>
 
-        <button class="entry__cancelbutton">
+        <button class="entry__cancelbutton" id="cancelbutton">
         申し込みをキャンセルする<br>(入力情報は保存されません)
         </button>
 
@@ -295,6 +295,7 @@ $ticket = $_SESSION['ticket'];
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="/js/header.js"></script>
+  <script src="/js/entry.js"></script>
 </body>
 
 </html>
