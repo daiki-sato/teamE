@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <?php include($_SERVER['DOCUMENT_ROOT'] . "/php/parts/_header.php"); ?>
 
-
+<div class="container">
     <div class="top-pc__container">
 
         <div class="main">
@@ -295,7 +295,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
 
                 <p class="search-result__agent">&emsp;エージェント&emsp;</p>
-                <form method="POST" action="../entry/entry1.php">
+                <form method="post" action="../entry/entry1.php">
+
+
                     <!-- PC版内部サイト用エージェントのforeachここから-->
                     <?php if (!is_null($agent_internals)) : ?>
                         <?php foreach ($agent_internals as $index => $agent_internal) : ?>
@@ -609,6 +611,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
 
     </div>
+</div>
 
     <?php include($_SERVER['DOCUMENT_ROOT'] . "/php/parts/_footer.php"); ?>
 
