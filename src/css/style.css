@@ -389,6 +389,7 @@ body {
   justify-content: center;
   padding: 1vmax;
   align-items: center;
+  background-color: #ffffff;
 }
 
 /* エージェント画像枠 */
@@ -559,7 +560,6 @@ button {
   background-color: #47a69b;
   font-size: 2vmin;
   color: #ffff;
-  margin-left: 2vmin;
   cursor: pointer;
 }
 
@@ -796,6 +796,14 @@ button {
   .card-pc__container {
     display: none;
   }
+}
+
+.card-pc__button-article a {
+  color: #ffffff;
+}
+
+.card-sp__button-article a {
+  color: #ffffff;
 }
 
 .confirmlist__box {
@@ -1039,6 +1047,9 @@ input[type="checkbox"] {
   .number-of-searches-box {
     width: 40%;
   }
+  .application-area__pc {
+    display: none;
+  }
 }
 
 /* for pc */
@@ -1047,7 +1058,7 @@ input[type="checkbox"] {
     background-color: #eaedf2;
   }
   /* 全体のレイアウト（メインとサイドバー） */
-  .container {
+  .top-pc__container {
     display: flex;
     margin: 5vmax;
   }
@@ -1080,7 +1091,6 @@ input[type="checkbox"] {
   /* hover  */
   .category-search_button-q:hover .service-description {
     display: block;
-    opacity: 1;
     /* インライン要素として表示 */
   }
   .category-search_button-q {
@@ -1121,11 +1131,13 @@ input[type="checkbox"] {
     display: flex;
   }
   button:hover {
-    background-color: #000000;
-    opacity: 0.5;
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0), 0 0 5px rgba(0, 0, 0, 0);
   }
   label:hover {
-    opacity: 0.35;
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0), 0 0 5px rgba(0, 0, 0, 0);
+  }
+  .application-area__sp {
+    display: none;
   }
 }
 
@@ -1179,36 +1191,36 @@ input[type="checkbox"] {
 }
 
 /* 一括申し込みエリア */
-.application-area {
+.application-area, .application-area__pc, .application-area__sp {
   margin-bottom: 3em;
   background-color: #E0E4EA;
   text-align: center;
-  display: grid;
+  padding: 0.5em;
   /* ↓吹き出し用 */
   position: relative;
 }
 
-.application-area .application-area__text {
+.application-area__text {
   line-height: 30px;
   font-size: 4em;
   font-weight: 600;
   padding: 0.5em;
 }
 
-.application-area .application-area__description {
+.application-area__description {
   line-height: 30px;
   font-size: 3em;
   font-weight: 300;
   padding: 0.5em;
 }
 
-.application-area .application-area__button {
+.application-area__button {
   display: block;
   width: 80%;
   cursor: pointer;
   border: none;
-  padding: 0.5em 1em;
-  margin: 0 auto;
+  padding: 2vw 1vw;
+  margin: 1vw auto;
   text-align: center;
   color: #ffffff;
   background-color: #FFAB3F;
@@ -1452,6 +1464,7 @@ body {
   align-items: center;
   margin: 3vmax;
   justify-content: center;
+  padding: 1vw;
 }
 
 .entry-title::before,
@@ -1559,36 +1572,8 @@ body {
   border-top: none;
 }
 
-/* 送信・キャンセルボタン類 */
-.entry__buttons {
-  text-align: center;
-  margin: 3vmax;
-}
-
-/* 次へbtn */
-.entry__submitbutton {
-  width: 40vmin;
-  height: 5vmin;
-  display: inline-block;
-  background-color: #47a69b;
-  font-size: 5vmin;
-  font-weight: 300;
-  color: #ffff;
-  padding: 3vmin;
-  margin: 4vmin 0;
-  cursor: pointer;
-}
-
-/* キャンセルbtn */
-.entry__cancelbutton {
-  width: auto;
-  display: inline-block;
-  background-color: #c4c4c4;
-  font-size: 1.5vmin;
-  color: #ffff;
-  padding: 2vmin;
-  margin: 0vmin 4vmin;
-  cursor: pointer;
+.btn .btn-secondary {
+  color: #ffffff;
 }
 
 @media screen and (min-width: 767px) {
@@ -1643,6 +1628,38 @@ body {
     width: 60%;
     text-align: center;
   }
+  /* 送信・キャンセルボタン類 */
+  .entry__buttons {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 3vmax;
+    justify-content: center;
+  }
+  /* 次へbtn */
+  .entry__submitbutton {
+    width: 40vmin;
+    display: inline-block;
+    background-color: #47a69b;
+    cursor: pointer;
+  }
+  #nextbutton {
+    color: #ffffff;
+    font-size: 5vmin;
+    font-weight: 300;
+    padding: 1vw 2vw;
+  }
+  /* キャンセルbtn */
+  .entry__cancelbutton {
+    width: auto;
+    display: inline-block;
+    background-color: #c4c4c4;
+    font-size: 1.5vmin;
+    color: #ffff;
+    padding: 2vmin;
+    margin: 0vmin 4vmin;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1683,6 +1700,39 @@ body {
   }
   .inputarea {
     text-align: center;
+  }
+  /* 送信・キャンセルボタン類 */
+  .entry__buttons {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  /* 次へbtn */
+  .entry__submitbutton {
+    width: 40vmin;
+    display: block;
+    background-color: #47a69b;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  #nextbutton {
+    color: #ffffff;
+    font-size: 5vmin;
+    font-weight: 300;
+    padding: 3vw 4vw;
+  }
+  /* キャンセルbtn */
+  .entry__cancelbutton {
+    width: auto;
+    display: block;
+    background-color: #c4c4c4;
+    font-size: 1.5vmin;
+    color: #ffff;
+    padding: 1vmin 2vmin;
+    margin-top: 4vw;
+    cursor: pointer;
+    margin: 4vw auto;
   }
 }
 

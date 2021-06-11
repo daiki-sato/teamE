@@ -21,6 +21,7 @@ body{
 	align-items: center;
   margin: 3vmax;
   justify-content: center;
+  padding: 1vw;
 }
 .entry-title::before,
 .entry-title::after {
@@ -117,38 +118,10 @@ body{
   border: solid 1px;
   border-top: none;
 }
-
-/* 送信・キャンセルボタン類 */
-.entry__buttons{
-  text-align: center;
-  margin: 3vmax;
+.btn .btn-secondary{
+  color: #ffffff;
 }
 
-/* 次へbtn */
-.entry__submitbutton{
-  width: 40vmin;
-  height: 5vmin;
-  display: inline-block;
-  background-color: #47a69b;
-  font-size: 5vmin;
-  font-weight: 300;
-  color: #ffff;
-  padding: 3vmin;
-  margin: 4vmin 0;
-  cursor: pointer;
-}
-
-/* キャンセルbtn */
-.entry__cancelbutton{
-  width: auto;
-  display: inline-block;
-  background-color: #c4c4c4;
-  font-size: 1.5vmin;
-  color: #ffff;
-  padding: 2vmin;
-  margin: 0vmin 4vmin;
-  cursor: pointer;
-}
 
 @media screen and (min-width: 767px) {
   /* .entry-page__top{
@@ -202,6 +175,38 @@ body{
     width: 60%;
     text-align: center;
   }
+  /* 送信・キャンセルボタン類 */
+  .entry__buttons{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 3vmax;
+    justify-content: center;
+  }
+  /* 次へbtn */
+  .entry__submitbutton{
+    width: 40vmin;
+    display: inline-block;
+    background-color: #47a69b;
+    cursor: pointer;
+  }
+  #nextbutton {
+    color: #ffffff;
+    font-size: 5vmin;
+    font-weight: 300;
+    padding: 1vw 2vw;
+  }
+  /* キャンセルbtn */
+  .entry__cancelbutton{
+    width: auto;
+    display: inline-block;
+    background-color: #c4c4c4;
+    font-size: 1.5vmin;
+    color: #ffff;
+    padding: 2vmin;
+    margin: 0vmin 4vmin;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -242,5 +247,38 @@ body{
   }
   .inputarea{
     text-align: center;
+  }
+  /* 送信・キャンセルボタン類 */
+  .entry__buttons{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  /* 次へbtn */
+  .entry__submitbutton{
+    width: 40vmin;
+    display: block;
+    background-color: #47a69b;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  #nextbutton{
+    color: #ffffff;
+    font-size: 5vmin;
+    font-weight: 300;
+    padding: 3vw 4vw;
+  }
+  /* キャンセルbtn */
+  .entry__cancelbutton{
+    width: auto;
+    display: block;
+    background-color: #c4c4c4;
+    font-size: 1.5vmin;
+    color: #ffff;
+    padding: 1vmin 2vmin;
+    margin-top: 4vw;
+    cursor: pointer;
+    margin: 4vw auto;
   }
 }

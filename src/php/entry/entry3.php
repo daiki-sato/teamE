@@ -146,13 +146,13 @@ $_SESSION['worklocation'] = $worklocation;
       <div class="entry__submitbutton">
             <!-- 完了ページへ渡すトークンの隠しフィールド -->
             <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
-            <button type="submit" class="btn btn-success">確認画面へ</button>
+            <button type="submit" class="btn btn-success" id="nextbutton">確認画面へ</button>
           </form>
       </div>
       
       <div class="entry__cancelbutton">
       <form action="entry1.php" method="post" class="confirm">
-            <button type="submit" class="btn btn-secondary"><span>申し込みをキャンセルする<br>(入力情報は保存されません)</span></button>
+            <button type="submit" class="btn btn-secondary">申し込みをキャンセルする<br>(入力情報は保存されません)</button>
           </form>
       </div>
       

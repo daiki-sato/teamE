@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php include($_SERVER['DOCUMENT_ROOT'] . "/php/parts/_header.php"); ?>
 
 
-    <div class="container">
+    <div class="top-pc__container">
 
         <div class="main">
 
@@ -267,7 +267,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <?php if (!is_null($agent_internals)) : ?>
                         <?php foreach ($agent_internals as $index => $agent_internal) : ?>
                             <?php if ($index === 2) : ?>
-                                <div class="application-area">
+                                <div class="application-area__pc">
                                     <p class="application-area__text">よくわからない方は</p>
                                     <button class="application-area__button">エージェント一括申し込み！</button>
                                     <div class="application-area__balloon">
@@ -324,7 +324,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 </div>
                             </div>
                             <?php if ($index === (count($agent_internals) - 1) && $index !== 1) : ?>
-                                <div class="application-area">
+                                <div class="application-area__pc">
                                     <p class="application-area__text">よくわからない方は</p>
                                     <button class="application-area__button">エージェント一括申し込み！</button>
                                     <div class="application-area__balloon">
@@ -341,7 +341,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <?php if (!is_null($agent_internals)) : ?>
                         <?php foreach ($agent_internals as $index => $agent_internal) : ?>
                             <?php if ($index === 2) : ?>
-                                <div class="application-area">
+                                <div class="application-area__sp">
                                     <p class="application-area__text">よくわからない方は</p>
                                     <button class="application-area__button">エージェント一括申し込み！</button>
                                     <div class="application-area__balloon">
@@ -398,7 +398,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 </div>
                             </div>
                             <?php if ($index === (count($agent_internals) - 1) && $index !== 1) : ?>
-                                <div class="application-area">
+                                <div class="application-area__sp">
                                     <p class="application-area__text">よくわからない方は</p>
                                     <button class="application-area__button">エージェント一括申し込み！</button>
                                     <div class="application-area__balloon">
