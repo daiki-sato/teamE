@@ -93,6 +93,13 @@ a{
   align-items: center;
   margin: 1vw 0;
 }
+
+.sidebar__content a{
+  /* importあまり良くないらしいから違う書き方あったらそっちで書いてby daiki 6/11 */
+  cursor: pointer !important;
+  
+}
+
 .newpublish, .infosetting, .ordersetting, .tagsetting{
   padding: 0 1vw;
   font-size: 1.5vw;
