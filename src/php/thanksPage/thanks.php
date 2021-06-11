@@ -47,14 +47,6 @@ $tel = h($_SESSION['tel']);
 $email = h($_SESSION['email']);
 $body = h($_SESSION['body']);
 
-// 今月の申し込みを対象にエージェントを数える
-// 今月何件だったよってagentsテーブルで数える
-// 掲載上限が超えてないか値をwhere句に入れる
-// 掲載がオンになっている、掲載上限が超えてない、掲載期間内のもの
-// 今月の掲載数 ＞ 今月の申し込み数
-// 全エージェントの申し込み数件数を0にする　（月の初めに〜〜の処理は小谷さんが書く）　優先度低
-
-
 //スプシのwebURL
 $url = 'https://script.google.com/macros/s/AKfycbzG463t0aRICPhbL2YJlby0wWsdX37gfeRAC1JNG41l6czDrpRFV7AYZuzc4SNikuzdaA/exec';
 // すぷしに持っていくデータの設定
@@ -153,8 +145,9 @@ $response_data = json_decode($response_json);
         // とってきたagentid以外のagentのカードを表示（無限ループ）
         try {
           $sql = 'SELECT id,agent_name,image_url,overview,star,official_link,article_link
-      FROM `agents`';
+           FROM `agents`';
           $sql .= 'WHERE agents.id  NOT IN ( ' . substr(str_repeat(',?', count($agent_ids)), 1) . ')';
+          $sql .= 'LIMIT 0, 2';
           $stmt = $db->prepare($sql);
           $stmt->execute($agent_ids);
           $agents = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -169,16 +162,18 @@ $response_data = json_decode($response_json);
         <?php if (!is_null($agents)) : ?>
           <?php foreach ($agents as $index => $agent) : ?>
             <form method="post" action="thanks.php">
+              <!-- PC版無限ループ用カード -->
               <div class="card-pc__container">
+
                 <div class="card-pc__left">
                   <img src="<?= $agent["image_url"]; ?>" class="card-pc__img" alt="エージェント画像が入ります">
                 </div>
 
                 <div class="card-pc__right">
 
-                  　　　　<div class="card-pc__agent-top">
+                  　　　　　　　<div class="card-pc__agent-top">
                     <p>
-                      <a href="<?= $agent["offcial_link"]; ?>" class="card-pc__agant-name" data-wpel-link="internal" target="_blank" rel="noopener noreferrer"><?= $agent["agent_name"]; ?></a>
+                      <a href="<?= $agent["offcial_link"]; ?>" class="card-pc__agant-name"><?= $agent["agent_name"]; ?></a>
                     </p>
                     <p class="card-pc__hashtag">
                       <?php
@@ -205,93 +200,101 @@ $response_data = json_decode($response_json);
                   </div>
 
                   <div class="card-pc__buttons">
-                    <button id="articlebtn" class="card-pc__button-article">
+                    <button id="articlebtn" class="card__button-article">
                       <a href="<?= $agent["article_link"]; ?>" data-wpel-link="internal" target="_blank" rel="noopener noreferrer">解説記事</a>
                     </button>
-                    <input type="checkbox" id="application" class="checks" name="agent[]" value="<?= $agent["id"]; ?>">
-                    <label for="application">
-                      <span id="submit__pc" class="card-pc__button-submit">
-                        <p id="text__pc">お申し込みリストに<br>追加する</p>
-                      </span>
+
+                    　<button id="continueapply" class="card-pc__button-submit">
+                      <input type="hidden" name="agent[]" value="<?= $agent["id"]; ?>">
+                      <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
+                      <input type="submit">
+                      　 <p>続けて申し込む</p>
+                      　</button>
                   </div>
                 </div>
               </div>
-            </form>
-          <?php endforeach; ?>
-        <?php endif; ?>
-        <!-- PC版内部サイト用エージェントのforeachここまで -->
+      </div>
+      <!-- PC版無限ループ用カードここまで -->
+      </form>
+    <?php endforeach; ?>
+  <?php endif; ?>
+  <!-- PC版内部サイト用エージェントのforeachここまで -->
 
-        <!-- SP版内部サイト用エージェントのforeachここから -->
-        <?php if (!is_null($agents)) : ?>
-          <?php foreach ($agents as $index => $agent) : ?>
-            <form method="post" action="thanks.php">
-            <div class="card-sp__container">
-              <div class="card-sp-summary">
-                <div class="card-sp-summary-left">
-                  <img src="<?= $agent["image_url"]; ?>" class="card-sp__image" alt="エージェント画像が入ります">
-                </div>
+  <!-- SP版内部サイト用エージェントのforeachここから -->
+  <?php if (!is_null($agents)) : ?>
+    <?php foreach ($agents as $index => $agent) : ?>
+      <form method="post" action="thanks.php">
+        <!-- SP版無限ループ用カード -->
+        <div class="card-sp__container">
+          <div class="card-sp-summary">
 
-                <div class="card-sp-summary-right">
-                  <p>
-                    <a href="<?= $agent["offcial_link"]; ?>" class="card-sp__agent-name" data-wpel-link="internal" target="_blank" rel="noopener noreferrer"><?= $agent["agent_name"]; ?></a>
-                  </p>
-                  <p class="card-sp__hashtag">
-                    <?php
-                    $stmt = $db->prepare('SELECT tag_name
+            <div class="card-sp-summary-left">
+              <img src="<?= $agent["image_url"]; ?>" class="card-sp__image" alt="エージェント画像が入ります">
+            </div>
+
+            <div class="card-sp-summary-right">
+              <p>
+                <a href="<?= $agent["offcial_link"]; ?>" class="card-sp__agent-name"><?= $agent["agent_name"]; ?></a>
+              </p>
+              <p class="card-sp__hashtag">
+                <?php
+                $stmt = $db->prepare('SELECT tag_name
                                               FROM `agent_tag_table`
                                               INNER JOIN `tag_table` ON agent_tag_table.tag_id = tag_table.id
                                               WHERE agent_id = ?
                                               ');
-                    $stmt->execute(array($agent["id"]));
-                    $tag_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    foreach ($tag_names as $key => $tag_name) {
-                      echo "#" . $tag_name["tag_name"] . " ";
-                    }
-                    ?>
-                  </p>
-                  <p class="card-sp__stars">
-                    <span class="card-sp__stars-rating" data-rate="<?= $agent["star"]; ?>"></span>&ensp;<?= $agent["star"]; ?>
-                  </p>
-                </div>
-
-              </div>
-
-              <div class="card-sp-explanation">
-                <?= $agent["overview"]; ?>
-              </div>
-
-              <div class="card-sp__buttons">
-                <button id="articlebtn" class="card-sp__button-article">
-                  <a href="<?= $agent["article_link"]; ?>" data-wpel-link="internal" target="_blank" rel="noopener noreferrer">解説記事</a>
-                </button>
-                <input type="checkbox" id="application" class="checks" name="agent[]" value="<?= $agent["id"]; ?>">
-                <label for="application">
-                  <span id="submit__sp" class="card-sp__button-submit">
-                    <p id="text__sp">お申し込みリストに<br>追加する</p>
-                  </span>
-                </label>
-              </div>
+                $stmt->execute(array($agent["id"]));
+                $tag_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($tag_names as $key => $tag_name) {
+                  echo "#" . $tag_name["tag_name"] . " ";
+                }
+                ?>
+              </p>
+              <p class="card-sp__stars">
+                <span class="card-sp__stars-rating" data-rate="<?= $agent["star"]; ?>"></span>&ensp;<?= $agent["star"]; ?>
+              </p>
             </div>
-            </form>
-          <?php endforeach; ?>
-        <?php endif; ?>
-        <!-- SP版内部サイト用エージェントのforeachここまで -->
 
-
-
-
-
-        <!-- 申し込み完了モーダル -->
-        <div id="modal" class="thanksPafe-container__hidden">
-          <div class="thanksPage_modal-content">
-            <div class="thanksPage_modal-body">
-              <h4>申し込み完了！</h4>
-            </div>
           </div>
-        </div>
-      </div>
 
+          <div class="card-sp-explanation">
+            <?= $agent["overview"]; ?>
+          </div>
+
+          <div class="card-sp-buttons">
+            <button id="articlebtn" class="card-sp-button__article">
+              <a href="<?= $agent["article_link"]; ?>" data-wpel-link="internal" target="_blank" rel="noopener noreferrer">解説記事</a>
+            </button>
+
+
+
+            <button id="continueapply" class="card-sp__button-submit">
+              <input type="hidden" name="agent[]" value="<?= $agent["id"]; ?>">
+              <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
+              <input type="submit" class="card-sp__button-submit">
+              <p>続けて申し込む</p>
+            </button>
+          </div>
+          <!-- SP版無限ループ用カードここまで -->
+      </form>
+    <?php endforeach; ?>
+  <?php endif; ?>
+
+
+
+
+
+  <!-- 申し込み完了モーダル -->
+  <div id="modal" class="thanksPafe-container__hidden">
+    <div class="thanksPage_modal-content">
+      <div class="thanksPage_modal-body">
+        <h4>申し込み完了！</h4>
+      </div>
     </div>
+  </div>
+    </div>
+
+  </div>
   </div>
 
   </div>

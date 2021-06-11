@@ -1,4 +1,12 @@
 <?php
+// 今月の申し込みを対象にエージェントを数える
+// 今月何件だったよってagentsテーブルで数える
+// 掲載上限が超えてないか値をwhere句に入れる
+// 掲載がオンになっている、掲載上限が超えてない、掲載期間内のもの
+// 今月の掲載数 ＞ 今月の申し込み数
+// 全エージェントの申し込み数件数を0にする　（月の初めに〜〜の処理は小谷さんが書く）　優先度低
+
+
 // セッションを開始
 session_start();
 require(dirname(__FILE__, 3) . "/dbconnect.php");
@@ -23,6 +31,22 @@ if (isset($_POST['tag']) && is_array($_POST['tag'])) {
 $agents = [];
 //検索ボタンが押されたかどうかの確認
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // 検索数
+    try {
+        $sql = 'SELECT agents.id
+        FROM `agent_tag_table` 
+        JOIN  `agents` ON agent_tag_table.agent_id = agents.id';
+        if (count($tag) > 0) {
+            $sql .= ' AND tag_id IN (' . substr(str_repeat(',?', count($tag)), 1) . ')';
+        }
+        $stmt = $db->prepare($sql);
+        $stmt->execute($tag);
+        $count_agents = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo "count_agents error!" . $e->getMessage() . PHP_EOL;
+        exit;
+    }
+
     // 内部エージェント検索
     try {
         $sql = 'SELECT DISTINCT agents.id,agents.agent_name,agents.image_url,agents.overview,agents.button_type,agents.star,agents.official_link,agents.article_link,agents.status
@@ -240,7 +264,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </form>
 
                 <div id="searched" class="number-of-searches-box">
-                    <p class="number-of-searches__text">↓検索結果がn件あります↓</p>
+                    <p class="number-of-searches__text">↓検索結果が
+                        <?php if (!is_null($count_agents)) {
+                            echo count($count_agents);
+                        } else {
+                            echo "0";
+                        }; ?>件あります↓</p>
                 </div>
 
             </div>
@@ -257,12 +286,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <section class="search-results">
                 <div class="search-results__title-box">
                     <i class="fas fa-search"></i>
-                    <p class="section__title-text">検索結果 n件表示</p>
+                    <p class="section__title-text">検索結果
+                        <?php if (!is_null($count_agents)) {
+                            echo count($count_agents);
+                        } else {
+                            echo "0";
+                        }; ?>件表示</p>
                 </div>
 
                 <p class="search-result__agent">&emsp;エージェント&emsp;</p>
-                <form method="post" action="application/contact.php">
-
+                <form method="POST" action="../entry/entry1.php">
                     <!-- PC版内部サイト用エージェントのforeachここから-->
                     <?php if (!is_null($agent_internals)) : ?>
                         <?php foreach ($agent_internals as $index => $agent_internal) : ?>
@@ -349,8 +382,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                     </div>
                                     <span class="application-area__description">就活のプロが話を聞いてくれます</span>
                                 </div>
-                                <?php endif; ?>
-                                <div class="card-sp__container">
+                            <?php endif; ?>
+                            <div class="card-sp__container">
                                 <div class="card-sp-summary">
                                     <div class="card-sp-summary-left">
                                         <img src="<?= $agent_internal["image_url"]; ?>" class="card-sp__image" alt="エージェント画像が入ります">
