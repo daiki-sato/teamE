@@ -211,6 +211,9 @@ input[type="checkbox"]{
   .number-of-searches-box{
     width: 40%;
   }
+  .application-area__pc{
+    display: none;
+  }
 }
 
 /* for pc */
@@ -219,7 +222,7 @@ input[type="checkbox"]{
     background-color: #eaedf2;
   }
   /* 全体のレイアウト（メインとサイドバー） */
-  .container{
+  .top-pc__container{
     display: flex;
     margin: 5vmax;
   }
@@ -292,12 +295,14 @@ input[type="checkbox"]{
   }
 // ボタンのホバー
 button:hover{
-  background-color: #000000;
-  opacity: 0.5;
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0 / 30%), 0 0 5px rgba(0,0,0,0 / 30%)
 }
 
 label:hover{
-  opacity: 0.35;
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0 / 30%), 0 0 5px rgba(0,0,0,0 / 30%)
+}
+.application-area__sp{
+  display: none;
 }
 }
 
@@ -353,36 +358,38 @@ label:hover{
 
 
 /* 一括申し込みエリア */
-.application-area {
+.application-area, .application-area__pc ,.application-area__sp {
   margin-bottom: 3em;
   background-color: #E0E4EA;
   text-align: center;
-  display: grid;
+  padding: 0.5em;
+  // display: grid;
   /* ↓吹き出し用 */
   position: relative;
 }
 
-.application-area .application-area__text {
+.application-area__text {
   line-height: 30px;
   font-size: 4em;
   font-weight: 600;
   padding: 0.5em;
+  padding-bottom: 0;
 }
 
-.application-area .application-area__description {
+.application-area__description {
   line-height: 30px;
   font-size: 3em;
   font-weight: 300;
   padding: 0.5em;
 }
 
-.application-area .application-area__button {
+.application-area__button {
   display: block;
   width: 80%;
   cursor: pointer;
   border: none;
-  padding: 0.5em 1em;
-  margin: 0 auto;
+  padding: 2vw 1vw;
+  margin: 1vw auto;
   text-align: center;
   color: #ffffff;
   background-color: #FFAB3F;
